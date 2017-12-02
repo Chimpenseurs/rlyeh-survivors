@@ -22,6 +22,10 @@ transform/pos = Vector2( 199.047, 146.869 )
 
 [node name="slime2" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 479.412, 137.825 )
+transform/pos = Vector2( 807.948, 455.956 )
+
+[node name="slime3" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 634.86, 153.051 )
 
 

@@ -16,7 +16,12 @@ func _fixed_process(delta):
 	
 	if path.size() > 1 :
 		var direction = path[0] - get_pos()
-	
+		
+		if direction.x < 0 :
+			self.scale(Vector2(-1, 1))
+		else : 
+			self.scale(Vector2(1, 1))
+		
 		var motion = direction.normalized() * velocity * delta 
 		self.move(motion)
 	
