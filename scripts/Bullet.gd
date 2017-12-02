@@ -25,5 +25,6 @@ func _on_Bullet_body_enter( body ):
 	if body.is_in_group("enemy"):
 		body.take_damage(self.damages)
 		self.queue_free()
+
 	elif !body.is_in_group("player"):
 		self.queue_free()
