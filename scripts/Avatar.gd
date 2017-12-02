@@ -37,11 +37,13 @@ func _fixed_process(delta):
 	var motion = vect.normalized() * velocity * delta
 	self.move(motion)
 	
-	if (is_colliding()):
+	if is_colliding() :
 		var n = get_collision_normal()
 		motion = n.slide(motion)
 		vect = n.slide(vect)
 		move(motion)
+		
+		
 
 func _shoot_arrow(delta):
 	
@@ -54,5 +56,9 @@ func _shoot_arrow(delta):
 		get_parent().get_node("BulletHolder").add_child(new_arrow)
 		new_arrow.init_bullet( ( get_global_mouse_pos() - self.get_global_pos() ).normalized() * shoot_speed )
 
-func _get_damage():
+func take_damage(collider_pos):
+	var direction = get_pos() - collider_pos
+	
+	self.move(direction)
+	
 	get_node("AnimationPlayer").play("take_damage")
