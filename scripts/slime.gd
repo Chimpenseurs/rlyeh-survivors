@@ -22,6 +22,20 @@ func _fixed_process(delta):
 		else : 
 			self.scale(Vector2(1, 1))
 		
+		
+		
+		# Attack
+		var player_rect = get_parent().get_node("Avatar").get_item_rect()
+		var cross_pos = get_pos() + get_scale()*get_node("Position2D").get_pos()
+		
+		if cross_pos.x > player_pos.x - player_rect.size.width / 2 \
+		&& cross_pos.x < player_pos.x + player_rect.size.width / 2 \
+		&& cross_pos.y > player_pos.y - player_rect.size.height / 2 \
+		&& cross_pos.y < player_pos.y + player_rect.size.height / 2 :
+			print("attack !!!")
+			get_node("AnimationPlayer").play("attack")
+			get_parent().get_node("Avatar").take_damage(get_pos())
+	
 		var motion = direction.normalized() * velocity * delta 
 		self.move(motion)
 	
@@ -32,6 +46,8 @@ func _fixed_process(delta):
 			var n = get_collision_normal()
 			motion = n.slide(motion)
 			self.move(motion)
+	
+	
 
 func take_damage(hit_rate):
 	self.life -= hit_rate

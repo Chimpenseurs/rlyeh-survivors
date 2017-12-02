@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 points = Vector2Array( 32, -32, 32, 32, -32, 32, -32, -32 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 
 length = 0.25
 loop = false
@@ -53,7 +53,7 @@ trigger = false
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/take_damage = SubResource( 3 )
+anims/take_damage = SubResource( 2 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
