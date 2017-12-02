@@ -12,6 +12,7 @@ var fire_ready = 0
 func _ready():
 	set_process_input(true)
 	set_fixed_process(true)
+	
 
 func _fixed_process(delta):
 	

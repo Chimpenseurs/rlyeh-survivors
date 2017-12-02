@@ -9,16 +9,21 @@ var velocity = 200
 var dist_range = 40
 
 func _ready():
-	print("bullet")
 	set_fixed_process(true)
 
 func init_bullet(velocity):
 	self.set_linear_velocity(velocity)
-	
-func _fixed_process(delta):
+
+
+func _fixed_process(delta):	
 	var motion = direction.normalized() * velocity * delta
-	print(self.dist_range)
 	self.dist_range -= direction.length()
 	
 	if self.dist_range <= 0:
+		self.queue_free()
+
+func _on_Bullet_body_enter( body ):
+	print(body.get_name())
+	if body.is_in_group("enemy"):
+
 		self.queue_free()
