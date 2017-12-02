@@ -56,6 +56,6 @@ func _shoot_arrow(delta):
 func take_damage(collider_pos):
 	var direction = get_pos() - collider_pos
 	
-	self.move(direction)
+	self.move(direction.normalized() * 50)
 	
 	get_node("AnimationPlayer").play("take_damage")
