@@ -3,7 +3,7 @@ extends KinematicBody2D
 var bulletTscn = preload("res://scenes/Bullet.tscn")
 
 const shoot_speed = 500
-const fire_rate = 0.5 # lets say in ms
+const fire_rate = 0.2 # lets say in ms
 const velocity = 350
 
 var bullet_range = 100000
