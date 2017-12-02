@@ -28,12 +28,10 @@ func _fixed_process(delta):
 		# Attack
 		if player != null :
 			var player_rect = player.get_item_rect()
+			player_rect.pos += player_pos
 			var cross_pos = get_pos() + get_scale()*get_node("Position2D").get_pos()
 		
-			if cross_pos.x > player_pos.x - player_rect.size.width / 2 \
-			&& cross_pos.x < player_pos.x + player_rect.size.width / 2 \
-			&& cross_pos.y > player_pos.y - player_rect.size.height / 2 \
-			&& cross_pos.y < player_pos.y + player_rect.size.height / 2 :
+			if player_rect.has_point(cross_pos) :
 				get_node("AnimationPlayer").play("attack")
 				player.take_damage(get_pos())
 	
