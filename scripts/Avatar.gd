@@ -12,6 +12,7 @@ var fire_ready = 0
 func _ready():
 	set_process_input(true)
 	set_fixed_process(true)
+	
 
 func _fixed_process(delta):
 	
@@ -52,3 +53,6 @@ func _shoot_arrow(delta):
 		new_arrow.set_global_pos(self.get_global_pos())
 		get_parent().get_node("BulletHolder").add_child(new_arrow)
 		new_arrow.init_bullet( ( get_global_mouse_pos() - self.get_global_pos() ).normalized() * shoot_speed )
+
+func _get_damage():
+	get_node("AnimationPlayer").play("take_damage")
