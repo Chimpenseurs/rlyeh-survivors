@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 # class member variables go here, for example:
-const shoot_speed = 300
+const shoot_speed = 400
 const fire_rate = 0.3 # lets say in ms
 
 const velocity = 200
@@ -32,8 +32,14 @@ func _fixed_process(delta):
 	if Input.is_action_pressed("ui_left") :
 		vect.x = -1
 	
-	self.move(vect.normalized() * velocity * delta)
-
+	var motion = vect.normalized() * velocity * delta
+	self.move(motion)
+	
+	if (is_colliding()):
+		var n = get_collision_normal()
+		motion = n.slide(motion)
+		vect = n.slide(vect)
+		move(motion)
 
 func _shoot_arrow(delta):
 	if self.fire_ready == 0:
