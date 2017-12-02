@@ -19,6 +19,6 @@ transform/pos = Vector2( 482.349, 263.784 )
 
 [node name="Node2D" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 200.554, 190.582 )
+transform/pos = Vector2( 199.047, 146.869 )
 
 
