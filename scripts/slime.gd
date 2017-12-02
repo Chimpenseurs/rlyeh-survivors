@@ -6,13 +6,13 @@ const velocity = 100
 var life = 100
 
 func _ready():
-	add_to_group("enemies")
 	set_fixed_process(true)
 
 func _fixed_process(delta):
-	var player_pos = get_parent().get_node("Avatar").get_pos()
 	
-	var path = get_parent().get_simple_path(player_pos, get_pos())
+	var player_pos = get_tree().get_nodes_in_group("player")[0].get_pos()
+	
+	var path = get_tree().get_nodes_in_group("map")[0].get_simple_path(player_pos, get_pos())
 	
 	if path.size() > 1 :
 		var direction = path[0] - get_pos()
