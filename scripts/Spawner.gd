@@ -2,10 +2,11 @@ extends Sprite
 
 var slimeScn = preload("res://scenes/slime.tscn")
 
-var cooldown = 1
-var throuput = 1
+var cooldown
+var throuput = 3
 
 func _ready():
+	self.cooldown = throuput
 	set_fixed_process(true)
 	
 func _fixed_process(delta):

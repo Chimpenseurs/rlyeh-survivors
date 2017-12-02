@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-# class member variables go here, for example:
+const hearthItem = preload("res://scenes/Hearth.tscn")
 const velocity = 100
 
 var life = 100
@@ -53,4 +53,13 @@ func _fixed_process(delta):
 func take_damage(hit_rate):
 	self.life -= hit_rate
 	if self.life <= 0:
-		self.queue_free()
+		self.die()
+		
+func die():
+	var drop = floor(rand_range(1, 11))
+	if drop >= 9:
+		var item = hearthItem.instance()
+		item.set_pos(self.get_pos())
+		get_tree().get_nodes_in_group("map")[0].add_child(item)
+
+	self.queue_free()

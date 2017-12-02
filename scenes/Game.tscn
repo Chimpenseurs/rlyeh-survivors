@@ -16,6 +16,14 @@
 
 transform/pos = Vector2( 919.647, 101.982 )
 
+[node name="Spawner1" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 105.593, 475.617 )
+
+[node name="Spawner2" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 922.354, 474.714 )
+
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="BulletHolder" type="Node2D" parent="."]
