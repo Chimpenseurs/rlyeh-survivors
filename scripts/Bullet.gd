@@ -1,29 +1,29 @@
 extends RigidBody2D
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
-
-var direction = Vector2(1, 0)
-var velocity = 200
-var dist_range = 40
+# set at one so it won't be killed in the first call to _fixed_process
+var dist_range = 100
+var motion = Vector2(0, 0)
+var damages = 0
 
 func _ready():
 	set_fixed_process(true)
+	self.set_gravity_scale(0)
 
-func init_bullet(velocity):
-	self.set_linear_velocity(velocity)
+func init_bullet(velocity, damages, dist_range):
+	self.motion = velocity
+	self.damages = damages
+	self.dist_range = dist_range
+	self.set_linear_velocity(self.motion)
 
-
-func _fixed_process(delta):	
-	var motion = direction.normalized() * velocity * delta
-	self.dist_range -= direction.length()
-	
+func _fixed_process(delta):
 	if self.dist_range <= 0:
 		self.queue_free()
+	self.dist_range -= motion.length()
 
 func _on_Bullet_body_enter( body ):
 	print(body.get_name())
 	if body.is_in_group("enemy"):
-
+		body.take_damage(self.damages)
+		self.queue_free()
+	elif !body.is_in_group("player"):
 		self.queue_free()

@@ -31,10 +31,7 @@ func _fixed_process(delta):
 		self.fire_ready = 0
 	
 	var vect = Vector2(0,0)
-	
-	if Input.is_action_pressed(\"action_shoot\"):
-		_shoot_arrow(delta)
-		
+
 	if Input.is_action_pressed(\"ui_up\") :
 		vect.y = -1
 	if Input.is_action_pressed(\"ui_down\") :
@@ -46,12 +43,17 @@ func _fixed_process(delta):
 	
 	var motion = vect.normalized() * velocity * delta
 	self.move(motion)
-	
+
+		
 	if (is_colliding()):
 		var n = get_collision_normal()
 		motion = n.slide(motion)
 		vect = n.slide(vect)
 		move(motion)
+		
+	if Input.is_action_pressed(\"action_shoot\"):
+		_shoot_arrow(delta)
+
 
 func _shoot_arrow(delta):
 	
@@ -82,7 +84,9 @@ tracks/0/keys = {
 "values": [ true, false, true ]
 }
 
-[node name="Avatar" type="KinematicBody2D"]
+[node name="Avatar" type="KinematicBody2D" groups=[
+"player",
+]]
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
