@@ -10,7 +10,8 @@ func _ready():
 
 func _fixed_process(delta):
 	
-	var player_pos = get_tree().get_nodes_in_group("player")[0].get_pos()
+	var player = get_tree().get_nodes_in_group("player")[0]
+	var player_pos = player.get_pos()
 	
 	var path = get_tree().get_nodes_in_group("map")[0].get_simple_path(player_pos, get_pos())
 	
@@ -25,22 +26,22 @@ func _fixed_process(delta):
 		
 		
 		# Attack
-		var player_rect = get_parent().get_node("Avatar").get_item_rect()
-		var cross_pos = get_pos() + get_scale()*get_node("Position2D").get_pos()
+		if player != null :
+			var player_rect = player.get_item_rect()
+			var cross_pos = get_pos() + get_scale()*get_node("Position2D").get_pos()
 		
-		if cross_pos.x > player_pos.x - player_rect.size.width / 2 \
-		&& cross_pos.x < player_pos.x + player_rect.size.width / 2 \
-		&& cross_pos.y > player_pos.y - player_rect.size.height / 2 \
-		&& cross_pos.y < player_pos.y + player_rect.size.height / 2 :
-			print("attack !!!")
-			get_node("AnimationPlayer").play("attack")
-			get_parent().get_node("Avatar").take_damage(get_pos())
+			if cross_pos.x > player_pos.x - player_rect.size.width / 2 \
+			&& cross_pos.x < player_pos.x + player_rect.size.width / 2 \
+			&& cross_pos.y > player_pos.y - player_rect.size.height / 2 \
+			&& cross_pos.y < player_pos.y + player_rect.size.height / 2 :
+				get_node("AnimationPlayer").play("attack")
+				player.take_damage(get_pos())
 	
 		var motion = direction.normalized() * velocity * delta 
 		self.move(motion)
 	
 		if (is_colliding()):
-			if get_collider().get_name() == "Avatar" :
+			if get_collider() == player :
 				get_collider().take_damage(get_pos())
 			
 			var n = get_collision_normal()
