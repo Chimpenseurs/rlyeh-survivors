@@ -21,7 +21,6 @@ func _fixed_process(delta):
 	self.dist_range -= motion.length()
 
 func _on_Bullet_body_enter( body ):
-	print(body.get_name())
 	if body.is_in_group("enemy"):
 		body.take_damage(self.damages)
 		self.queue_free()
