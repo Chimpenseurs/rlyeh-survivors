@@ -52,7 +52,9 @@ length = 1.0
 loop = false
 step = 0.1
 
-[node name="Node2D" type="KinematicBody2D"]
+[node name="Node2D" type="KinematicBody2D" groups=[
+"enemy",
+]]
 
 input/pickable = false
 shapes/0/shape = SubResource( 4 )
