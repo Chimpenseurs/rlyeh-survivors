@@ -54,4 +54,4 @@ func _shoot_arrow(delta):
 		new_arrow.init_bullet( ( get_global_mouse_pos() - self.get_global_pos() ).normalized() * shoot_speed )
 
 func _get_damage():
-	pass
+	get_node("AnimationPlayer").play("take_damage")

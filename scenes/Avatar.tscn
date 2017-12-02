@@ -64,15 +64,23 @@ func _shoot_arrow(delta):
 		get_parent().get_node(\"BulletHolder\").add_child(new_arrow)
 		new_arrow.init_bullet( ( get_global_mouse_pos() - self.get_global_pos() ).normalized() * shoot_speed )
 
-func _get_damage():
-	pass
 "
 
 [sub_resource type="Animation" id=3]
 
-length = 1.0
-loop = false
-step = 0.1
+length = 0.25
+loop = true
+step = 0.14
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.13, 0.25 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
 
 [node name="Avatar" type="KinematicBody2D"]
 

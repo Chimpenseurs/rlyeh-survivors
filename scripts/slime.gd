@@ -11,6 +11,13 @@ func _fixed_process(delta):
 	
 	var path = get_parent().get_simple_path(player_pos, get_pos())
 	
-	var direction = path[0] - get_pos()
+	if path.size() > 1 :
+		var direction = path[0] - get_pos()
 	
-	self.move(direction.normalized() * velocity * delta)
+		var motion = direction.normalized() * velocity * delta 
+		self.move(motion)
+	
+		if (is_colliding()):
+			var n = get_collision_normal()
+			motion = n.slide(motion)
+			self.move(motion)
