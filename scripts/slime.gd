@@ -6,6 +6,7 @@ const velocity = 100
 var life = 100
 
 func _ready():
+	add_to_group("enemies")
 	set_fixed_process(true)
 
 func _fixed_process(delta):
@@ -20,6 +21,9 @@ func _fixed_process(delta):
 		self.move(motion)
 	
 		if (is_colliding()):
+			if get_collider().get_name() == "Avatar" :
+				get_collider().take_damage(get_pos())
+			
 			var n = get_collision_normal()
 			motion = n.slide(motion)
 			self.move(motion)
