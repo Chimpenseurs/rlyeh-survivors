@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=1]
+[gd_scene load_steps=51 format=1]
 
 [sub_resource type="ImageTexture" id=1]
 
@@ -11,18 +11,12 @@ lossy_quality = 0.7
 [sub_resource type="ConvexPolygonShape2D" id=2]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 15.239, 32.492, -31.4625, 33.0907, -30.8638, -30.3754, 14.6403, 15.1286 )
+points = Vector2Array( 14.6403, 15.1286, 15.239, 32.492, -31.4625, 33.0907, -31.5981, -31.5712 )
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 14.6403, 15.1286, -30.8638, -30.3754, 30.8062, -30.3754, 32.6024, 14.5299 )
-
-[sub_resource type="NavigationPolygon" id=4]
-
-vertices = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
-polygons = [ IntArray( 0, 1, 2, 3 ) ]
-outlines = [ Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 ) ]
+points = Vector2Array( 14.6403, 15.1286, -31.5981, -31.5712, 32.0555, -31.5712, 32.6024, 14.5299 )
 
 [sub_resource type="ConvexPolygonShape2D" id=5]
 
@@ -39,55 +33,35 @@ points = Vector2Array( -14.2371, 14.7617, -32.1992, 13.5643, -31.6004, -31.9397 
 custom_solver_bias = 0.0
 points = Vector2Array( -14.2371, 14.7617, 31.8657, 32.1251, -12.4408, 32.7239 )
 
-[sub_resource type="NavigationPolygon" id=8]
-
-vertices = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
-polygons = [ IntArray( 0, 1, 2, 3 ) ]
-outlines = [ Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 ) ]
-
-[sub_resource type="ConvexPolygonShape2D" id=9]
+[sub_resource type="ConvexPolygonShape2D" id=63]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
+points = Vector2Array( -33.0732, -33.17, 14.8561, -32.878, 15.346, 32.6113, -31.8447, 32.9287 )
 
-[sub_resource type="NavigationPolygon" id=10]
-
-vertices = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
-polygons = [ IntArray( 0, 1, 2, 3 ) ]
-outlines = [ Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 ) ]
-
-[sub_resource type="ConvexPolygonShape2D" id=11]
+[sub_resource type="ConvexPolygonShape2D" id=64]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
+points = Vector2Array( -11.3547, -1.68796, -13.3924, -32.5247, 32.3846, -32.4237, 32.3846, 32.2831 )
 
-[sub_resource type="NavigationPolygon" id=12]
-
-vertices = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
-polygons = [ IntArray( 0, 1, 2, 3 ) ]
-outlines = [ Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 ) ]
-
-[sub_resource type="ConvexPolygonShape2D" id=13]
+[sub_resource type="ConvexPolygonShape2D" id=65]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
+points = Vector2Array( -11.3547, -1.68796, 32.3846, 32.2831, -11.998, 32.2831, -14.2493, 11.577 )
 
-[sub_resource type="NavigationPolygon" id=14]
-
-vertices = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
-polygons = [ IntArray( 0, 1, 2, 3 ) ]
-outlines = [ Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 ) ]
-
-[sub_resource type="ConvexPolygonShape2D" id=15]
+[sub_resource type="ConvexPolygonShape2D" id=66]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
+points = Vector2Array( -32.8214, -13.2443, 33.0954, -13.0956, 33.4603, 32.7884, -32.8214, 32.7884 )
 
-[sub_resource type="NavigationPolygon" id=16]
+[sub_resource type="ConvexPolygonShape2D" id=67]
 
-vertices = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
-polygons = [ IntArray( 0, 1, 2, 3 ) ]
-outlines = [ Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 ) ]
+custom_solver_bias = 0.0
+points = Vector2Array( -4.50101, 13.2095, -32.6692, 16.3014, -32.4378, -32.6771, 32.6522, -32.5583 )
+
+[sub_resource type="ConvexPolygonShape2D" id=68]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -4.50101, 13.2095, 32.6522, -32.5583, 32.6773, 13.7888, 7.38245, 16.3014 )
 
 [sub_resource type="NavigationPolygon" id=17]
 
@@ -121,61 +95,37 @@ points = Vector2Array( 14.9322, -12.6655, 33.493, -13.2642, 32.8943, 32.2398, -3
 [sub_resource type="ConvexPolygonShape2D" id=22]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 14.9322, -12.6655, -31.1706, 32.2398, -31.1706, -31.2263, 13.1359, -31.2263 )
-
-[sub_resource type="NavigationPolygon" id=23]
-
-vertices = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
-polygons = [ IntArray( 0, 1, 2, 3 ) ]
-outlines = [ Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 ) ]
+points = Vector2Array( 14.9322, -12.6655, -31.1706, 32.2398, -31.905, -31.9471, 13.9374, -32.239 )
 
 [sub_resource type="ConvexPolygonShape2D" id=24]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 144.974, 21.3271, 143.511, -24.5143, 164.969, -21.1006, 209.347, 21.8148 )
+points = Vector2Array( 144.017, 22.1576, 143.779, -23.9809, 166.683, -19.4683, 209.347, 21.8148 )
 
 [sub_resource type="ConvexPolygonShape2D" id=25]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 208.372, -42.0706, 209.347, 21.8148, 164.969, -21.1006, 163.994, -42.5583 )
-
-[sub_resource type="NavigationPolygon" id=26]
-
-vertices = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
-polygons = [ IntArray( 0, 1, 2, 3 ) ]
-outlines = [ Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 ) ]
+points = Vector2Array( 208.372, -42.0706, 209.347, 21.8148, 166.683, -19.4683, 163.994, -42.5583 )
 
 [sub_resource type="ConvexPolygonShape2D" id=27]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 11.9617, 5.61487, 15.7442, 32.0925, -32.4808, 31.8109, -31.2671, -15.4592, -0.466568, -20.3224 )
+points = Vector2Array( 9.69312, 6.60382, 14.9489, 32.2989, -32.3534, 32.0069, -32.0614, -12.6675, 1.22542, -20.8432 )
 
 [sub_resource type="ConvexPolygonShape2D" id=28]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 11.9617, 5.61487, -0.466568, -20.3224, 18.9864, -7.35376 )
-
-[sub_resource type="NavigationPolygon" id=29]
-
-vertices = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
-polygons = [ IntArray( 0, 1, 2, 3 ) ]
-outlines = [ Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 ) ]
+points = Vector2Array( 9.69312, 6.60382, 1.22542, -20.8432, 18.3846, -9.20999 )
 
 [sub_resource type="ConvexPolygonShape2D" id=30]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 10.2376, -12.2119, 32.4637, -14.0044, 32.1052, 31.8818, -12.7056, 31.1649, -10.9131, 4.27844 )
+points = Vector2Array( -9.92341, 6.26367, -11.0456, -14.1479, 8.96484, -10.4782 )
 
 [sub_resource type="ConvexPolygonShape2D" id=31]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 10.2376, -12.2119, -10.9131, 4.27844, -8.04523, -14.0044 )
-
-[sub_resource type="NavigationPolygon" id=32]
-
-vertices = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
-polygons = [ IntArray( 0, 1, 2, 3 ) ]
-outlines = [ Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 ) ]
+points = Vector2Array( 32.4637, -14.0044, 32.1052, 31.8818, -14.2079, 31.7047, -9.92341, 6.26367, 8.96484, -10.4782 )
 
 [sub_resource type="ConvexPolygonShape2D" id=33]
 
@@ -192,27 +142,15 @@ points = Vector2Array( -11.656, -1.26215, -8.08112, -21.5201, 10.588, 17.0097, -
 custom_solver_bias = 0.0
 points = Vector2Array( -4.90344, 14.2292, -8.08112, 2.70999, 10.588, 17.0097, 0.260376, 17.0097 )
 
-[sub_resource type="NavigationPolygon" id=36]
-
-vertices = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
-polygons = [ IntArray( 0, 1, 2, 3 ) ]
-outlines = [ Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 ) ]
-
 [sub_resource type="ConvexPolygonShape2D" id=37]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -6.21454, 11.0101, -31.0897, 15.6704, -31.4471, -30.9328, 14.1547, -30.9328, 18.8003, -5.48029, 11.6532, 4.91582 )
+points = Vector2Array( -6.21454, 11.0101, -31.6478, 14.9918, -31.4338, -32.4434, 14.9957, -32.4434, 18.8003, -5.48029, 11.6532, 4.91582 )
 
 [sub_resource type="ConvexPolygonShape2D" id=38]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -6.21454, 11.0101, 11.6532, 4.91582, 5.22079, 15.6704 )
-
-[sub_resource type="NavigationPolygon" id=39]
-
-vertices = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
-polygons = [ IntArray( 0, 1, 2, 3 ) ]
-outlines = [ Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 ) ]
 
 [sub_resource type="NavigationPolygon" id=40]
 
@@ -229,66 +167,47 @@ outlines = [ Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 ) ]
 [sub_resource type="ConvexPolygonShape2D" id=42]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
+points = Vector2Array( -31.7717, -10.0834, -38.3303, -31.7101, 25.383, -30.7898, 25.383, 33.1701 )
 
-[sub_resource type="NavigationPolygon" id=43]
+[sub_resource type="ConvexPolygonShape2D" id=43]
 
-vertices = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
-polygons = [ IntArray( 0, 1, 2, 3 ) ]
-outlines = [ Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 ) ]
+custom_solver_bias = 0.0
+points = Vector2Array( -31.7717, -10.0834, 25.383, 33.1701, -21.9335, 35.4708, -36.4564, 12.4636 )
 
 [sub_resource type="ConvexPolygonShape2D" id=44]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
+points = Vector2Array( -7.22968, 11.1333, -31.9563, 14.731, -32.1941, -32.0392, 15.1194, -31.7994, 14.4061, -4.45679 )
 
-[sub_resource type="NavigationPolygon" id=45]
+[sub_resource type="ConvexPolygonShape2D" id=45]
 
-vertices = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
-polygons = [ IntArray( 0, 1, 2, 3 ) ]
-outlines = [ Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 ) ]
+custom_solver_bias = 0.0
+points = Vector2Array( 15.1194, -31.7994, 18.9235, -4.45679, 14.4061, -4.45679 )
 
-[sub_resource type="NavigationPolygon" id=46]
+[sub_resource type="ConvexPolygonShape2D" id=46]
 
-vertices = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
-polygons = [ IntArray( 0, 1, 2, 3 ) ]
-outlines = [ Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 ) ]
+custom_solver_bias = 0.0
+points = Vector2Array( -7.22968, 11.1333, 14.4061, -4.45679, 4.89587, 16.6498 )
 
-[sub_resource type="OccluderPolygon2D" id=47]
+[sub_resource type="ConvexPolygonShape2D" id=48]
 
-closed = true
-cull_mode = 0
-polygon = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
+custom_solver_bias = 0.0
+points = Vector2Array( 11.3284, 7.41467, 15.2298, 31.7985, -32.0748, 31.3108, -32.5624, -12.5801, 1.57486, -20.8705 )
 
-[sub_resource type="NavigationPolygon" id=48]
+[sub_resource type="ConvexPolygonShape2D" id=49]
 
-vertices = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
-polygons = [ IntArray( 0, 1, 2, 3 ) ]
-outlines = [ Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 ) ]
+custom_solver_bias = 0.0
+points = Vector2Array( 11.3284, 7.41467, 1.57486, -20.8705, 18.1558, -9.654 )
 
-[sub_resource type="OccluderPolygon2D" id=49]
+[sub_resource type="ConvexPolygonShape2D" id=51]
 
-closed = true
-cull_mode = 0
-polygon = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
+custom_solver_bias = 0.0
+points = Vector2Array( -13.6888, 31.1167, -8.81201, -14.7248, 4.35522, -11.3111, 31.6651, 31.6044 )
 
-[sub_resource type="NavigationPolygon" id=50]
+[sub_resource type="ConvexPolygonShape2D" id=52]
 
-vertices = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
-polygons = [ IntArray( 0, 1, 2, 3 ) ]
-outlines = [ Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 ) ]
-
-[sub_resource type="NavigationPolygon" id=51]
-
-vertices = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
-polygons = [ IntArray( 0, 1, 2, 3 ) ]
-outlines = [ Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 ) ]
-
-[sub_resource type="NavigationPolygon" id=52]
-
-vertices = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
-polygons = [ IntArray( 0, 1, 2, 3 ) ]
-outlines = [ Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 ) ]
+custom_solver_bias = 0.0
+points = Vector2Array( 31.6651, 31.6044, 4.35522, -11.3111, 32.1528, -14.2372 )
 
 [sub_resource type="NavigationPolygon" id=53]
 
@@ -332,6 +251,24 @@ vertices = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
 polygons = [ IntArray( 0, 1, 2, 3 ) ]
 outlines = [ Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 ) ]
 
+[sub_resource type="NavigationPolygon" id=60]
+
+vertices = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
+polygons = [ IntArray( 0, 1, 2, 3 ) ]
+outlines = [ Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 ) ]
+
+[sub_resource type="NavigationPolygon" id=61]
+
+vertices = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
+polygons = [ IntArray( 0, 1, 2, 3 ) ]
+outlines = [ Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 ) ]
+
+[sub_resource type="NavigationPolygon" id=62]
+
+vertices = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
+polygons = [ IntArray( 0, 1, 2, 3 ) ]
+outlines = [ Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 ) ]
+
 [node name="Tiles" type="Node2D"]
 
 [node name="map_tileset0" type="Sprite" parent="."]
@@ -363,18 +300,12 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="map_tileset0/StaticBody2D"]
 
 build_mode = 0
-polygon = Vector2Array( 15.239, 32.492, 14.6403, 15.1286, 32.6024, 14.5299, 30.8062, -30.3754, -30.8638, -30.3754, -31.4625, 33.0907 )
+polygon = Vector2Array( 15.239, 32.492, 14.6403, 15.1286, 32.6024, 14.5299, 32.0555, -31.5712, -31.5981, -31.5712, -31.4625, 33.0907 )
 shape_range = Vector2( 0, 1 )
 trigger = false
 
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="map_tileset0"]
-
-navpoly = SubResource( 4 )
-enabled = true
-
 [node name="map_tileset1" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 662.521, 44.4148 )
 texture = SubResource( 1 )
 vframes = 8
@@ -410,14 +341,8 @@ polygon = Vector2Array( -32.1992, 13.5643, -14.2371, 14.7617, -12.4408, 32.7239,
 shape_range = Vector2( 0, 2 )
 trigger = false
 
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="map_tileset1"]
-
-navpoly = SubResource( 8 )
-enabled = true
-
 [node name="map_tileset2" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 560.692, 384.952 )
 texture = SubResource( 1 )
 vframes = 8
@@ -429,10 +354,10 @@ __meta__ = {
 
 [node name="StaticBody2D" type="StaticBody2D" parent="map_tileset2"]
 
-transform/pos = Vector2( -8.59586, 0 )
-transform/scale = Vector2( 0.731379, 1 )
+transform/pos = Vector2( -0.22366, 0 )
+transform/scale = Vector2( 0.99301, 1 )
 input/pickable = false
-shapes/0/shape = SubResource( 9 )
+shapes/0/shape = SubResource( 63 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -445,18 +370,12 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="map_tileset2/StaticBody2D"]
 
 build_mode = 0
-polygon = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
-shape_range = Vector2( -1, -1 )
+polygon = Vector2Array( -33.0732, -33.17, 14.8561, -32.878, 15.346, 32.6113, -31.8447, 32.9287 )
+shape_range = Vector2( 0, 0 )
 trigger = false
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="map_tileset2"]
-
-navpoly = SubResource( 10 )
-enabled = true
 
 [node name="map_tileset3" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 463.423, 379.351 )
 texture = SubResource( 1 )
 vframes = 8
@@ -468,12 +387,15 @@ __meta__ = {
 
 [node name="StaticBody2D" type="StaticBody2D" parent="map_tileset3"]
 
-transform/pos = Vector2( 11.5169, 0 )
-transform/scale = Vector2( 0.640096, 1 )
+transform/pos = Vector2( -0.191178, 0 )
+transform/scale = Vector2( 1.00597, 1 )
 input/pickable = false
-shapes/0/shape = SubResource( 11 )
+shapes/0/shape = SubResource( 64 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
+shapes/1/shape = SubResource( 65 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/1/trigger = false
 collision/layers = 1
 collision/mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -484,18 +406,12 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="map_tileset3/StaticBody2D"]
 
 build_mode = 0
-polygon = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
-shape_range = Vector2( -1, -1 )
+polygon = Vector2Array( -13.3924, -32.5247, -11.3547, -1.68796, -14.2493, 11.577, -11.998, 32.2831, 32.3846, 32.2831, 32.3846, -32.4237 )
+shape_range = Vector2( 0, 1 )
 trigger = false
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="map_tileset3"]
-
-navpoly = SubResource( 12 )
-enabled = true
 
 [node name="map_tileset4" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 375.112, 380.147 )
 texture = SubResource( 1 )
 vframes = 8
@@ -507,10 +423,10 @@ __meta__ = {
 
 [node name="StaticBody2D" type="StaticBody2D" parent="map_tileset4"]
 
-transform/pos = Vector2( 0, 10.8992 )
-transform/scale = Vector2( 1, 0.6594 )
+transform/pos = Vector2( 0, 0.335258 )
+transform/scale = Vector2( 1, 0.989523 )
 input/pickable = false
-shapes/0/shape = SubResource( 13 )
+shapes/0/shape = SubResource( 66 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -523,18 +439,12 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="map_tileset4/StaticBody2D"]
 
 build_mode = 0
-polygon = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
-shape_range = Vector2( -1, -1 )
+polygon = Vector2Array( -32.8214, -13.2443, 33.0954, -13.0956, 33.4603, 32.7884, -32.8214, 32.7884 )
+shape_range = Vector2( 0, 0 )
 trigger = false
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="map_tileset4"]
-
-navpoly = SubResource( 14 )
-enabled = true
 
 [node name="map_tileset5" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 275.843, 387.386 )
 texture = SubResource( 1 )
 vframes = 8
@@ -546,12 +456,15 @@ __meta__ = {
 
 [node name="StaticBody2D" type="StaticBody2D" parent="map_tileset5"]
 
-transform/pos = Vector2( 0, -10.0157 )
-transform/scale = Vector2( 1, 0.687011 )
+transform/pos = Vector2( 0, -0.113605 )
+transform/scale = Vector2( 1, 0.996451 )
 input/pickable = false
-shapes/0/shape = SubResource( 15 )
+shapes/0/shape = SubResource( 67 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
+shapes/1/shape = SubResource( 68 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/1/trigger = false
 collision/layers = 1
 collision/mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -562,14 +475,9 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="map_tileset5/StaticBody2D"]
 
 build_mode = 0
-polygon = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
-shape_range = Vector2( -1, -1 )
+polygon = Vector2Array( -32.4378, -32.6771, -32.6692, 16.3014, -4.50101, 13.2095, 7.38245, 16.3014, 32.6773, 13.7888, 32.6522, -32.5583 )
+shape_range = Vector2( 0, 1 )
 trigger = false
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="map_tileset5"]
-
-navpoly = SubResource( 16 )
-enabled = true
 
 [node name="map_tileset6" type="Sprite" parent="."]
 
@@ -669,14 +577,9 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="map_tileset10/StaticBody2D"]
 
 build_mode = 0
-polygon = Vector2Array( 13.1359, -31.2263, 14.9322, -12.6655, 33.493, -13.2642, 32.8943, 32.2398, -31.1706, 32.2398, -31.1706, -31.2263 )
+polygon = Vector2Array( 13.9374, -32.239, 14.9322, -12.6655, 33.493, -13.2642, 32.8943, 32.2398, -31.1706, 32.2398, -31.905, -31.9471 )
 shape_range = Vector2( 0, 1 )
 trigger = false
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="map_tileset10"]
-
-navpoly = SubResource( 23 )
-enabled = true
 
 [node name="map_tileset11" type="Sprite" parent="."]
 
@@ -709,18 +612,12 @@ bounce = 0.0
 
 transform/pos = Vector2( -176.361, 10.3936 )
 build_mode = 0
-polygon = Vector2Array( 143.511, -24.5143, 164.969, -21.1006, 163.994, -42.5583, 208.372, -42.0706, 209.347, 21.8148, 144.974, 21.3271 )
+polygon = Vector2Array( 143.779, -23.9809, 166.683, -19.4683, 163.994, -42.5583, 208.372, -42.0706, 209.347, 21.8148, 144.017, 22.1576 )
 shape_range = Vector2( 0, 1 )
 trigger = false
 
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="map_tileset11"]
-
-navpoly = SubResource( 26 )
-enabled = true
-
 [node name="map_tileset12" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 186.912, 286.846 )
 texture = SubResource( 1 )
 vframes = 8
@@ -749,18 +646,12 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="map_tileset12/StaticBody2D"]
 
 build_mode = 0
-polygon = Vector2Array( -31.2671, -15.4592, -0.466568, -20.3224, 18.9864, -7.35376, 11.9617, 5.61487, 15.7442, 32.0925, -32.4808, 31.8109 )
+polygon = Vector2Array( -32.0614, -12.6675, 1.22542, -20.8432, 18.3846, -9.20999, 9.69312, 6.60382, 14.9489, 32.2989, -32.3534, 32.0069 )
 shape_range = Vector2( 0, 1 )
 trigger = false
 
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="map_tileset12"]
-
-navpoly = SubResource( 29 )
-enabled = true
-
 [node name="map_tileset13" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 88.2703, 287.492 )
 texture = SubResource( 1 )
 vframes = 8
@@ -789,18 +680,12 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="map_tileset13/StaticBody2D"]
 
 build_mode = 0
-polygon = Vector2Array( 10.2376, -12.2119, -8.04523, -14.0044, -10.9131, 4.27844, -12.7056, 31.1649, 32.1052, 31.8818, 32.4637, -14.0044 )
+polygon = Vector2Array( 8.96484, -10.4782, -11.0456, -14.1479, -9.92341, 6.26367, -14.2079, 31.7047, 32.1052, 31.8818, 32.4637, -14.0044 )
 shape_range = Vector2( 0, 1 )
 trigger = false
 
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="map_tileset13"]
-
-navpoly = SubResource( 32 )
-enabled = true
-
 [node name="map_tileset14" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 552.33, 201.257 )
 texture = SubResource( 1 )
 vframes = 8
@@ -836,11 +721,6 @@ polygon = Vector2Array( -12.4504, -31.8477, 33.4871, -31.3582, 31.6403, 14.2292,
 shape_range = Vector2( 0, 2 )
 trigger = false
 
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="map_tileset14"]
-
-navpoly = SubResource( 36 )
-enabled = true
-
 [node name="map_tileset15" type="Sprite" parent="."]
 
 transform/pos = Vector2( 462.753, 203.491 )
@@ -873,14 +753,9 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="map_tileset15/StaticBody2D"]
 
 build_mode = 0
-polygon = Vector2Array( 14.1547, -30.9328, 18.8003, -5.48029, 11.6532, 4.91582, 5.22079, 15.6704, -6.21454, 11.0101, -31.0897, 15.6704, -31.4471, -30.9328 )
+polygon = Vector2Array( 14.9957, -32.4434, 18.8003, -5.48029, 11.6532, 4.91582, 5.22079, 15.6704, -6.21454, 11.0101, -31.6478, 14.9918, -31.4338, -32.4434 )
 shape_range = Vector2( 0, 1 )
 trigger = false
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="map_tileset15"]
-
-navpoly = SubResource( 39 )
-enabled = true
 
 [node name="map_tileset16" type="Sprite" parent="."]
 
@@ -917,7 +792,6 @@ enabled = true
 
 [node name="map_tileset18" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 545.764, 43.7109 )
 texture = SubResource( 1 )
 vframes = 8
@@ -935,6 +809,9 @@ input/pickable = false
 shapes/0/shape = SubResource( 42 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
+shapes/1/shape = SubResource( 43 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/1/trigger = false
 collision/layers = 1
 collision/mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -945,18 +822,12 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="map_tileset18/StaticBody2D"]
 
 build_mode = 0
-polygon = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
-shape_range = Vector2( -1, -1 )
+polygon = Vector2Array( -38.3303, -31.7101, -31.7717, -10.0834, -36.4564, 12.4636, -21.9335, 35.4708, 25.383, 33.1701, 25.383, -30.7898 )
+shape_range = Vector2( 0, 1 )
 trigger = false
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="map_tileset18"]
-
-navpoly = SubResource( 43 )
-enabled = true
 
 [node name="map_tileset19" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 548.219, 120.552 )
 texture = SubResource( 1 )
 vframes = 8
@@ -968,12 +839,18 @@ __meta__ = {
 
 [node name="StaticBody2D" type="StaticBody2D" parent="map_tileset19"]
 
-transform/pos = Vector2( -9.25752, -12.1327 )
-transform/scale = Vector2( 0.710702, 0.620853 )
+transform/pos = Vector2( 0.00960636, -0.269506 )
+transform/scale = Vector2( 1.0003, 0.991578 )
 input/pickable = false
 shapes/0/shape = SubResource( 44 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
+shapes/1/shape = SubResource( 45 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/1/trigger = false
+shapes/2/shape = SubResource( 46 )
+shapes/2/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/2/trigger = false
 collision/layers = 1
 collision/mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -984,20 +861,12 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="map_tileset19/StaticBody2D"]
 
 build_mode = 0
-polygon = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
-shape_range = Vector2( -1, -1 )
+polygon = Vector2Array( -31.9563, 14.731, -7.22968, 11.1333, 4.89587, 16.6498, 14.4061, -4.45679, 18.9235, -4.45679, 15.1194, -31.7994, -32.1941, -32.0392 )
+shape_range = Vector2( 0, 2 )
 trigger = false
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="map_tileset19"]
-
-transform/pos = Vector2( 0, -0.0698643 )
-transform/scale = Vector2( 1, 1.00218 )
-navpoly = SubResource( 45 )
-enabled = true
 
 [node name="map_tileset20" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 459.372, 118.228 )
 texture = SubResource( 1 )
 vframes = 8
@@ -1007,19 +876,31 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="map_tileset20"]
+[node name="StaticBody2D" type="StaticBody2D" parent="map_tileset20"]
 
-navpoly = SubResource( 46 )
-enabled = true
+input/pickable = false
+shapes/0/shape = SubResource( 48 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+shapes/1/shape = SubResource( 49 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/1/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="map_tileset20"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="map_tileset20/StaticBody2D"]
 
-occluder = SubResource( 47 )
-light_mask = 1
+build_mode = 0
+polygon = Vector2Array( -32.5624, -12.5801, 1.57486, -20.8705, 18.1558, -9.654, 11.3284, 7.41467, 15.2298, 31.7985, -32.0748, 31.3108 )
+shape_range = Vector2( 0, 1 )
+trigger = false
 
 [node name="map_tileset21" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 457.567, 43.32 )
 texture = SubResource( 1 )
 vframes = 8
@@ -1029,15 +910,28 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="map_tileset21"]
+[node name="StaticBody2D" type="StaticBody2D" parent="map_tileset21"]
 
-navpoly = SubResource( 48 )
-enabled = true
+input/pickable = false
+shapes/0/shape = SubResource( 51 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+shapes/1/shape = SubResource( 52 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/1/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="map_tileset21"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="map_tileset21/StaticBody2D"]
 
-occluder = SubResource( 49 )
-light_mask = 1
+build_mode = 0
+polygon = Vector2Array( -13.6888, 31.1167, -8.81201, -14.7248, 4.35522, -11.3111, 32.1528, -14.2372, 31.6651, 31.6044 )
+shape_range = Vector2( 0, 1 )
+trigger = false
 
 [node name="map_tileset22" type="Sprite" parent="."]
 
@@ -1053,7 +947,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="map_tileset22"]
 
-navpoly = SubResource( 50 )
+navpoly = SubResource( 53 )
 enabled = true
 
 [node name="map_tileset23" type="Sprite" parent="."]
@@ -1070,7 +964,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="map_tileset23"]
 
-navpoly = SubResource( 51 )
+navpoly = SubResource( 54 )
 enabled = true
 
 [node name="map_tileset24" type="Sprite" parent="."]
@@ -1087,7 +981,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="map_tileset24"]
 
-navpoly = SubResource( 52 )
+navpoly = SubResource( 55 )
 enabled = true
 
 [node name="map_tileset25" type="Sprite" parent="."]
@@ -1104,7 +998,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="map_tileset25"]
 
-navpoly = SubResource( 53 )
+navpoly = SubResource( 56 )
 enabled = true
 
 [node name="map_tileset26" type="Sprite" parent="."]
@@ -1121,7 +1015,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="map_tileset26"]
 
-navpoly = SubResource( 54 )
+navpoly = SubResource( 57 )
 enabled = true
 
 [node name="map_tileset27" type="Sprite" parent="."]
@@ -1138,7 +1032,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="map_tileset27"]
 
-navpoly = SubResource( 55 )
+navpoly = SubResource( 58 )
 enabled = true
 
 [node name="map_tileset28" type="Sprite" parent="."]
@@ -1155,7 +1049,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="map_tileset28"]
 
-navpoly = SubResource( 56 )
+navpoly = SubResource( 59 )
 enabled = true
 
 [node name="map_tileset29" type="Sprite" parent="."]
@@ -1172,7 +1066,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="map_tileset29"]
 
-navpoly = SubResource( 57 )
+navpoly = SubResource( 60 )
 enabled = true
 
 [node name="map_tileset30" type="Sprite" parent="."]
@@ -1189,7 +1083,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="map_tileset30"]
 
-navpoly = SubResource( 58 )
+navpoly = SubResource( 61 )
 enabled = true
 
 [node name="map_tileset31" type="Sprite" parent="."]
@@ -1206,7 +1100,7 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="map_tileset31"]
 
-navpoly = SubResource( 59 )
+navpoly = SubResource( 62 )
 enabled = true
 
 
