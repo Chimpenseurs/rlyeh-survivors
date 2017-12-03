@@ -20,6 +20,7 @@ script/script = ExtResource( 1 )
 
 [node name="collectable" type="HBoxContainer" parent="."]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -32,6 +33,7 @@ alignment = 2
 
 [node name="devil_eyes" type="HBoxContainer" parent="collectable"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -87,6 +89,7 @@ margin/bottom = 32.0
 
 [node name="devil_shoes" type="HBoxContainer" parent="collectable"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -142,6 +145,7 @@ margin/bottom = 32.0
 
 [node name="devil_heart" type="HBoxContainer" parent="collectable"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
