@@ -23,6 +23,7 @@ func create_bullet_holder():
 func _ready():
 	self.set_fixed_process(true)
 	create_bullet_holder()
+	Input.set_custom_mouse_cursor(load("res://assets/target.png"))
 	
 	self.player = PlayerTscn.instance()
 	self.player.set_pos(Vector2(100, 100))
