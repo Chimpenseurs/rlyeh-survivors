@@ -97,15 +97,15 @@ points = Vector2Array( 14.9322, -12.6655, 33.493, -13.2642, 32.8943, 32.2398, -3
 custom_solver_bias = 0.0
 points = Vector2Array( 14.9322, -12.6655, -31.1706, 32.2398, -31.905, -31.9471, 13.9374, -32.239 )
 
-[sub_resource type="ConvexPolygonShape2D" id=19]
+[sub_resource type="ConvexPolygonShape2D" id=51]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 144.017, 22.1576, 143.779, -23.9809, 166.683, -19.4683, 209.347, 21.8148 )
+points = Vector2Array( -32.8025, 32.6902, -33.0925, -13.8947, -8.44537, -7.73288, 31.3666, 32.6902 )
 
-[sub_resource type="ConvexPolygonShape2D" id=20]
+[sub_resource type="ConvexPolygonShape2D" id=52]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 208.372, -42.0706, 209.347, 21.8148, 166.683, -19.4683, 163.994, -42.5583 )
+points = Vector2Array( 32.1634, -32.9651, 31.3666, 32.6902, -8.44537, -7.73288, -12.8466, -32.8201 )
 
 [sub_resource type="ConvexPolygonShape2D" id=21]
 
@@ -595,11 +595,11 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="map_tileset11"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 19 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, -176.361, 10.3936 )
+shapes/0/shape = SubResource( 51 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 20 )
-shapes/1/transform = Matrix32( 1, 0, 0, 1, -176.361, 10.3936 )
+shapes/1/shape = SubResource( 52 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/1/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -610,9 +610,8 @@ bounce = 0.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="map_tileset11/StaticBody2D"]
 
-transform/pos = Vector2( -176.361, 10.3936 )
 build_mode = 0
-polygon = Vector2Array( 143.779, -23.9809, 166.683, -19.4683, 163.994, -42.5583, 208.372, -42.0706, 209.347, 21.8148, 144.017, 22.1576 )
+polygon = Vector2Array( -33.0925, -13.8947, -8.44537, -7.73288, -12.8466, -32.8201, 32.1634, -32.9651, 31.3666, 32.6902, -32.8025, 32.6902 )
 shape_range = Vector2( 0, 1 )
 trigger = false
 

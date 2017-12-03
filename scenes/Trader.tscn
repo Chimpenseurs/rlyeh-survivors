@@ -12,5 +12,6 @@ collision/margin = 0.08
 [node name="Sprite" type="Sprite" parent="."]
 
 texture = ExtResource( 1 )
+hframes = 4
 
 
