@@ -31,6 +31,7 @@ func _ready():
 	
 	self.currentRoom = Maps["Map"].instance()
 	self.currentRoom.add_to_group("map")
+	self.currentRoom.set_z(self.currentRoom.get_z() - 1)
 	
 	self.add_child(currentRoom)
 	self.add_child(player)
@@ -44,6 +45,8 @@ func change_room(name, pos):
 	
 	self.currentRoom.add_to_group("map")
 	self.add_child(self.currentRoom)
+	self.currentRoom.set_z(self.currentRoom.get_z() - 1)
+	
 	self.player.set_pos(pos)
 	
 func _fixed_process(delta):
