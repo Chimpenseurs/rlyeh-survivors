@@ -1,6 +1,6 @@
 extends "base_enemy.gd"
 
-var slimeScn = preload("res://scenes/slime.tscn")
+var slimeScn = preload("res://scenes/Slime.tscn")
 
 var cooldown
 var throuput = 5
