@@ -1,1 +1,3 @@
-Hello World
+# Rlyeh survivors 
+
+[Play online](rlyeh.html)
