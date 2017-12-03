@@ -1,4 +1,4 @@
-extends Sprite
+extends "base_enemy.gd"
 
 var slimeScn = preload("res://scenes/slime.tscn")
 
@@ -6,6 +6,8 @@ var cooldown
 var throuput = 3
 
 func _ready():
+	set_shape_as_trigger(0, true)
+	self.life  = 1000
 	self.cooldown = throuput
 	set_fixed_process(true)
 	

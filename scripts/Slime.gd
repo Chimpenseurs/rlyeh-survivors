@@ -1,15 +1,10 @@
-extends KinematicBody2D
-
-const hearthItem = preload("res://scenes/Hearth.tscn")
-const velocity = 100
-
-var life = 100
+extends "base_enemy.gd"
 
 func _ready():
+
 	set_fixed_process(true)
 
 func _fixed_process(delta):
-	
 	var player = get_tree().get_nodes_in_group("player")[0]
 	var player_pos = player.get_pos()
 	
@@ -22,8 +17,6 @@ func _fixed_process(delta):
 			self.scale(Vector2(-1, 1))
 		else : 
 			self.scale(Vector2(1, 1))
-		
-		
 		
 		# Attack
 		if player != null :
@@ -45,19 +38,3 @@ func _fixed_process(delta):
 			var n = get_collision_normal()
 			motion = n.slide(motion)
 			self.move(motion)
-	
-	
-
-func take_damage(hit_rate):
-	self.life -= hit_rate
-	if self.life <= 0:
-		self.die()
-		
-func die():
-	var drop = floor(rand_range(1, 11))
-	if drop >= 9:
-		var item = hearthItem.instance()
-		item.set_pos(self.get_pos())
-		get_tree().get_nodes_in_group("map")[0].add_child(item)
-
-	self.queue_free()
