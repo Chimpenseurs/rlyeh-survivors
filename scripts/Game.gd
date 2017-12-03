@@ -62,7 +62,7 @@ func get_direction_vector(direction):
 		return Vector2(0, 1)
 
 func get_room(pos):
-	return self.world[pos.x][pos.y]
+	return self.world[pos.y][pos.x]
 	
 func change_room(pos, direction):
 	create_bullet_holder()
