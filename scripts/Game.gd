@@ -2,19 +2,21 @@ extends Node2D
 
 enum MAPS {
 	DeadEnd,
-	CrossRoad
+	CrossRoad,
+	ShopRoom
 }
 
 var currentRoomIdx = Vector2(1, 1)
 var world = [
 	[ MAPS.CrossRoad, MAPS.CrossRoad, MAPS.CrossRoad],
-	[ MAPS.DeadEnd, MAPS.DeadEnd, MAPS.CrossRoad],
+	[ MAPS.CrossRoad, MAPS.ShopRoom, MAPS.CrossRoad],
 	[ MAPS.CrossRoad, MAPS.CrossRoad, MAPS.CrossRoad]
 		]
 			
 const Maps = {
 	MAPS.DeadEnd: preload("res://scenes/rooms/DeadEnd.tscn"),
-	MAPS.CrossRoad : preload("res://scenes/rooms/CrossRoad.tscn")
+	MAPS.CrossRoad: preload("res://scenes/rooms/CrossRoad.tscn"),
+	MAPS.ShopRoom: preload("res://scenes/rooms/ShopRoom.tscn")
 }
 
 var PlayerTscn = preload("res://scenes/Avatar.tscn")
