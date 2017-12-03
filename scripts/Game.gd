@@ -35,6 +35,8 @@ func _ready():
 	
 	self.add_child(currentRoom)
 	self.add_child(player)
+	
+	get_node("HUD").init_life_bar()
 
 func change_room(name, pos):
 	create_bullet_holder()

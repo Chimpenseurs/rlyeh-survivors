@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=1]
 
-[ext_resource path="res://scenes/Trader.gd" type="Script" id=1]
+[ext_resource path="res://scripts/Trader.gd" type="Script" id=1]
 [ext_resource path="res://assets/merchant.png" type="Texture" id=2]
 [ext_resource path="res://assets/couteau.png" type="Texture" id=3]
 [ext_resource path="res://resources/fonts/TravelingTypewriter.fnt" type="BitmapFont" id=4]
@@ -73,7 +73,7 @@ size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
 margin/right = 177.0
-margin/bottom = 197.0
+margin/bottom = 199.0
 alignment = 0
 
 [node name="Knife" type="HBoxContainer" parent="ShopListWrapper/HBoxContainer/ShopList"]
@@ -85,7 +85,7 @@ size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
 margin/right = 177.0
-margin/bottom = 93.0
+margin/bottom = 94.0
 alignment = 0
 
 [node name="knifeSumary" type="VBoxContainer" parent="ShopListWrapper/HBoxContainer/ShopList/Knife"]
@@ -98,7 +98,7 @@ size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
 margin/right = 64.0
-margin/bottom = 93.0
+margin/bottom = 94.0
 alignment = 0
 
 [node name="TextureFrame" type="TextureFrame" parent="ShopListWrapper/HBoxContainer/ShopList/Knife/knifeSumary"]
@@ -123,7 +123,7 @@ size_flags/vertical = 0
 margin/left = 0.0
 margin/top = 68.0
 margin/right = 64.0
-margin/bottom = 83.0
+margin/bottom = 90.0
 custom_fonts/font = ExtResource( 4 )
 text = "Plof!"
 percent_visible = 1.0
@@ -132,7 +132,6 @@ max_lines_visible = -1
 
 [node name="KnifeCost" type="VBoxContainer" parent="ShopListWrapper/HBoxContainer/ShopList/Knife"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -140,7 +139,7 @@ size_flags/vertical = 2
 margin/left = 68.0
 margin/top = 0.0
 margin/right = 137.0
-margin/bottom = 93.0
+margin/bottom = 94.0
 alignment = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ShopListWrapper/HBoxContainer/ShopList/Knife/KnifeCost"]
@@ -186,7 +185,6 @@ stretch_mode = 0
 
 [node name="HBoxContainer1" type="HBoxContainer" parent="ShopListWrapper/HBoxContainer/ShopList/Knife/KnifeCost"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -235,7 +233,7 @@ size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 72.0
 margin/right = 69.0
-margin/bottom = 93.0
+margin/bottom = 94.0
 alignment = 0
 
 [node name="Label" type="Label" parent="ShopListWrapper/HBoxContainer/ShopList/Knife/KnifeCost/HBoxContainer2"]
@@ -245,9 +243,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 0.0
-margin/top = 3.0
+margin/top = 0.0
 margin/right = 32.0
-margin/bottom = 18.0
+margin/bottom = 22.0
 custom_fonts/font = ExtResource( 4 )
 text = "030"
 percent_visible = 1.0
@@ -263,7 +261,7 @@ size_flags/vertical = 2
 margin/left = 36.0
 margin/top = 0.0
 margin/right = 68.0
-margin/bottom = 21.0
+margin/bottom = 22.0
 texture = ExtResource( 7 )
 stretch_mode = 0
 
@@ -276,7 +274,7 @@ size_flags/vertical = 2
 margin/left = 141.0
 margin/top = 0.0
 margin/right = 177.0
-margin/bottom = 93.0
+margin/bottom = 94.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -290,9 +288,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 97.0
+margin/top = 98.0
 margin/right = 177.0
-margin/bottom = 100.0
+margin/bottom = 101.0
 
 [node name="Pumkin" type="HBoxContainer" parent="ShopListWrapper/HBoxContainer/ShopList"]
 
@@ -302,9 +300,9 @@ focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 104.0
+margin/top = 105.0
 margin/right = 177.0
-margin/bottom = 197.0
+margin/bottom = 199.0
 alignment = 0
 
 [node name="PunkinSumarize" type="VBoxContainer" parent="ShopListWrapper/HBoxContainer/ShopList/Pumkin"]
@@ -317,7 +315,7 @@ size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
 margin/right = 64.0
-margin/bottom = 93.0
+margin/bottom = 94.0
 alignment = 0
 
 [node name="TextureFrame" type="TextureFrame" parent="ShopListWrapper/HBoxContainer/ShopList/Pumkin/PunkinSumarize"]
@@ -342,7 +340,7 @@ size_flags/vertical = 0
 margin/left = 0.0
 margin/top = 68.0
 margin/right = 64.0
-margin/bottom = 83.0
+margin/bottom = 90.0
 custom_fonts/font = ExtResource( 4 )
 text = "Grrr!"
 percent_visible = 1.0
@@ -359,7 +357,7 @@ size_flags/vertical = 2
 margin/left = 68.0
 margin/top = 0.0
 margin/right = 137.0
-margin/bottom = 93.0
+margin/bottom = 94.0
 alignment = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ShopListWrapper/HBoxContainer/ShopList/Pumkin/Punkincost"]
@@ -382,9 +380,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 0.0
-margin/top = 8.0
+margin/top = 5.0
 margin/right = 33.0
-margin/bottom = 23.0
+margin/bottom = 27.0
 custom_fonts/font = ExtResource( 4 )
 text = "100"
 percent_visible = 1.0
@@ -424,9 +422,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 0.0
-margin/top = 8.0
+margin/top = 5.0
 margin/right = 33.0
-margin/bottom = 23.0
+margin/bottom = 27.0
 custom_fonts/font = ExtResource( 4 )
 text = "000"
 percent_visible = 1.0
@@ -456,7 +454,7 @@ size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 72.0
 margin/right = 69.0
-margin/bottom = 93.0
+margin/bottom = 94.0
 alignment = 0
 
 [node name="Label" type="Label" parent="ShopListWrapper/HBoxContainer/ShopList/Pumkin/Punkincost/HBoxContainer2"]
@@ -466,9 +464,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 0.0
-margin/top = 3.0
+margin/top = 0.0
 margin/right = 33.0
-margin/bottom = 18.0
+margin/bottom = 22.0
 custom_fonts/font = ExtResource( 4 )
 text = "000"
 percent_visible = 1.0
@@ -484,7 +482,7 @@ size_flags/vertical = 2
 margin/left = 37.0
 margin/top = 0.0
 margin/right = 69.0
-margin/bottom = 21.0
+margin/bottom = 22.0
 texture = ExtResource( 7 )
 stretch_mode = 0
 
@@ -497,7 +495,7 @@ size_flags/vertical = 2
 margin/left = 141.0
 margin/top = 0.0
 margin/right = 177.0
-margin/bottom = 93.0
+margin/bottom = 94.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -513,7 +511,7 @@ size_flags/vertical = 2
 margin/left = 181.0
 margin/top = 0.0
 margin/right = 197.0
-margin/bottom = 135.0
+margin/bottom = 199.0
 range/min = 0.0
 range/max = 100.0
 range/step = 1.0
