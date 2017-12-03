@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://resources/tilest.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/trade_post.png" type="Texture" id=2]
+[ext_resource path="res://scenes/Trader.tscn" type="PackedScene" id=3]
 
 [node name="shop" type="Node2D"]
 
@@ -29,5 +30,9 @@ tile_data = IntArray( 0, 0, 1, 5, 2, 5, 3, 5, 4, 5, 5, 5, 6, 5, 7, 5, 8, 5, 9, 5
 
 transform/pos = Vector2( 504.611, 195.13 )
 texture = ExtResource( 2 )
+
+[node name="trader" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 398.82, 316.443 )
 
 
