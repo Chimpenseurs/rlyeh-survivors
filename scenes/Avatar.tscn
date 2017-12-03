@@ -3,7 +3,7 @@
 [ext_resource path="res://scripts/Avatar.gd" type="Script" id=1]
 [ext_resource path="res://assets/PlayerUnicorn.png" type="Texture" id=2]
 
-[sub_resource type="ConvexPolygonShape2D" id=1]
+[sub_resource type="ConvexPolygonShape2D" id=4]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 31.4279, -16.9899, 32, 32, -32, 32, -31.7837, -17.4664 )
@@ -46,8 +46,8 @@ tracks/0/keys = {
 ]]
 
 input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 0.811217, 0, 0, 0.993194, -0.636643, 7.56806 )
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 0.811217, 0, 0, 0.993194, 3, 13 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -58,10 +58,11 @@ script/script = ExtResource( 1 )
 
 transform/scale = Vector2( -1, 1 )
 texture = ExtResource( 2 )
+hframes = 4
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 
-transform/pos = Vector2( -0.636643, 7.56806 )
+transform/pos = Vector2( 3, 13 )
 transform/scale = Vector2( 0.811217, 0.993194 )
 build_mode = 0
 polygon = Vector2Array( -31.7837, -17.4664, -32, 32, 32, 32, 31.4279, -16.9899 )
