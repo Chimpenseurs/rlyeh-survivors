@@ -11,6 +11,7 @@ var damage = 50
 var fire_ready = 0
 var dead = false
 
+const max_life = 5000
 var life = 5000
 
 var devil_hearts = 0
