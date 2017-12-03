@@ -1,12 +1,30 @@
 extends Control
 
-var lifeHud
-var player
+# class member variables go here, for example:
+# var a = 2
+# var b = "textvar"
 
 func _ready():
 	set_fixed_process(true)
-	lifeHud = self.get_node("Control/Label")
-	
+
 func _fixed_process(delta):
-	self.player =  get_tree().get_nodes_in_group("player")[0]
-	lifeHud.set_text(String(self.player.life))
+	
+	var player = get_tree().get_nodes_in_group("player")[0]
+	
+	var nb = player.devil_hearts
+	var label = get_node("collectable/devil_heart/Label")
+	if nb != int(label.get_text()):
+		label.set_text(int_to_text(nb))
+		
+	nb = player.devil_shoes
+	label = get_node("collectable/devil_shoes/Label")
+	if nb != int(label.get_text()):
+		label.set_text(int_to_text(nb))
+		
+	nb = player.devil_eyes
+	label = get_node("collectable/devil_eyes/Label")
+	if nb != int(label.get_text()):
+		label.set_text(int_to_text(nb))
+
+func int_to_text(val) :
+	return String(val / 100) + String((val % 100) / 10) + String((val % 100) % 10)
