@@ -1,31 +1,64 @@
 extends Node2D
 
-var enemies
+var Maps = {
+	"Map": preload("res://scenes/Map.tscn"),
+	"Map3": preload("res://scenes/Map3Spawner.tscn")
+}
+
+var PlayerTscn = preload("res://scenes/Avatar.tscn")
+
+var bullerHolder = null
 var player
+var currentRoom
+
+func create_bullet_holder():
+	if self.bullerHolder!= null:
+		self.queue_free()
+		
+	self.bullerHolder = Node2D.new()
+	self.bullerHolder.set_name("BulletHolder")
+	self.bullerHolder.set_as_toplevel(true)
+	self.add_child(self.bullerHolder)
 
 func _ready():
-	enemies = get_tree().get_nodes_in_group("enemy")
-	self.player =  get_tree().get_nodes_in_group("player")[0]
-	set_fixed_process(true)
+	self.set_fixed_process(true)
+	create_bullet_holder()
+	
+	self.player = PlayerTscn.instance()
+	self.player.set_pos(Vector2(100, 100))
+	self.player.add_to_group("player")
+	self.player.set_as_toplevel(true)
+	
+	self.currentRoom = Maps["Map"].instance()
+	self.currentRoom.add_to_group("map")
+	
+	self.add_child(currentRoom)
+	self.add_child(player)
 
+func change_room(name, pos):
+	var tmp_room = self.currentRoom
+	self.currentRoom = Maps[name].instance()
+	tmp_room.queue_free()
+	
+	self.currentRoom.add_to_group("map")
+	self.add_child(self.currentRoom)
+	self.player.set_pos(pos)
 	
 func _fixed_process(delta):
 	if self.player.dead and !self.player.get_node("AnimationPlayer").is_playing():
 		get_tree().set_pause(true)
 	
-	# Move camera
-	var camera_pos = get_node("Camera2D").get_camera_pos()
-	var visible_rect = get_node("Camera2D").get_viewport().get_visible_rect()
 	
-	var slide = Vector2(0, 0)
-	if player.get_pos().x < camera_pos.x :
-		slide.x -= visible_rect.size.width
-	elif player.get_pos().x > camera_pos.x + visible_rect.size.width :
-		slide.x += visible_rect.size.width
-	elif player.get_pos().y < camera_pos.y :
-		slide.y -= visible_rect.size.height
-	elif player.get_pos().y > camera_pos.y + visible_rect.size.height :
-		slide.y += visible_rect.size.height
+	var viewport_rect = get_viewport_rect()
+	var new_pos = player.get_pos()
+	if player.get_pos().x < 0 :
+		new_pos.x = viewport_rect.size.width - 10
+	elif player.get_pos().x > viewport_rect.size.width :
+		new_pos.x = 10
+	elif player.get_pos().y < 0 :
+		new_pos.y = viewport_rect.size.height - 10
+	elif player.get_pos().y > viewport_rect.size.height :
+		new_pos.y = 10
 	
-	var new_pos = camera_pos + slide 
-	get_node("Camera2D").set_pos(new_pos)
+	if new_pos != player.get_pos():
+		self.change_room("Map3", new_pos)

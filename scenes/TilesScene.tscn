@@ -97,12 +97,12 @@ points = Vector2Array( 14.9322, -12.6655, 33.493, -13.2642, 32.8943, 32.2398, -3
 custom_solver_bias = 0.0
 points = Vector2Array( 14.9322, -12.6655, -31.1706, 32.2398, -31.905, -31.9471, 13.9374, -32.239 )
 
-[sub_resource type="ConvexPolygonShape2D" id=51]
+[sub_resource type="ConvexPolygonShape2D" id=19]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -32.8025, 32.6902, -33.0925, -13.8947, -8.44537, -7.73288, 31.3666, 32.6902 )
 
-[sub_resource type="ConvexPolygonShape2D" id=52]
+[sub_resource type="ConvexPolygonShape2D" id=20]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 32.1634, -32.9651, 31.3666, 32.6902, -8.44537, -7.73288, -12.8466, -32.8201 )
@@ -595,10 +595,10 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="map_tileset11"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 51 )
+shapes/0/shape = SubResource( 19 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 52 )
+shapes/1/shape = SubResource( 20 )
 shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/1/trigger = false
 collision/layers = 1
