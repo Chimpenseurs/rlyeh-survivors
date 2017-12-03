@@ -3,7 +3,7 @@ extends "base_enemy.gd"
 var slimeScn = preload("res://scenes/Slime.tscn")
 
 var cooldown
-var throuput = 3
+var throuput = 5
 
 func _ready():
 	set_shape_as_trigger(0, true)

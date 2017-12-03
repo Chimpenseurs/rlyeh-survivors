@@ -6,16 +6,19 @@ const shoot_speed = 500
 const fire_rate = 0.2 # lets say in ms
 const velocity = 350
 
-var bullet_range = 100000
+var bullet_range = 50000
 var damage = 50
 var fire_ready = 0
+var dead = false
+
+var life = 5000
 
 func _ready():
 	set_process_input(true)
 	set_fixed_process(true)
 
 func _fixed_process(delta):
-	
+	set_player_orientation()
 	self.fire_ready -= delta
 	if self.fire_ready < 0:
 		self.fire_ready = 0
@@ -53,9 +56,29 @@ func _shoot_arrow(delta):
 		get_parent().get_node("BulletHolder").add_child(new_arrow)
 		new_arrow.init_bullet(bullet_motion, self.damage, self.bullet_range )
 
-func take_damage(collider_pos):
+func set_player_orientation():
+	var self_pos = self.get_pos()
+	var mouse_pos = self.get_global_mouse_pos()
+	var dif = self_pos - mouse_pos
+	if dif.x > 0:
+		self.set_scale(Vector2(-1, 1))
+	else :
+		self.set_scale(Vector2(1, 1))
+	
+func take_damage(collider_pos, damage_amount):
 	var direction = get_pos() - collider_pos
+	life -= damage_amount
 	
-	self.move(direction.normalized() * 50)
+	if self.life <= 0 and !self.dead:
+		self.dead = true
+		self.play_animation("death")
+		return
+		
+	if life > 0:
+		self.move(direction.normalized() * 50)
+		play_animation("take_damage")
+
+# Helper to play animation
+func play_animation(animation):
+	self.get_node("AnimationPlayer").play(animation)
 	
-	get_node("AnimationPlayer").play("take_damage")

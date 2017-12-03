@@ -1,5 +1,6 @@
 extends "base_enemy.gd"
 
+var damages = 500
 func _ready():
 
 	set_fixed_process(true)
@@ -26,14 +27,14 @@ func _fixed_process(delta):
 		
 			if player_rect.has_point(cross_pos) :
 				get_node("AnimationPlayer").play("attack")
-				player.take_damage(get_pos())
+				player.take_damage(get_pos(), self.damages)
 	
 		var motion = direction.normalized() * velocity * delta 
 		self.move(motion)
 	
 		if (is_colliding()):
 			if get_collider() == player :
-				get_collider().take_damage(get_pos())
+				get_collider().take_damage(get_pos(), self.damages)
 			
 			var n = get_collision_normal()
 			motion = n.slide(motion)
