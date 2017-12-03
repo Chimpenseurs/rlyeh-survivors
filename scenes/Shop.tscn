@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://resources/tilest.tres" type="TileSet" id=1]
-[ext_resource path="res://assets/trade_post.png" type="Texture" id=2]
-[ext_resource path="res://scenes/Trader.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Trader.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/trade_post.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 9.32687 )
 
 [node name="shop" type="Node2D"]
 
@@ -27,13 +32,35 @@ collision/mask = 1
 occluder/light_mask = 1
 tile_data = IntArray( 0, 0, 1, 5, 2, 5, 3, 5, 4, 5, 5, 5, 6, 5, 7, 5, 8, 5, 9, 5, 10, 5, 11, 5, 12, 5, 13, 5, 14, 5, 15, 1, 65536, 2, 65537, 16, 65538, 16, 65539, 16, 65540, 16, 65541, 16, 65542, 16, 65543, 16, 65544, 16, 65545, 16, 65546, 16, 65547, 16, 65548, 16, 65549, 16, 65550, 16, 65551, 3, 131072, 2, 131073, 16, 131074, 16, 131075, 16, 131076, 16, 131077, 16, 131078, 16, 131079, 16, 131080, 16, 131081, 16, 131082, 16, 131083, 16, 131084, 16, 131085, 16, 131086, 16, 131087, 3, 196608, 2, 196609, 16, 196610, 16, 196611, 16, 196612, 16, 196613, 16, 196614, 16, 196615, 16, 196616, 16, 196617, 16, 196618, 16, 196619, 16, 196620, 16, 196621, 16, 196622, 16, 196623, 14, 262144, 2, 262145, 16, 262146, 16, 262147, 16, 262148, 16, 262149, 16, 262150, 16, 262151, 16, 262152, 16, 262153, 16, 262154, 16, 262155, 16, 262156, 16, 262157, 16, 262158, 16, 262159, 16, 327680, 2, 327681, 16, 327682, 6, 327683, 24, 327684, 7, 327685, 16, 327686, 16, 327687, 16, 327688, 16, 327689, 16, 327690, 16, 327691, 16, 327692, 16, 327693, 16, 327694, 16, 327695, 13, 393216, 2, 393217, 16, 393218, 8, 393219, 28, 393220, 23, 393221, 16, 393222, 16, 393223, 16, 393224, 16, 393225, 16, 393226, 16, 393227, 16, 393228, 16, 393229, 16, 393230, 16, 393231, 3, 458752, 2, 458753, 16, 458754, 16, 458755, 8, 458756, 9, 458757, 16, 458758, 16, 458759, 16, 458760, 16, 458761, 16, 458762, 16, 458763, 16, 458764, 16, 458765, 16, 458766, 16, 458767, 3, 524288, 10, 524289, 4, 524290, 4, 524291, 4, 524292, 4, 524293, 4, 524294, 4, 524295, 4, 524296, 4, 524297, 4, 524298, 4, 524299, 4, 524300, 4, 524301, 4, 524302, 4, 524303, 11 )
 
-[node name="altar" type="Sprite" parent="."]
-
-transform/pos = Vector2( 504.611, 195.13 )
-texture = ExtResource( 2 )
-
-[node name="trader" parent="." instance=ExtResource( 3 )]
+[node name="trader" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 398.82, 316.443 )
+
+[node name="Altar" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( 515.235, 226.039 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( -1.87228e-07, -4.28327, 8.31323, -3.63383e-07, -1.89612, 58.6204 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="altar" type="Sprite" parent="Altar"]
+
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Altar"]
+
+transform/pos = Vector2( -1.89612, 58.6204 )
+transform/rot = 90.0
+transform/scale = Vector2( 4.28327, 8.31323 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
 
 
