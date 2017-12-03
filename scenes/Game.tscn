@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=7 format=1]
 
 [ext_resource path="res://scenes/Map.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Spawner.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Avatar.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/slime.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/Hearth.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/shop.tscn" type="PackedScene" id=6]
 
 [node name="Game" type="Node2D"]
 
@@ -39,5 +40,9 @@ transform/pos = Vector2( 199.047, 146.869 )
 [node name="Hearth" parent="." instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 873.159, 345.746 )
+
+[node name="shop" parent="." instance=ExtResource( 6 )]
+
+transform/pos = Vector2( -1023, 0 )
 
 
