@@ -15,6 +15,18 @@ script/script = ExtResource( 1 )
 "map",
 ] instance=ExtResource( 2 )]
 
+[node name="TileMap1" parent="." groups=[
+"map",
+] instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 0, -576 )
+
+[node name="TileMap2" parent="." groups=[
+"map",
+] instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 0, 576 )
+
 [node name="shop" parent="." instance=ExtResource( 3 )]
 
 transform/pos = Vector2( -1023, 0 )
@@ -55,8 +67,8 @@ limit/right = 10000000
 limit/bottom = 10000000
 drag_margin/h_enabled = true
 drag_margin/v_enabled = true
-smoothing/enable = true
-smoothing/speed = 5.0
+smoothing/enable = false
+smoothing/speed = 4.0
 drag_margin/left = 0.2
 drag_margin/top = 0.2
 drag_margin/right = 0.2
