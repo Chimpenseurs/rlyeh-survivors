@@ -13,6 +13,10 @@ var dead = false
 
 var life = 5000
 
+var devil_hearts = 0
+var devil_eyes = 0
+var devil_shoes = 0
+
 func _ready():
 	set_process_input(true)
 	set_fixed_process(true)
