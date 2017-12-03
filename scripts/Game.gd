@@ -13,7 +13,7 @@ var currentRoom
 
 func create_bullet_holder():
 	if self.bullerHolder!= null:
-		self.queue_free()
+		self.bullerHolder.queue_free()
 		
 	self.bullerHolder = Node2D.new()
 	self.bullerHolder.set_name("BulletHolder")
@@ -36,6 +36,8 @@ func _ready():
 	self.add_child(player)
 
 func change_room(name, pos):
+	create_bullet_holder()
+	
 	var tmp_room = self.currentRoom
 	self.currentRoom = Maps[name].instance()
 	tmp_room.queue_free()
