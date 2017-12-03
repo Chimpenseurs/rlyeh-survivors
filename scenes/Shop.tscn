@@ -4,11 +4,10 @@
 [ext_resource path="res://scenes/Trader.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/trade_post.png" type="Texture" id=3]
 
-[sub_resource type="CapsuleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 29.6644
-height = 47.4954
+extents = Vector2( 10, 9.32687 )
 
 [node name="shop" type="Node2D"]
 
@@ -41,8 +40,8 @@ transform/pos = Vector2( 398.82, 316.443 )
 
 transform/pos = Vector2( 515.235, 226.039 )
 input/pickable = false
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Matrix32( -6.21872e-08, -1.42268, 1.6715, -7.30636e-08, -1.65517, 56.6731 )
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( -1.87228e-07, -4.28327, 8.31323, -3.63383e-07, -1.89612, 58.6204 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -57,10 +56,10 @@ texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Altar"]
 
-transform/pos = Vector2( -1.65517, 56.6731 )
+transform/pos = Vector2( -1.89612, 58.6204 )
 transform/rot = 90.0
-transform/scale = Vector2( 1.42268, 1.6715 )
-shape = SubResource( 2 )
+transform/scale = Vector2( 4.28327, 8.31323 )
+shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
 
