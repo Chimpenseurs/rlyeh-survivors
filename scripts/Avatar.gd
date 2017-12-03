@@ -57,7 +57,7 @@ func _shoot_arrow(delta):
 		var arrow_rotation = get_angle_to(get_global_mouse_pos()) + self.get_rot()
 		new_arrow.set_rot(arrow_rotation)
 		new_arrow.set_global_pos(self.get_global_pos())
-		get_parent().get_node("BulletHolder").add_child(new_arrow)
+		get_parent().bullerHolder.add_child(new_arrow)
 		new_arrow.init_bullet(bullet_motion, self.damage, self.bullet_range )
 
 func set_player_orientation():
