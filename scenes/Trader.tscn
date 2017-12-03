@@ -11,6 +11,7 @@ collision/margin = 0.08
 
 [node name="Sprite" type="Sprite" parent="."]
 
+transform/pos = Vector2( 94.1829, -2.21606 )
 texture = ExtResource( 1 )
 
 
