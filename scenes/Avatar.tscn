@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scripts/Avatar.gd" type="Script" id=1]
 [ext_resource path="res://assets/PlayerUnicorn.png" type="Texture" id=2]
-[ext_resource path="res://assets/couteau.png" type="Texture" id=3]
+[ext_resource path="res://assets/Aquagun.png" type="Texture" id=3]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
@@ -63,9 +63,11 @@ hframes = 4
 
 [node name="weapon_sprite" type="Sprite" parent="Sprite"]
 
-transform/pos = Vector2( -27.9771, 13.0261 )
-transform/scale = Vector2( 0.421971, 0.521838 )
+transform/pos = Vector2( -31.8816, 3.50695 )
+transform/scale = Vector2( 0.297984, 0.35602 )
+z/z = -1
 texture = ExtResource( 3 )
+flip_h = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 
