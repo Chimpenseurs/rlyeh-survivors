@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var weapons = {
 	"pistol":{
-		"fire_rate": 0.75,
+		"fire_rate": 0.5,
 		"damage": 50,
 		"sprite": null,
 		"fire": "_shoot_arrow",
