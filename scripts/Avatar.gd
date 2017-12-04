@@ -108,6 +108,7 @@ func take_damage(collider_pos, damage_amount):
 		
 	if life > 0:
 		self.move(direction.normalized() * 50)
+		play("takeDammage")
 		play_animation("take_damage")
 
 # Helper to play animation
