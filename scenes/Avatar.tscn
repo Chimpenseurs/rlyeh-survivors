@@ -3,7 +3,7 @@
 [ext_resource path="res://scripts/Avatar.gd" type="Script" id=1]
 [ext_resource path="res://assets/PlayerUnicorn.png" type="Texture" id=2]
 [ext_resource path="res://assets/Aquagun.png" type="Texture" id=3]
-[ext_resource path="res://assets/couteau.png" type="Texture" id=4]
+[ext_resource path="res://assets/shotgun.png" type="Texture" id=4]
 [ext_resource path="res://assets/laserGun.png" type="Texture" id=5]
 [ext_resource path="res://assets/canon.png" type="Texture" id=6]
 [ext_resource path="res://resources/sounds/laser.wav" type="Sample" id=7]
@@ -98,15 +98,15 @@ transform/scale = Vector2( 3.35588, 2.80883 )
 
 [node name="Pump" type="Sprite" parent="Sprite"]
 
-transform/pos = Vector2( -33.0935, 3.71108 )
-transform/scale = Vector2( 0.297984, 0.35602 )
+transform/pos = Vector2( -39.5524, 19.1541 )
+transform/scale = Vector2( 0.748817, 0.917657 )
 z/z = -1
 texture = ExtResource( 4 )
 flip_h = true
 
 [node name="ShotPosition" type="Position2D" parent="Sprite/Pump"]
 
-transform/pos = Vector2( -34.7135, -4.64135 )
+transform/pos = Vector2( -34.1986, -11.2234 )
 transform/scale = Vector2( 3.35588, 2.80883 )
 
 [node name="laser gun" type="Sprite" parent="Sprite"]
