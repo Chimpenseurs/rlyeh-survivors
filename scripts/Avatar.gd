@@ -30,6 +30,8 @@ var devil_hearts
 var devil_eyes
 var devil_shoes
 
+
+var shoot_postition
 func _ready():
 	# Init vars
 	dead = false
@@ -45,6 +47,7 @@ func _ready():
 	devil_eyes = 0
 	devil_shoes = 0
 	
+	self.shoot_postition = self.get_node("Sprite/weapon_sprite/ShotPosition")
 	set_process_input(true)
 	set_fixed_process(true)
 
@@ -79,7 +82,7 @@ func _fixed_process(delta):
 func _shoot_arrow(delta):
 	if self.fire_ready == 0:
 		self.fire_ready = self.current_weapon["fire_rate"]
-		var bullet_motion = (get_global_mouse_pos() - self.get_global_pos()).normalized() * shoot_speed
+		var bullet_motion = (get_global_mouse_pos() - self.shoot_postition.get_global_pos()).normalized() * shoot_speed
 		var new_arrow = bulletTscn.instance()
 		var arrow_rotation = get_angle_to(get_global_mouse_pos()) + self.get_rot()
 		new_arrow.set_rot(arrow_rotation)
