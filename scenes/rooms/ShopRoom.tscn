@@ -20,6 +20,7 @@ tile_data = IntArray( 0, 0, 1, 5, 2, 15, 3, 16, 4, 16, 5, 16, 6, 14, 7, 5, 8, 5,
 
 [node name="Sprite" type="Node2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 492.321, 231.898 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite"]
