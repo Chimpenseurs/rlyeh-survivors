@@ -102,7 +102,7 @@ func restart():
 	self.move_to_room(room)
 	
 	self.player = PlayerTscn.instance()
-	self.player.set_pos(Vector2(100, 100))
+	self.player.set_pos(Vector2(600, 400))
 	self.player.add_to_group("player")
 	self.add_child(player)
 	self.player.set_z(self.currentRoom.get_z() + 2)

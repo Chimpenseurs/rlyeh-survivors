@@ -166,7 +166,7 @@ func add_weapons(weapons_bought) :
 		
 		devil_hearts -= w["heart_malus"]
 		
-		# TODO : Precision
+		visual_acuity *= (100.0 - float(w["eye_malus"])) / 100.0
 		devil_eyes -= w["eye_malus"]
 		
 		velocity *= (100.0 - float(w["shoe_malus"])) / 100.0

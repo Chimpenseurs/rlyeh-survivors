@@ -52,7 +52,6 @@ alignment = 0
 
 [node name="weapon01" type="HBoxContainer" parent="ScrollContainer/weapon_list"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -176,16 +175,15 @@ stretch_mode = 0
 
 [node name="eyes_cost" type="HBoxContainer" parent="ScrollContainer/weapon_list/weapon01/weapon_cost"]
 
-editor/display_folded = true
 visibility/visible = false
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 36.0
+margin/top = 41.0
 margin/right = 69.0
-margin/bottom = 68.0
+margin/bottom = 73.0
 alignment = 0
 
 [node name="Label" type="Label" parent="ScrollContainer/weapon_list/weapon01/weapon_cost/eyes_cost"]
