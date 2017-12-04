@@ -13,21 +13,24 @@ Will you survive Rlyeh?
 
 ## Game for linux
 
-[Download for linux (64-bit)](Rlyeh_Survivors.64)
-[Download for linux (32-bit)](Rlyeh_Survivors.32)
+* [Download for linux (64-bit)](Rlyeh_Survivors.64)
+
+* [Download for linux (32-bit)](Rlyeh_Survivors.32)
 
 ## Game for windows
 
-[Download for windows (64-bit)](Rlyeh_Survivors.64.exe)
-[Download for windows (32-bit)](Rlyeh_Survivors.32.exe)
+* [Download for windows (64-bit)](Rlyeh_Survivors-64bits.exe)
+
+* [Download for windows (32-bit)](Rlyeh_Survivors-32bits.exe)
 
 ## Game for Mac
 
-[Download for Mac (64-bit)](Rlyeh_Survivors.64.mac)
-[Download for Mac (32-bit)](Rlyeh_Survivors.32.mac)
+* [Download for Mac (64-bit)](Rlyeh_Survivors.64.mac)
+
+* [Download for Mac (32-bit)](Rlyeh_Survivors.32.mac)
 
 ## The source code
-[Source code](https://github.com/ludum-rlyeh/rlyeh-survivors)
+* [Source code](https://github.com/ludum-rlyeh/rlyeh-survivors)
 
 ## Screenshots
 
