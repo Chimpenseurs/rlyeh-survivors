@@ -44,7 +44,7 @@ var world = [
 var PlayerTscn = preload("res://scenes/Avatar.tscn")
 
 var bullerHolder = null
-var player
+var player  = null
 var currentRoom
 
 func create_bullet_holder():
@@ -57,6 +57,42 @@ func create_bullet_holder():
 	self.add_child(self.bullerHolder)
 
 func _ready():
+	self.restart()
+
+func get_direction_vector(direction):
+	if direction == "left":
+		return Vector2(-1, 0)
+	if direction == "right":
+		return Vector2(1, 0)
+	if direction == "bottom":
+		return Vector2(0, -1)
+	if direction == "up":
+		return Vector2(0, 1)
+	
+func get_room(pos):
+	return self.world[pos.y][pos.x]
+	
+func change_room(pos, direction):
+	create_bullet_holder()
+	
+	var direction_vector = get_direction_vector(direction)
+	
+	self.currentRoomIdx += direction_vector
+	var room = get_room(self.currentRoomIdx)
+	
+	var tmp_room = self.currentRoom
+	self.currentRoom = Maps[room].instance()
+	tmp_room.queue_free()
+	
+	self.currentRoom.add_to_group("map")
+	self.add_child(self.currentRoom)
+	self.currentRoom.set_z(self.currentRoom.get_z() - 1)
+	
+	self.player.set_pos(pos)
+
+func restart():
+	get_node("GameOver").hide()
+	get_tree().set_pause(false)
 	self.set_fixed_process(true)
 	create_bullet_holder()
 	var cursorTexture = load("res://assets/target.png")
@@ -75,43 +111,18 @@ func _ready():
 	self.add_child(player)
 	
 	get_node("HUD").init_life_bar()
-
-func get_direction_vector(direction):
-	if direction == "left":
-		return Vector2(-1, 0)
-	if direction == "right":
-		return Vector2(1, 0)
-	if direction == "bottom":
-		return Vector2(0, -1)
-	if direction == "up":
-		return Vector2(0, 1)
-
-func get_room(pos):
-	return self.world[pos.y][pos.x]
 	
-func change_room(pos, direction):
-	create_bullet_holder()
-	print(currentRoomIdx)
-	
-	var direction_vector = get_direction_vector(direction)
-	
-	self.currentRoomIdx += direction_vector
-	var room = get_room(self.currentRoomIdx)
-	
-	var tmp_room = self.currentRoom
-	self.currentRoom = Maps[room].instance()
-	tmp_room.queue_free()
-	
-	self.currentRoom.add_to_group("map")
-	self.add_child(self.currentRoom)
-	self.currentRoom.set_z(self.currentRoom.get_z() - 1)
-	
-	self.player.set_pos(pos)
+func death():
+	self.player.queue_free()
+	self.currentRoom.queue_free()
+	get_node("GameOver").show()
+	get_node("GameOver").set_fixed_process(true)
+	get_tree().set_pause(true)
 	
 func _fixed_process(delta):
 	if self.player.dead and !self.player.get_node("AnimationPlayer").is_playing():
-		get_tree().set_pause(true)
-	
+		self.death()
+		
 	var viewport_rect = get_viewport_rect()
 	var new_pos = player.get_pos()
 	var direction = null
