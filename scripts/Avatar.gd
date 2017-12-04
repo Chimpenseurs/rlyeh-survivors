@@ -68,6 +68,7 @@ func _ready():
 	enabled_weapons = ["pistol"]
 	current_weapon_id = 0
 	current_weapon = weapons[enabled_weapons[current_weapon_id]]
+	current_weapon["sprite"].show()
 	
 	velocity = 350
 	visual_acuity = 1.0

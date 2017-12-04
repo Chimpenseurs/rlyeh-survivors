@@ -83,7 +83,6 @@ hframes = 4
 
 [node name="pistol" type="Sprite" parent="Sprite"]
 
-editor/display_folded = true
 transform/pos = Vector2( -33.0935, 3.71108 )
 transform/scale = Vector2( 0.297984, 0.35602 )
 z/z = -1
