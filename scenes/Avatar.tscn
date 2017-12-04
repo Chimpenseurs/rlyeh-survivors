@@ -63,8 +63,9 @@ hframes = 4
 
 [node name="weapon_sprite" type="Sprite" parent="Sprite"]
 
-transform/pos = Vector2( -30.3005, 7.98679 )
+transform/pos = Vector2( -31.8816, 3.50695 )
 transform/scale = Vector2( 0.297984, 0.35602 )
+z/z = -1
 texture = ExtResource( 3 )
 flip_h = true
 
