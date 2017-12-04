@@ -27,4 +27,6 @@ __meta__ = {
 
 [node name="Enemies" type="Node2D" parent="."]
 
+material/use_parent = true
+
 

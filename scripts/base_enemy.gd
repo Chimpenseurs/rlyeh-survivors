@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 const items = {"heart": preload("res://scenes/collectables/Heart.tscn"), 
-#"eye": preload("res://scenes/collectables/Eye.tscn"),
+"eye": preload("res://scenes/collectables/Eye.tscn"),
 "shoe": preload("res://scenes/collectables/Shoe.tscn")}
 
 var life = 100
@@ -15,7 +15,10 @@ func die():
 	randomize()
 	if randf() < 0.25 :
 		var item 
-		if randf() < 0.1 : 
+		var rand = randf()
+		if rand < 0.1 : 
+			item = items["eye"].instance()
+		if rand >= 0.1 && rand < 0.3 : 
 			item = items["shoe"].instance()
 		else :
 			item = items["heart"].instance()

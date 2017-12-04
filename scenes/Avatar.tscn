@@ -9,7 +9,7 @@
 [ext_resource path="res://resources/sounds/laser.wav" type="Sample" id=7]
 [ext_resource path="res://resources/sounds/takeDamage.wav" type="Sample" id=8]
 
-[sub_resource type="ConvexPolygonShape2D" id=5]
+[sub_resource type="ConvexPolygonShape2D" id=1]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 32, -19, 32, 32, -32, 32, -32, -19 )
@@ -67,7 +67,7 @@ samples/takeDamage = {
 ]]
 
 input/pickable = false
-shapes/0/shape = SubResource( 5 )
+shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 0.811217, 0, 0, 0.993194, 3, 13 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -83,7 +83,7 @@ hframes = 4
 
 [node name="pistol" type="Sprite" parent="Sprite"]
 
-visibility/visible = false
+editor/display_folded = true
 transform/pos = Vector2( -33.0935, 3.71108 )
 transform/scale = Vector2( 0.297984, 0.35602 )
 z/z = -1
@@ -98,6 +98,8 @@ transform/scale = Vector2( 3.35588, 2.80883 )
 
 [node name="Pump" type="Sprite" parent="Sprite"]
 
+editor/display_folded = true
+visibility/visible = false
 transform/pos = Vector2( -39.5524, 19.1541 )
 transform/scale = Vector2( 0.748817, 0.917657 )
 z/z = -1
@@ -111,6 +113,7 @@ transform/scale = Vector2( 3.35588, 2.80883 )
 
 [node name="laser gun" type="Sprite" parent="Sprite"]
 
+editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( -40.1196, 3.77684 )
 transform/scale = Vector2( 0.69229, 0.520955 )
@@ -125,6 +128,7 @@ transform/scale = Vector2( 1.69412, 2.23897 )
 
 [node name="Paczooka" type="Sprite" parent="Sprite"]
 
+editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( -25.7622, -4.34814 )
 transform/scale = Vector2( -2.18597, 1.46861 )

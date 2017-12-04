@@ -5,7 +5,7 @@ var weapons = {
 		"fire_rate": 0.75,
 		"damage": 50,
 		"sprite": null,
-		"fire": "_shoot_arrow_rifle",
+		"fire": "_shoot_arrow",
 		"bulletTscn" : preload("res://scenes/Bullet.tscn")
 	},
 	"laser gun":{
@@ -39,6 +39,7 @@ const bullet_range = 50000
 var fire_ready = 0
 
 var velocity
+var visual_acuity
 
 var dead
 
@@ -68,6 +69,7 @@ func _ready():
 	current_weapon = weapons[enabled_weapons[current_weapon_id]]
 	
 	velocity = 350
+	visual_acuity = 1.0
 	
 	devil_hearts = 0
 	devil_eyes = 0
@@ -163,6 +165,7 @@ func _shoot_arrow():
 		var new_arrow = self.current_weapon["bulletTscn"].instance()
 
 		new_arrow.set_global_pos(shoot_position.get_global_pos())
+		new_arrow.set_z(self.get_z())
 		get_parent().bullerHolder.add_child(new_arrow)
 		get_node("SamplePlayer").play("laser")
 		new_arrow.init_bullet(bullet_motion, self.current_weapon["damage"], self.bullet_range )
@@ -202,7 +205,7 @@ func add_weapons(weapons_bought) :
 		
 		devil_hearts -= w["heart_malus"]
 		
-		# TODO : Precision
+		visual_acuity *= (100.0 - float(w["eye_malus"])) / 100.0
 		devil_eyes -= w["eye_malus"]
 		
 		velocity *= (100.0 - float(w["shoe_malus"])) / 100.0

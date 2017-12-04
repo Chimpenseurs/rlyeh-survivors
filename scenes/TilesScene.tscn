@@ -273,6 +273,7 @@ outlines = [ Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 ) ]
 
 [node name="map_tileset0" type="Sprite" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 663.171, 125.877 )
 texture = SubResource( 1 )
 vframes = 8
@@ -306,6 +307,8 @@ trigger = false
 
 [node name="map_tileset1" type="Sprite" parent="."]
 
+editor/display_folded = true
+material/use_parent = true
 transform/pos = Vector2( 662.521, 44.4148 )
 texture = SubResource( 1 )
 vframes = 8
@@ -343,6 +346,8 @@ trigger = false
 
 [node name="map_tileset2" type="Sprite" parent="."]
 
+editor/display_folded = true
+material/use_parent = true
 transform/pos = Vector2( 560.692, 384.952 )
 texture = SubResource( 1 )
 vframes = 8
@@ -376,6 +381,8 @@ trigger = false
 
 [node name="map_tileset3" type="Sprite" parent="."]
 
+editor/display_folded = true
+material/use_parent = true
 transform/pos = Vector2( 463.423, 379.351 )
 texture = SubResource( 1 )
 vframes = 8
@@ -445,6 +452,8 @@ trigger = false
 
 [node name="map_tileset5" type="Sprite" parent="."]
 
+editor/display_folded = true
+material/use_parent = true
 transform/pos = Vector2( 275.843, 387.386 )
 texture = SubResource( 1 )
 vframes = 8
@@ -482,6 +491,7 @@ trigger = false
 [node name="map_tileset6" type="Sprite" parent="."]
 
 editor/display_folded = true
+material/use_parent = true
 transform/pos = Vector2( 190.701, 391.654 )
 texture = SubResource( 1 )
 vframes = 8
@@ -499,6 +509,7 @@ enabled = true
 [node name="map_tileset7" type="Sprite" parent="."]
 
 editor/display_folded = true
+material/use_parent = true
 transform/pos = Vector2( 88.2379, 388.99 )
 texture = SubResource( 1 )
 vframes = 8
@@ -516,6 +527,7 @@ enabled = true
 [node name="map_tileset8" type="Sprite" parent="."]
 
 editor/display_folded = true
+material/use_parent = true
 transform/pos = Vector2( 551.484, 288.696 )
 texture = SubResource( 1 )
 vframes = 8
@@ -533,6 +545,7 @@ enabled = true
 [node name="map_tileset9" type="Sprite" parent="."]
 
 editor/display_folded = true
+material/use_parent = true
 transform/pos = Vector2( 465.651, 288.809 )
 texture = SubResource( 1 )
 vframes = 8
@@ -549,6 +562,8 @@ enabled = true
 
 [node name="map_tileset10" type="Sprite" parent="."]
 
+editor/display_folded = true
+material/use_parent = true
 transform/pos = Vector2( 364.572, 288.696 )
 texture = SubResource( 1 )
 vframes = 8
@@ -583,6 +598,8 @@ trigger = false
 
 [node name="map_tileset11" type="Sprite" parent="."]
 
+editor/display_folded = true
+material/use_parent = true
 transform/pos = Vector2( 273.435, 285.679 )
 texture = SubResource( 1 )
 vframes = 8
@@ -617,6 +634,8 @@ trigger = false
 
 [node name="map_tileset12" type="Sprite" parent="."]
 
+editor/display_folded = true
+material/use_parent = true
 transform/pos = Vector2( 186.912, 286.846 )
 texture = SubResource( 1 )
 vframes = 8
@@ -663,11 +682,9 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="map_tileset13"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 52 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 shapes/1/shape = SubResource( 53 )
-shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/1/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -685,6 +702,8 @@ trigger = false
 
 [node name="map_tileset14" type="Sprite" parent="."]
 
+editor/display_folded = true
+material/use_parent = true
 transform/pos = Vector2( 552.33, 201.257 )
 texture = SubResource( 1 )
 vframes = 8
@@ -722,6 +741,8 @@ trigger = false
 
 [node name="map_tileset15" type="Sprite" parent="."]
 
+editor/display_folded = true
+material/use_parent = true
 transform/pos = Vector2( 462.753, 203.491 )
 texture = SubResource( 1 )
 vframes = 8
@@ -758,6 +779,8 @@ trigger = false
 
 [node name="map_tileset16" type="Sprite" parent="."]
 
+editor/display_folded = true
+material/use_parent = true
 transform/pos = Vector2( 362.554, 202.352 )
 texture = SubResource( 1 )
 vframes = 8
@@ -775,6 +798,7 @@ enabled = true
 [node name="map_tileset17" type="Sprite" parent="."]
 
 editor/display_folded = true
+material/use_parent = true
 transform/pos = Vector2( 271.321, 198.969 )
 texture = SubResource( 1 )
 vframes = 8
@@ -791,6 +815,8 @@ enabled = true
 
 [node name="map_tileset18" type="Sprite" parent="."]
 
+editor/display_folded = true
+material/use_parent = true
 transform/pos = Vector2( 545.764, 43.7109 )
 texture = SubResource( 1 )
 vframes = 8
@@ -827,6 +853,8 @@ trigger = false
 
 [node name="map_tileset19" type="Sprite" parent="."]
 
+editor/display_folded = true
+material/use_parent = true
 transform/pos = Vector2( 548.219, 120.552 )
 texture = SubResource( 1 )
 vframes = 8
@@ -866,6 +894,8 @@ trigger = false
 
 [node name="map_tileset20" type="Sprite" parent="."]
 
+editor/display_folded = true
+material/use_parent = true
 transform/pos = Vector2( 459.372, 118.228 )
 texture = SubResource( 1 )
 vframes = 8
@@ -900,6 +930,8 @@ trigger = false
 
 [node name="map_tileset21" type="Sprite" parent="."]
 
+editor/display_folded = true
+material/use_parent = true
 transform/pos = Vector2( 457.567, 43.32 )
 texture = SubResource( 1 )
 vframes = 8
@@ -935,6 +967,7 @@ trigger = false
 [node name="map_tileset22" type="Sprite" parent="."]
 
 editor/display_folded = true
+material/use_parent = true
 transform/pos = Vector2( 362.805, 119.13 )
 texture = SubResource( 1 )
 vframes = 8
@@ -952,6 +985,7 @@ enabled = true
 [node name="map_tileset23" type="Sprite" parent="."]
 
 editor/display_folded = true
+material/use_parent = true
 transform/pos = Vector2( 362.947, 43.0615 )
 texture = SubResource( 1 )
 vframes = 8
@@ -969,6 +1003,7 @@ enabled = true
 [node name="map_tileset24" type="Sprite" parent="."]
 
 editor/display_folded = true
+material/use_parent = true
 transform/pos = Vector2( 270.672, 123.033 )
 texture = SubResource( 1 )
 vframes = 8
@@ -986,6 +1021,7 @@ enabled = true
 [node name="map_tileset25" type="Sprite" parent="."]
 
 editor/display_folded = true
+material/use_parent = true
 transform/pos = Vector2( 269.803, 42.2544 )
 texture = SubResource( 1 )
 vframes = 8
@@ -1003,6 +1039,7 @@ enabled = true
 [node name="map_tileset26" type="Sprite" parent="."]
 
 editor/display_folded = true
+material/use_parent = true
 transform/pos = Vector2( 179.968, 122.349 )
 texture = SubResource( 1 )
 vframes = 8
@@ -1020,6 +1057,7 @@ enabled = true
 [node name="map_tileset27" type="Sprite" parent="."]
 
 editor/display_folded = true
+material/use_parent = true
 transform/pos = Vector2( 85.9684, 121.198 )
 texture = SubResource( 1 )
 vframes = 8
@@ -1037,6 +1075,7 @@ enabled = true
 [node name="map_tileset28" type="Sprite" parent="."]
 
 editor/display_folded = true
+material/use_parent = true
 transform/pos = Vector2( 179.703, 43.4776 )
 texture = SubResource( 1 )
 vframes = 8
@@ -1054,6 +1093,7 @@ enabled = true
 [node name="map_tileset29" type="Sprite" parent="."]
 
 editor/display_folded = true
+material/use_parent = true
 transform/pos = Vector2( 88.1873, 43.2424 )
 texture = SubResource( 1 )
 vframes = 8
@@ -1071,6 +1111,7 @@ enabled = true
 [node name="map_tileset30" type="Sprite" parent="."]
 
 editor/display_folded = true
+material/use_parent = true
 transform/pos = Vector2( 180.058, 199.147 )
 texture = SubResource( 1 )
 vframes = 8
@@ -1088,6 +1129,7 @@ enabled = true
 [node name="map_tileset31" type="Sprite" parent="."]
 
 editor/display_folded = true
+material/use_parent = true
 transform/pos = Vector2( 88.4716, 198.68 )
 texture = SubResource( 1 )
 vframes = 8

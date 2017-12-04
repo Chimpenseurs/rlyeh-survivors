@@ -88,6 +88,7 @@ script/script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 
+material/use_parent = true
 transform/pos = Vector2( -34.9943, -37.0543 )
 texture = ExtResource( 2 )
 centered = false
