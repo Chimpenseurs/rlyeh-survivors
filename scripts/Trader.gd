@@ -8,7 +8,6 @@ func _ready():
 func _on_Area2D_body_enter( body ):
 	if(body.is_in_group("player")):
 		var list = get_node("shop_menu")
-		print("enter the area")
 		list.show()
 
 
