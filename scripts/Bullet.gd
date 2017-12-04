@@ -4,6 +4,7 @@ extends RigidBody2D
 var dist_range = 100
 var motion = Vector2(0, 0)
 var damages = 0
+var pierce = 1
 
 func _ready():
 	set_fixed_process(true)
@@ -23,7 +24,10 @@ func _fixed_process(delta):
 func _on_Bullet_body_enter( body ):
 	if body.is_in_group("enemy"):
 		body.take_damage(self.damages)
-		self.queue_free()
+		print(pierce)
+		pierce -= 1
+		if pierce == 0:
+			self.queue_free()
 
 	elif !body.is_in_group("player"):
 		self.queue_free()

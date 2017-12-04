@@ -63,15 +63,15 @@ points = Vector2Array( 9.69312, 6.60382, 14.9489, 32.2989, -32.3534, 32.0069, -3
 custom_solver_bias = 0.0
 points = Vector2Array( 9.69312, 6.60382, 1.22542, -20.8432, 18.3846, -9.20999 )
 
-[sub_resource type="ConvexPolygonShape2D" id=23]
+[sub_resource type="ConvexPolygonShape2D" id=52]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -9.92341, 6.26367, -11.0456, -14.1479, 8.96484, -10.4782 )
+points = Vector2Array( 31.7721, -12.9416, 32, 32, -11, 32, -11, 6, 9, -15 )
 
-[sub_resource type="ConvexPolygonShape2D" id=24]
+[sub_resource type="ConvexPolygonShape2D" id=53]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 32.4637, -14.0044, 32.1052, 31.8818, -14.2079, 31.7047, -9.92341, 6.26367, 8.96484, -10.4782 )
+points = Vector2Array( 9, -15, -11, 6, -11.1164, -13.6029 )
 
 [sub_resource type="ConvexPolygonShape2D" id=25]
 
@@ -230,10 +230,10 @@ vertices = Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
 polygons = [ IntArray( 0, 1, 2, 3 ) ]
 outlines = [ Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 ) ]
 
-[sub_resource type="ConvexPolygonShape2D" id=10]
+[sub_resource type="ConvexPolygonShape2D" id=51]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -32.8214, -13.2443, 33.0954, -13.0956, 33.4603, 32.7884, -32.8214, 32.7884 )
+points = Vector2Array( -32, -15, 32, -15, 32, 32, -32, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=11]
 
@@ -323,7 +323,7 @@ outlines = [ Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 ) ]
 4/occluder_offset = Vector2( 32, 32.3353 )
 4/navigation_offset = Vector2( 32, 32.3353 )
 4/shape_offset = Vector2( 32, 32.3353 )
-4/shapes = [ SubResource( 10 ) ]
+4/shapes = [ SubResource( 51 ) ]
 4/one_way_collision_direction = Vector2( 0, 0 )
 4/one_way_collision_max_depth = 0.0
 5/name = "map_tileset5"
@@ -426,7 +426,7 @@ outlines = [ Vector2Array( -32, -32, 32, -32, 32, 32, -32, 32 ) ]
 13/occluder_offset = Vector2( 32, 32 )
 13/navigation_offset = Vector2( 32, 32 )
 13/shape_offset = Vector2( 32, 32 )
-13/shapes = [ SubResource( 23 ), SubResource( 24 ) ]
+13/shapes = [ SubResource( 52 ), SubResource( 53 ) ]
 13/one_way_collision_direction = Vector2( 0, 0 )
 13/one_way_collision_max_depth = 0.0
 14/name = "map_tileset14"

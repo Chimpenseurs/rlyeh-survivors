@@ -50,7 +50,6 @@ var currentRoom
 func create_bullet_holder():
 	if self.bullerHolder!= null:
 		self.bullerHolder.queue_free()
-		
 	self.bullerHolder = Node2D.new()
 	self.bullerHolder.set_name("BulletHolder")
 	self.bullerHolder.set_as_toplevel(true)
