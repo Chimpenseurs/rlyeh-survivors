@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://scripts/HUD.gd" type="Script" id=1]
-[ext_resource path="res://assets/lifeBarBack.png" type="Texture" id=2]
-[ext_resource path="res://assets/lifeBarAround.png" type="Texture" id=3]
-[ext_resource path="res://assets/lifeBarRed.png" type="Texture" id=4]
+[ext_resource path="res://assets/lifeBarAround.png" type="Texture" id=2]
+[ext_resource path="res://assets/lifeBarRed.png" type="Texture" id=3]
+[ext_resource path="res://assets/lifeBarBack.png" type="Texture" id=4]
 [ext_resource path="res://resources/fonts/TravelingTypewriter.fnt" type="BitmapFont" id=5]
 [ext_resource path="res://assets/EvilEye.png" type="Texture" id=6]
 [ext_resource path="res://assets/oldBoot.png" type="Texture" id=7]
@@ -39,8 +39,32 @@ range/value = 100.0
 range/exp_edit = false
 range/rounded = false
 texture/under = ExtResource( 2 )
-texture/over = ExtResource( 3 )
+texture/over = null
+texture/progress = ExtResource( 3 )
+radial_fill/fill_degrees = 360.0
+radial_fill/center_offset = Vector2( 0, 0 )
+
+[node name="corrupt_bar" type="TextureProgress" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 56.0
+margin/top = 7.0
+margin/right = 456.0
+margin/bottom = 37.0
+range/min = 0.0
+range/max = 100.0
+range/step = 1.0
+range/page = 0.0
+range/value = 10.0
+range/exp_edit = false
+range/rounded = false
+texture/under = null
+texture/over = null
 texture/progress = ExtResource( 4 )
+mode = 1
 radial_fill/fill_degrees = 360.0
 radial_fill/center_offset = Vector2( 0, 0 )
 
