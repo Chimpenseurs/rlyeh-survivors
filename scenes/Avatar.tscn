@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=1]
+[gd_scene load_steps=11 format=1]
 
 [ext_resource path="res://scripts/Avatar.gd" type="Script" id=1]
 [ext_resource path="res://assets/PlayerUnicorn.png" type="Texture" id=2]
 [ext_resource path="res://assets/Aquagun.png" type="Texture" id=3]
-[ext_resource path="res://resources/sounds/laser.wav" type="Sample" id=4]
-[ext_resource path="res://resources/sounds/takeDamage.wav" type="Sample" id=5]
+[ext_resource path="res://assets/laserGun.png" type="Texture" id=4]
+[ext_resource path="res://resources/sounds/laser.wav" type="Sample" id=5]
+[ext_resource path="res://resources/sounds/takeDamage.wav" type="Sample" id=6]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
@@ -50,13 +51,13 @@ samples/laser = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 4 )
+"sample": ExtResource( 5 )
 }
 samples/takeDamage = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 5 )
+"sample": ExtResource( 6 )
 }
 
 [node name="Avatar" type="KinematicBody2D" groups=[
@@ -78,18 +79,32 @@ transform/scale = Vector2( -1, 1 )
 texture = ExtResource( 2 )
 hframes = 4
 
-[node name="weapon_sprite" type="Sprite" parent="Sprite"]
+[node name="pistol" type="Sprite" parent="Sprite"]
 
-transform/pos = Vector2( -31.8816, 3.50695 )
+transform/pos = Vector2( -33.0935, 3.71108 )
 transform/scale = Vector2( 0.297984, 0.35602 )
 z/z = -1
 texture = ExtResource( 3 )
 flip_h = true
 
-[node name="ShotPosition" type="Position2D" parent="Sprite/weapon_sprite"]
+[node name="ShotPosition" type="Position2D" parent="Sprite/pistol"]
 
-transform/pos = Vector2( -26.5446, -7.6299 )
+transform/pos = Vector2( -35.3636, -8.45005 )
 transform/scale = Vector2( 3.35588, 2.80883 )
+
+[node name="laser gun" type="Sprite" parent="Sprite"]
+
+visibility/visible = false
+transform/pos = Vector2( -40.1196, 3.77684 )
+transform/scale = Vector2( 0.69229, 0.520955 )
+z/z = -1
+texture = ExtResource( 4 )
+flip_h = true
+
+[node name="ShotPosition" type="Position2D" parent="Sprite/laser gun"]
+
+transform/pos = Vector2( -27.712, -5.68686 )
+transform/scale = Vector2( 1.69412, 2.23897 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 

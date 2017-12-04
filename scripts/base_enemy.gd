@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
-const items = [preload("res://scenes/collectables/Heart.tscn"), 
-preload("res://scenes/collectables/Eye.tscn"),
-preload("res://scenes/collectables/Shoe.tscn")]
+const items = {"heart": preload("res://scenes/collectables/Heart.tscn"), 
+#"eye": preload("res://scenes/collectables/Eye.tscn"),
+"shoe": preload("res://scenes/collectables/Shoe.tscn")}
 
 var life = 100
 var velocity = 100
@@ -13,8 +13,13 @@ func _ready():
 
 func die():
 	randomize()
-	if randf() < 0.15:
-		var item = items[randi() % items.size()].instance()
+	if randf() < 0.25 :
+		var item 
+		if randf() < 0.33 : 
+			item = items["shoe"].instance()
+		else :
+			item = items["heart"].instance()
+			
 		item.set_pos(self.get_pos())
 		get_tree().get_nodes_in_group("map")[0].add_child(item)
 	self.queue_free()
