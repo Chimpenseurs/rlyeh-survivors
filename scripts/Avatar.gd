@@ -2,21 +2,31 @@ extends KinematicBody2D
 
 var weapons = {
 	"pistol":{
-		"fire_rate": 0.75,
+		"fire_rate": 0.5,
 		"damage": 50,
 		"sprite": null,
+		"fire": "_shoot_arrow",
 		"bulletTscn" : preload("res://scenes/Bullet.tscn")
 	},
 	"laser gun":{
 		"fire_rate": 0.2,
 		"damage": 50,
 		"sprite": null,
+		"fire": "_shoot_arrow",
 		"bulletTscn" : preload("res://scenes/LaserBullet.tscn")
 	},
 	"Paczooka":{
 		"fire_rate": 0.85,
 		"damage": 100,
 		"sprite": null,
+		"fire": "_shoot_arrow",
+		"bulletTscn" : preload("res://scenes/PacBullet.tscn")
+	},
+	"Pump":{
+		"fire_rate": 0.50,
+		"damage": 100,
+		"sprite": null,
+		"fire": "_shoot_rifle",
 		"bulletTscn" : preload("res://scenes/PacBullet.tscn")
 	}
 }
@@ -47,6 +57,7 @@ func _ready():
 	weapons["pistol"]["sprite"]    = get_node("Sprite/pistol")
 	weapons["laser gun"]["sprite"] = get_node("Sprite/laser gun")
 	weapons["Paczooka"]["sprite"] = get_node("Sprite/Paczooka")
+	weapons["Pump"]["sprite"] = get_node("Sprite/Pump")
 	
 	# Init vars
 	dead = false
@@ -113,9 +124,38 @@ func _fixed_process(delta):
 		motion = n.slide(motion)
 		vect = n.slide(vect)
 		move(motion)
+		
 	if Input.is_action_pressed("action_shoot"):
-		_shoot_arrow()
+		self.call(current_weapon["fire"])
 
+func _shoot_rifle():
+	var shoot_position = current_weapon["sprite"].get_node("ShotPosition")
+	var cone = 0.1
+	var mouse_pos = get_global_mouse_pos()
+	var shoot_pos = shoot_position.get_global_pos()
+	var sep_dist = mouse_pos.distance_to(shoot_pos)
+
+	if self.fire_ready == 0:
+		self.fire_ready = self.current_weapon["fire_rate"]
+		get_node("SamplePlayer").play("laser")
+
+		for i in range(-3, 3):
+			self.fire_ready = self.current_weapon["fire_rate"]
+			# We get a point at a distance of 1 on the line defined by the shoot pos to the mouse
+			# then we apply a rotation
+			# https://math.stackexchange.com/questions/175896/finding-a-point-along-a-line-a-certain-distance-away-from-another-point
+			var new_arrow = self.current_weapon["bulletTscn"].instance()
+			var bullet_motion = (mouse_pos - shoot_pos)
+			var shift_pos = shoot_pos + bullet_motion.normalized()
+			var bullet_motion_f = (shift_pos - shoot_pos).rotated(cone*i)
+			
+			# shift_pos 
+			new_arrow.set_max_contacts_reported(100)
+			new_arrow.set_global_pos(shoot_position.get_global_pos())
+			get_parent().bullerHolder.add_child(new_arrow)
+			get_node("SamplePlayer").play("laser")
+			new_arrow.init_bullet(bullet_motion_f.normalized()*shoot_speed, self.current_weapon["damage"], self.bullet_range )
+		
 func _shoot_arrow():
 	if self.fire_ready == 0:
 		self.fire_ready = self.current_weapon["fire_rate"]
@@ -124,7 +164,6 @@ func _shoot_arrow():
 		var bullet_motion = (get_global_mouse_pos() - shoot_position.get_global_pos()).normalized() * shoot_speed
 		var new_arrow = self.current_weapon["bulletTscn"].instance()
 
-		
 		new_arrow.set_global_pos(shoot_position.get_global_pos())
 		new_arrow.set_z(self.get_z())
 		get_parent().bullerHolder.add_child(new_arrow)
@@ -186,4 +225,3 @@ func add_weapons(weapons_bought) :
 # Helper to play animation
 func play_animation(animation):
 	self.get_node("AnimationPlayer").play(animation)
-	
