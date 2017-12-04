@@ -12,5 +12,6 @@ tile_data = IntArray( 0, 0, 1, 5, 2, 5, 3, 5, 4, 1, 5, 30, 6, 30, 7, 30, 8, 30, 
 [node name="Spawner" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 157.803, 432.599 )
+throuput = 2
 
 

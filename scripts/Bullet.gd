@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 # set at one so it won't be killed in the first call to _fixed_process
-var dist_range = 100
+export var dist_range = 100
 var motion = Vector2(0, 0)
 var damages = 0
 var pierce = 1
