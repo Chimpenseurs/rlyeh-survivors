@@ -11,13 +11,12 @@ func _ready():
 	add_to_group("enemy")
 
 func die():
-	randomize()
 	if randf() < 0.5 :
 		var item 
 		var rand = randf()
 		if rand < 0.16 : 
 			item = items["eye"].instance()
-		if rand >= 0.16 && rand < 0.5 : 
+		elif rand >= 0.16 && rand < 0.5 : 
 			item = items["shoe"].instance()
 		else :
 			item = items["heart"].instance()
