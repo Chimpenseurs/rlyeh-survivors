@@ -1,9 +1,4 @@
-extends RigidBody2D
-
-# set at one so it won't be killed in the first call to _fixed_process
-var dist_range = 100
-var motion = Vector2(0, 0)
-var damages = 0
+extends "Bullet.gd"
 
 func _ready():
 	set_fixed_process(true)
@@ -12,8 +7,13 @@ func _ready():
 func init_bullet(velocity, damages, dist_range):
 	self.motion = velocity
 	self.damages = damages
-	self.dist_range = dist_range
+	self.dist_range = 100
+
+	var arrow_rotation = get_angle_to(get_global_mouse_pos()) - self.get_rot()
+	self.set_rot(-arrow_rotation)
+
 	self.set_linear_velocity(self.motion)
+
 
 func _fixed_process(delta):
 	if self.dist_range <= 0:
