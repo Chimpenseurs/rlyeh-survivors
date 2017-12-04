@@ -69,6 +69,11 @@ z/z = -1
 texture = ExtResource( 3 )
 flip_h = true
 
+[node name="ShotPosition" type="Position2D" parent="Sprite/weapon_sprite"]
+
+transform/pos = Vector2( -26.5446, -7.6299 )
+transform/scale = Vector2( 3.35588, 2.80883 )
+
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 
 transform/pos = Vector2( 3, 13 )
