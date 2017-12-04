@@ -119,6 +119,9 @@ func add_weapon(weapons) :
 	for w in weapons :
 		enabled_weapons.append(w["name"])
 		max_life *= (100.0 - float(w["heart_malus"])) / 100.0
+		if life > max_life :
+			life = max_life
+		
 		devil_hearts -= w["heart_malus"]
 		
 		# TODO : Precision
