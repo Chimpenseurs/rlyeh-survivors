@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=1]
+[gd_scene load_steps=11 format=1]
 
 [ext_resource path="res://scripts/HUD.gd" type="Script" id=1]
 [ext_resource path="res://assets/fog.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://assets/lifeBarAround.png" type="Texture" id=7]
 [ext_resource path="res://assets/lifeBarRed.png" type="Texture" id=8]
 [ext_resource path="res://assets/lifeBarBack.png" type="Texture" id=9]
+[ext_resource path="res://assets/Slime.png" type="Texture" id=10]
 
 [node name="HUD" type="Control"]
 
@@ -39,15 +40,19 @@ stretch_mode = 0
 
 [node name="collectable" type="HBoxContainer" parent="."]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 718.0
 margin/top = 2.0
-margin/right = 867.0
+margin/right = 947.0
 margin/bottom = 34.0
 alignment = 2
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="devil_eyes" type="HBoxContainer" parent="collectable"]
 
@@ -252,5 +257,49 @@ texture/progress = ExtResource( 9 )
 mode = 1
 radial_fill/fill_degrees = 360.0
 radial_fill/center_offset = Vector2( 0, 0 )
+
+[node name="enemies_killed" type="HBoxContainer" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 60.0
+margin/top = 48.0
+margin/right = 172.0
+margin/bottom = 112.0
+alignment = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="enemies_killed"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 21.0
+margin/right = 44.0
+margin/bottom = 43.0
+custom_fonts/font = ExtResource( 3 )
+text = "0000"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="TextureFrame" type="TextureFrame" parent="enemies_killed"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 48.0
+margin/top = 0.0
+margin/right = 112.0
+margin/bottom = 64.0
+texture = ExtResource( 10 )
+stretch_mode = 0
 
 
