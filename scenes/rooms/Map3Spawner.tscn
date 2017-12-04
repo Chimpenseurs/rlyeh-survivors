@@ -2,7 +2,8 @@
 
 [ext_resource path="res://resources/tilest.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/Spawner.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/Slime.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/monsters/Slime.tscn" type="PackedScene" id=3]
+
 
 [node name="TileMap" type="Navigation2D"]
 
