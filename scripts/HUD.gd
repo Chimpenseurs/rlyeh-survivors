@@ -9,7 +9,6 @@ func init_life_bar():
 	life_bar.set_max(
 		get_tree().get_nodes_in_group("player")[0].max_life
 	)
-	life_bar.set_percent_visible(false)
 	
 
 func _fixed_process(delta):

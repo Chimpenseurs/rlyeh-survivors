@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://scripts/HUD.gd" type="Script" id=1]
-[ext_resource path="res://resources/fonts/TravelingTypewriter.fnt" type="BitmapFont" id=2]
-[ext_resource path="res://assets/EvilEye.png" type="Texture" id=3]
-[ext_resource path="res://assets/oldBoot.png" type="Texture" id=4]
-[ext_resource path="res://assets/badHealt_token.png" type="Texture" id=5]
+[ext_resource path="res://assets/lifeBarBack.png" type="Texture" id=2]
+[ext_resource path="res://assets/lifeBarAround.png" type="Texture" id=3]
+[ext_resource path="res://assets/lifeBarRed.png" type="Texture" id=4]
+[ext_resource path="res://resources/fonts/TravelingTypewriter.fnt" type="BitmapFont" id=5]
+[ext_resource path="res://assets/EvilEye.png" type="Texture" id=6]
+[ext_resource path="res://assets/oldBoot.png" type="Texture" id=7]
+[ext_resource path="res://assets/badHealt_token.png" type="Texture" id=8]
 
 [node name="HUD" type="Control"]
 
@@ -18,24 +21,28 @@ margin/right = 1024.0
 margin/bottom = 576.0
 script/script = ExtResource( 1 )
 
-[node name="life_bar" type="ProgressBar" parent="."]
+[node name="life_bar" type="TextureProgress" parent="."]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 100.0
-margin/top = 9.0
-margin/right = 259.0
-margin/bottom = 29.0
+margin/left = 56.0
+margin/top = 7.0
+margin/right = 456.0
+margin/bottom = 37.0
 range/min = 0.0
 range/max = 100.0
 range/step = 1.0
 range/page = 0.0
-range/value = 1.0
+range/value = 100.0
 range/exp_edit = false
 range/rounded = false
-percent/visible = true
+texture/under = ExtResource( 2 )
+texture/over = ExtResource( 3 )
+texture/progress = ExtResource( 4 )
+radial_fill/fill_degrees = 360.0
+radial_fill/center_offset = Vector2( 0, 0 )
 
 [node name="collectable" type="HBoxContainer" parent="."]
 
@@ -75,7 +82,7 @@ margin/left = 0.0
 margin/top = 5.0
 margin/right = 33.0
 margin/bottom = 27.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 5 )
 text = "000"
 percent_visible = 1.0
 lines_skipped = 0
@@ -91,7 +98,7 @@ margin/left = 37.0
 margin/top = 0.0
 margin/right = 69.0
 margin/bottom = 32.0
-texture = ExtResource( 3 )
+texture = ExtResource( 6 )
 stretch_mode = 0
 
 [node name="VSeparator1" type="VSeparator" parent="collectable"]
@@ -131,7 +138,7 @@ margin/left = 0.0
 margin/top = 5.0
 margin/right = 33.0
 margin/bottom = 27.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 5 )
 text = "000"
 percent_visible = 1.0
 lines_skipped = 0
@@ -147,7 +154,7 @@ margin/left = 37.0
 margin/top = 0.0
 margin/right = 69.0
 margin/bottom = 32.0
-texture = ExtResource( 4 )
+texture = ExtResource( 7 )
 stretch_mode = 0
 
 [node name="VSeparator" type="VSeparator" parent="collectable"]
@@ -187,7 +194,7 @@ margin/left = 0.0
 margin/top = 5.0
 margin/right = 33.0
 margin/bottom = 27.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 5 )
 text = "000"
 percent_visible = 1.0
 lines_skipped = 0
@@ -203,7 +210,7 @@ margin/left = 37.0
 margin/top = 0.0
 margin/right = 69.0
 margin/bottom = 32.0
-texture = ExtResource( 5 )
+texture = ExtResource( 8 )
 stretch_mode = 0
 
 
