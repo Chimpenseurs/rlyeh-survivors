@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://scripts/Spawner.gd" type="Script" id=1]
 [ext_resource path="res://assets/spawner.png" type="Texture" id=2]
@@ -8,9 +8,42 @@
 custom_solver_bias = 0.0
 radius = 10.0
 
+[sub_resource type="Animation" id=2]
+
+resource/name = "Spawn"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:transform/scale")
+tracks/0/interp = 2
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 2, 2 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+
+resource/name = "idle"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:transform/scale")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 1 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ) ]
+}
+
 [node name="Spawner" type="KinematicBody2D"]
 
-transform/scale = Vector2( 2, 2 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1.61421, 0, 0, 1.6064, -0.0697906, -0.0319231 )
@@ -31,5 +64,17 @@ transform/scale = Vector2( 1.61421, 1.6064 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/Spawn = SubResource( 2 )
+anims/idle = SubResource( 3 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
 
 
