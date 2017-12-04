@@ -10,7 +10,7 @@ var weapons = {
 	},
 	"laser gun":{
 		"fire_rate": 0.01,
-		"damage": 2,
+		"damage": 4,
 		"sprite": null,
 		"fire": "_shoot_arrow",
 		"bulletTscn" : preload("res://scenes/LaserBullet.tscn")
@@ -25,9 +25,10 @@ var weapons = {
 	"Pump":{
 		"fire_rate": 0.50,
 		"damage": 100,
+		"bullet_range": 50000/4,
 		"sprite": null,
 		"fire": "_shoot_rifle",
-		"bulletTscn" : preload("res://scenes/PacBullet.tscn")
+		"bulletTscn" : preload("res://scenes/Bullet.tscn")
 	}
 }
 
@@ -130,16 +131,17 @@ func _fixed_process(delta):
 
 func _shoot_rifle():
 	var shoot_position = current_weapon["sprite"].get_node("ShotPosition")
-	var cone = 0.1
+	var cone = 0.17
 	var mouse_pos = get_global_mouse_pos()
 	var shoot_pos = shoot_position.get_global_pos()
 	var sep_dist = mouse_pos.distance_to(shoot_pos)
-
+	var bullet_range = self.current_weapon["bullet_range"]
+	
 	if self.fire_ready == 0:
 		self.fire_ready = self.current_weapon["fire_rate"]
 		get_node("SamplePlayer").play("laser")
-
-		for i in range(-3, 3):
+	
+		for i in range(-2, 2):
 			self.fire_ready = self.current_weapon["fire_rate"]
 			# We get a point at a distance of 1 on the line defined by the shoot pos to the mouse
 			# then we apply a rotation
@@ -154,7 +156,7 @@ func _shoot_rifle():
 			new_arrow.set_global_pos(shoot_position.get_global_pos())
 			get_parent().bullerHolder.add_child(new_arrow)
 			get_node("SamplePlayer").play("laser")
-			new_arrow.init_bullet(bullet_motion_f.normalized()*shoot_speed, self.current_weapon["damage"], self.bullet_range )
+			new_arrow.init_bullet(bullet_motion_f.normalized()*shoot_speed, self.current_weapon["damage"], bullet_range )
 		
 func _shoot_arrow():
 	if self.fire_ready == 0:
@@ -214,7 +216,7 @@ func add_weapons(weapons_bought) :
 		visual_acuity *= (100.0 - float(w["eye_malus"])) / 100.0
 		devil_eyes -= w["eye_malus"]
 		
-		velocity *= (100.0 - float(w["shoe_malus"])) / 100.0
+		velocity -= 12 * float(w["shoe_malus"])
 		devil_shoes -= w["shoe_malus"]
 	
 	# Equip last weapon

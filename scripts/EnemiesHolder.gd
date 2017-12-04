@@ -11,7 +11,6 @@ func add_enemy(node):
 	if self.get_child_count() < self.max_enemies:
 		self.add_child(node)
 	else:
-		print("ezrezr")
 		node.queue_free()
 		
 func is_max_reached():
