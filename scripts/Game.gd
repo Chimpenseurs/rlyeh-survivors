@@ -76,7 +76,7 @@ func move_to_room(room):
 	create_bullet_holder()
 	var tmp_room = self.currentRoom
 	self.currentRoom = Maps[room].instance()
-	if tmp_room :
+	if tmp_room != null :
 		tmp_room.queue_free()
 	self.currentRoom.add_to_group("map")
 	self.add_child(self.currentRoom)
@@ -103,7 +103,8 @@ func restart():
 	self.player.set_as_toplevel(true)
 	self.add_child(player)
 	
-	var room  = get_room(Vector2(1, 1))
+	self.currentRoomIdx = Vector2(1, 1)
+	var room  = get_room(self.currentRoomIdx)
 	self.move_to_room(room)
 	
 	get_node("HUD").init_life_bar()
@@ -111,7 +112,6 @@ func restart():
 	
 func death():
 	self.player.queue_free()
-	self.currentRoom.queue_free()
 	get_node("GameOver").show()
 	get_node("GameOver").set_fixed_process(true)
 	get_tree().set_pause(true)
