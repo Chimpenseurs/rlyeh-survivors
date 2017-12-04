@@ -74,7 +74,7 @@ func get_room(pos):
 	
 func change_room(pos, direction):
 	create_bullet_holder()
-	
+
 	var direction_vector = get_direction_vector(direction)
 	
 	self.currentRoomIdx += direction_vector

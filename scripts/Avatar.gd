@@ -1,17 +1,17 @@
 extends KinematicBody2D
 
-var bulletTscn = preload("res://scenes/Bullet.tscn")
-
 var weapons = {
 	"pistol":{
 		"fire_rate": 0.75,
 		"damage": 50,
-		"sprite": get_node("Sprite/pistol")
+		"sprite": null,
+		"bulletTscn" : preload("res://scenes/Bullet.tscn")
 	},
 	"laser gun":{
 		"fire_rate": 0.2,
 		"damage": 50,
-		"sprite": get_node("Sprite/laser gun")
+		"sprite": null,
+		"bulletTscn" : preload("res://scenes/LaserBullet.tscn")
 	}
 }
 
@@ -106,9 +106,8 @@ func _shoot_arrow():
 		self.fire_ready = self.current_weapon["fire_rate"]
 		var shoot_position = current_weapon["sprite"].get_node("ShotPosition")
 		var bullet_motion = (get_global_mouse_pos() - shoot_position.get_global_pos()).normalized() * shoot_speed
-		var new_arrow = bulletTscn.instance()
-		var arrow_rotation = get_angle_to(get_global_mouse_pos()) + self.get_rot()
-		new_arrow.set_rot(arrow_rotation)
+		var new_arrow = self.current_weapon["bulletTscn"].instance()
+
 		
 		new_arrow.set_global_pos(shoot_position.get_global_pos())
 		get_parent().bullerHolder.add_child(new_arrow)
