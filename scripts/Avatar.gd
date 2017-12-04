@@ -7,7 +7,7 @@ const weapons = {
 		"fire_rate": 0.75,
 		"damage": 50
 	},
-	"machine gun":{
+	"laser gun":{
 		"fire_rate": 0.2,
 		"damage": 50
 	}

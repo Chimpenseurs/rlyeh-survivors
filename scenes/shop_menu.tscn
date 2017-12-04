@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=1]
 
 [ext_resource path="res://scripts/shop_menu.gd" type="Script" id=1]
-[ext_resource path="res://assets/pumpkinfleau.png" type="Texture" id=2]
+[ext_resource path="res://assets/laserGun.png" type="Texture" id=2]
 [ext_resource path="res://resources/fonts/TravelingTypewriter_10pt.fnt" type="BitmapFont" id=3]
 [ext_resource path="res://resources/fonts/TravelingTypewriter.fnt" type="BitmapFont" id=4]
 [ext_resource path="res://assets/badHealt_token.png" type="Texture" id=5]
@@ -115,7 +115,7 @@ margin/top = 68.0
 margin/right = 64.0
 margin/bottom = 79.0
 custom_fonts/font = ExtResource( 3 )
-text = "machine gun"
+text = "laser gun"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
