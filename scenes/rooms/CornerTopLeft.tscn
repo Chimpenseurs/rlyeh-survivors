@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=3 format=1]
 
 [ext_resource path="res://scenes/rooms/Map.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/collectables/Shoe.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/Spawner.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Spawner.tscn" type="PackedScene" id=2]
 
 [node name="TileMap" instance=ExtResource( 1 )]
 
@@ -14,25 +13,17 @@ tile_data = IntArray( 0, 0, 1, 5, 2, 5, 3, 5, 4, 5, 5, 5, 6, 5, 7, 5, 8, 5, 9, 5
 
 max_enemies = 2
 
-[node name="Shoe" parent="." instance=ExtResource( 2 )]
-
-transform/pos = Vector2( 94.7736, 91.6047 )
-
-[node name="Shoe1" parent="." instance=ExtResource( 2 )]
-
-transform/pos = Vector2( 88.6349, 305.231 )
-
-[node name="Spawner" parent="." instance=ExtResource( 3 )]
+[node name="Spawner" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 901.159, 466.54 )
 throuput = 5
 
-[node name="Spawner2" parent="." instance=ExtResource( 3 )]
+[node name="Spawner2" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 484.956, 99.4468 )
 throuput = 3
 
-[node name="Spawner1" parent="." instance=ExtResource( 3 )]
+[node name="Spawner1" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 109.269, 477.59 )
 throuput = 4
