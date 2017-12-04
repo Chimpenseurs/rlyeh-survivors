@@ -51,7 +51,7 @@ points = Vector2Array( -11.3547, -1.68796, 32.3846, 32.2831, -11.998, 32.2831, -
 [sub_resource type="ConvexPolygonShape2D" id=51]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -32, -13, 32, -13, 32, 32, -32, 32 )
+points = Vector2Array( -32, -15, 32, -15, 32, 32, -32, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=11]
 
@@ -117,15 +117,15 @@ points = Vector2Array( 9.69312, 6.60382, 14.9489, 32.2989, -32.3534, 32.0069, -3
 custom_solver_bias = 0.0
 points = Vector2Array( 9.69312, 6.60382, 1.22542, -20.8432, 18.3846, -9.20999 )
 
-[sub_resource type="ConvexPolygonShape2D" id=23]
+[sub_resource type="ConvexPolygonShape2D" id=52]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -9.92341, 6.26367, -11.0456, -14.1479, 8.96484, -10.4782 )
+points = Vector2Array( 31.7721, -12.9416, 32, 32, -11, 32, -11, 6, 9, -15 )
 
-[sub_resource type="ConvexPolygonShape2D" id=24]
+[sub_resource type="ConvexPolygonShape2D" id=53]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 32.4637, -14.0044, 32.1052, 31.8818, -14.2079, 31.7047, -9.92341, 6.26367, 8.96484, -10.4782 )
+points = Vector2Array( 9, -15, -11, 6, -11.1164, -13.6029 )
 
 [sub_resource type="ConvexPolygonShape2D" id=25]
 
@@ -412,7 +412,7 @@ trigger = false
 
 [node name="map_tileset4" type="Sprite" parent="."]
 
-transform/pos = Vector2( 378.808, 380.147 )
+transform/pos = Vector2( 378.808, 379.802 )
 texture = SubResource( 1 )
 vframes = 8
 hframes = 4
@@ -439,7 +439,7 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="map_tileset4/StaticBody2D"]
 
 build_mode = 0
-polygon = Vector2Array( -32, -13, 32, -13, 32, 32, -32, 32 )
+polygon = Vector2Array( -32, -15, 32, -15, 32, 32, -32, 32 )
 shape_range = Vector2( 0, 0 )
 trigger = false
 
@@ -651,7 +651,7 @@ trigger = false
 
 [node name="map_tileset13" type="Sprite" parent="."]
 
-transform/pos = Vector2( 88.2703, 287.492 )
+transform/pos = Vector2( 88.2703, 287.347 )
 texture = SubResource( 1 )
 vframes = 8
 hframes = 4
@@ -663,10 +663,10 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="map_tileset13"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 23 )
+shapes/0/shape = SubResource( 52 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 24 )
+shapes/1/shape = SubResource( 53 )
 shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/1/trigger = false
 collision/layers = 1
@@ -679,7 +679,7 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="map_tileset13/StaticBody2D"]
 
 build_mode = 0
-polygon = Vector2Array( 8.96484, -10.4782, -11.0456, -14.1479, -9.92341, 6.26367, -14.2079, 31.7047, 32.1052, 31.8818, 32.4637, -14.0044 )
+polygon = Vector2Array( 9, -15, -11.1164, -13.6029, -11, 6, -11, 32, 32, 32, 31.7721, -12.9416 )
 shape_range = Vector2( 0, 1 )
 trigger = false
 
