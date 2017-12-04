@@ -1,6 +1,6 @@
 extends Node2D
 
-export var max_enemies = 2
+export var max_enemies = 7
 
 func _ready():
 	# Called every time the node is added to the scene.

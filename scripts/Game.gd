@@ -92,6 +92,7 @@ func change_room(pos, direction):
 	self.player.set_z(self.currentRoom.get_z() + 2)
 
 func restart():
+	get_node("GameOver/Control/enemies_killed").set_text("0000")
 	get_node("GameOver").hide()
 	get_tree().set_pause(false)
 	self.set_fixed_process(true)

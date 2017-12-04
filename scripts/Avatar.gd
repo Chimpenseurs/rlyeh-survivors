@@ -9,8 +9,8 @@ var weapons = {
 		"bulletTscn" : preload("res://scenes/Bullet.tscn")
 	},
 	"laser gun":{
-		"fire_rate": 0.2,
-		"damage": 50,
+		"fire_rate": 0.01,
+		"damage": 2,
 		"sprite": null,
 		"fire": "_shoot_arrow",
 		"bulletTscn" : preload("res://scenes/LaserBullet.tscn")
@@ -50,7 +50,7 @@ var devil_hearts
 var devil_eyes
 var devil_shoes
 
-var timer = 0
+var last_hit_time = 0
 
 func _ready():
 	# Init weapon sprite
@@ -96,9 +96,9 @@ func _input(event):
 
 func _fixed_process(delta):
 	
-	timer += delta
-	if (timer > 5 &&  self.life < self.max_life):
-		self.life +=1
+	last_hit_time += delta
+	if (last_hit_time > 0.5 &&  self.life < self.max_life):
+		self.life +=3
 		
 	set_player_orientation()
 	self.fire_ready -= delta
@@ -183,6 +183,11 @@ func set_player_orientation():
 	
 func take_damage(collider_pos, damage_amount):
 	var direction = get_pos() - collider_pos
+	#invincibility after hit
+	if ( last_hit_time < 0.25 ) :
+		return
+		
+	last_hit_time = 0
 	life -= damage_amount
 	
 	if self.life <= 0 and !self.dead:

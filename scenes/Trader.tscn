@@ -5,17 +5,17 @@
 [ext_resource path="res://scenes/shop_menu.tscn" type="PackedScene" id=3]
 [ext_resource path="res://resources/sounds/welcome.wav" type="Sample" id=4]
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 19.9134, 10 )
 
-[sub_resource type="SampleLibrary" id=2]
+[sub_resource type="SampleLibrary" id=3]
 
 samples/welcome = {
 "db": 0.0,
@@ -27,7 +27,7 @@ samples/welcome = {
 [node name="trader" type="StaticBody2D"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 3 )
+shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 2.2199, 0, 0, 4.38877, -0.0511808, 0.786588 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -48,14 +48,14 @@ hframes = 4
 
 transform/pos = Vector2( -0.0511808, 0.786588 )
 transform/scale = Vector2( 2.2199, 4.38877 )
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
 
 [node name="Area2D" type="Area2D" parent="."]
 
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 3.73499, 0, 0, 3.80191, 3.32786, 44.5865 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
@@ -67,21 +67,21 @@ angular_damp = 1.0
 
 transform/pos = Vector2( 3.32786, 44.5865 )
 transform/scale = Vector2( 3.73499, 3.80191 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 
 [node name="shop_menu" parent="." instance=ExtResource( 3 )]
 
 margin/left = 39.0
-margin/top = -121.0
+margin/top = -219.0
 margin/right = 249.0
-margin/bottom = 7.0
+margin/bottom = -47.0
 
 [node name="SamplePlayer" type="SamplePlayer" parent="."]
 
 config/polyphony = 1
-config/samples = SubResource( 2 )
+config/samples = SubResource( 3 )
 default/volume_db = 0.0
 default/pitch_scale = 1.0
 default/pan = 0.0

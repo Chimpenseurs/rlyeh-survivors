@@ -30,6 +30,6 @@ __meta__ = {
 
 material/use_parent = true
 script/script = ExtResource( 2 )
-max_enemies = 2
+max_enemies = 7
 
 

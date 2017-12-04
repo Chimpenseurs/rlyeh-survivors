@@ -7,7 +7,7 @@ func _ready():
 func init_bullet(velocity, damages, dist_range):
 	self.motion = velocity
 	self.damages = damages
-	self.dist_range = 100
+	self.dist_range = 500
 
 	
 	var arrow_rotation = get_angle_to(get_global_mouse_pos()) - self.get_rot()
