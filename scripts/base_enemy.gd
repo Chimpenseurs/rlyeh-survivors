@@ -8,7 +8,6 @@ var life = 100
 var velocity = 100
 
 func _ready():
-	print(get_name())
 	add_to_group("enemy")
 
 func die():
