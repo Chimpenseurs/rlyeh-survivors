@@ -19,9 +19,9 @@ Will you survive Rlyeh?
 
 ## Game for windows
 
-* [Download for windows (64-bit)](Rlyeh_Survivors.64.exe)
+* [Download for windows (64-bit)](Rlyeh_Survivors-64bits.exe)
 
-* [Download for windows (32-bit)](Rlyeh_Survivors.32.exe)
+* [Download for windows (32-bit)](Rlyeh_Survivors-32bits.exe)
 
 ## Game for Mac
 
