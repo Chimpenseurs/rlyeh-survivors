@@ -40,7 +40,7 @@ var devil_hearts
 var devil_eyes
 var devil_shoes
 
-var timer = 0
+var last_hit_time = 0
 
 func _ready():
 	# Init weapon sprite
@@ -85,8 +85,8 @@ func _input(event):
 
 func _fixed_process(delta):
 	
-	timer += delta
-	if (timer > 5 &&  self.life < self.max_life):
+	last_hit_time += delta
+	if (last_hit_time > 5 &&  self.life < self.max_life):
 		self.life +=1
 		
 	set_player_orientation()
@@ -144,6 +144,11 @@ func set_player_orientation():
 	
 func take_damage(collider_pos, damage_amount):
 	var direction = get_pos() - collider_pos
+	#invincibility after hit
+	if ( last_hit_time < 0.25 ) :
+		return
+		
+	last_hit_time = 0
 	life -= damage_amount
 	
 	if self.life <= 0 and !self.dead:
