@@ -36,6 +36,8 @@ func _fixed_process(delta):
 	if nb != int(label.get_text()):
 		label.set_text(int_to_text(nb))
 	
+	get_node("fog").set_opacity(1.0 - player.visual_acuity)
+	
 	get_node("life_bar").set_value(player.life * (float(player.life) / float(player.max_life)))
 	get_node("corrupt_bar").set_value(get_node("corrupt_bar").get_max() - player.max_life)
 

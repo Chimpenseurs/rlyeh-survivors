@@ -29,6 +29,7 @@ const bullet_range = 50000
 var fire_ready = 0
 
 var velocity
+var visual_acuity
 
 var dead
 
@@ -57,6 +58,7 @@ func _ready():
 	current_weapon = weapons[enabled_weapons[current_weapon_id]]
 	
 	velocity = 350
+	visual_acuity = 1.0
 	
 	devil_hearts = 0
 	devil_eyes = 0
