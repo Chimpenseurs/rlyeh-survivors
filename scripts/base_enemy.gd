@@ -13,7 +13,7 @@ func _ready():
 
 func die():
 	randomize()
-	if randf() < 0.25 :
+	if randf() < 0.5 :
 		var item 
 		var rand = randf()
 		if rand < 0.1 : 
