@@ -1,0 +1,149 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://assets/pumpkinfleau.png" type="Texture" id=1]
+[ext_resource path="res://resources/fonts/TravelingTypewriter_10pt.fnt" type="BitmapFont" id=2]
+[ext_resource path="res://assets/couteau.png" type="Texture" id=3]
+
+[node name="shop_menu" type="Panel"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 195.0
+margin/bottom = 92.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 3.0
+margin/top = 1.0
+margin/right = 192.0
+margin/bottom = 90.0
+scroll/horizontal = true
+scroll/vertical = true
+
+[node name="VBoxContainer 2" type="VBoxContainer" parent="ScrollContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 67.0
+margin/bottom = 162.0
+alignment = 0
+
+[node name="VBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer 2"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 67.0
+margin/bottom = 79.0
+alignment = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/VBoxContainer 2/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 67.0
+margin/bottom = 79.0
+alignment = 0
+
+[node name="TextureFrame" type="TextureFrame" parent="ScrollContainer/VBoxContainer 2/VBoxContainer/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 67.0
+margin/bottom = 64.0
+texture = ExtResource( 1 )
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer 2/VBoxContainer/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 68.0
+margin/right = 67.0
+margin/bottom = 79.0
+custom_fonts/font = ExtResource( 2 )
+text = "so pimp-kin !"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="VBoxContainer1" type="HBoxContainer" parent="ScrollContainer/VBoxContainer 2"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 83.0
+margin/right = 67.0
+margin/bottom = 162.0
+alignment = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/VBoxContainer 2/VBoxContainer1"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 64.0
+margin/bottom = 79.0
+alignment = 0
+
+[node name="TextureFrame" type="TextureFrame" parent="ScrollContainer/VBoxContainer 2/VBoxContainer1/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 64.0
+margin/bottom = 64.0
+texture = ExtResource( 3 )
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer 2/VBoxContainer1/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 68.0
+margin/right = 64.0
+margin/bottom = 79.0
+custom_fonts/font = ExtResource( 2 )
+text = "butterful !"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+
