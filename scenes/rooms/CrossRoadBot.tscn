@@ -24,14 +24,18 @@ transform/pos = Vector2( 515.595, 83.6444 )
 
 [node name="Hearth" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 499.495, 339.618 )
+transform/pos = Vector2( 508.495, 362.618 )
 
 [node name="Hearth1" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 465.486, 399.474 )
+transform/pos = Vector2( 399.486, 334.474 )
 
 [node name="Hearth2" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 537.586, 385.871 )
+transform/pos = Vector2( 512.586, 504.871 )
+
+[node name="Hearth3" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 627.586, 336.871 )
 
 

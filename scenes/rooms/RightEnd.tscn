@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://scenes/rooms/Map.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Spawner.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/collectables/Heart.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/collectables/Shoe.tscn" type="PackedScene" id=4]
 
 [node name="TileMap" instance=ExtResource( 1 )]
 
@@ -15,6 +16,16 @@ tile_data = IntArray( 0, 0, 1, 5, 2, 5, 3, 5, 4, 5, 5, 5, 6, 5, 7, 5, 8, 5, 9, 5
 transform/pos = Vector2( 497.617, 361.349 )
 transform/scale = Vector2( 0.86097, 0.861284 )
 
+[node name="Spawner4" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 730.241, 346.385 )
+transform/scale = Vector2( 0.86097, 0.861284 )
+
+[node name="Spawner5" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 723.439, 166.816 )
+transform/scale = Vector2( 0.86097, 0.861284 )
+
 [node name="Spawner1" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 933.464, 479.211 )
@@ -22,32 +33,41 @@ transform/scale = Vector2( 0.86097, 0.861284 )
 
 [node name="Spawner2" parent="." instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 271.714, 469.39 )
+transform/pos = Vector2( 274.435, 485.715 )
+transform/scale = Vector2( 0.86097, 0.861284 )
+
+[node name="Spawner6" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 109.918, 91.6108 )
 transform/scale = Vector2( 0.86097, 0.861284 )
 
 [node name="Spawner3" parent="." instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 926.098, 101.068 )
-transform/scale = Vector2( 0.86097, 0.861284 )
-
-[node name="Hearth" parent="." instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 503.961, 482.485 )
+transform/pos = Vector2( 931.54, 86.1039 )
 transform/scale = Vector2( 0.86097, 0.861284 )
 
 [node name="Hearth1" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 475.723, 453.019 )
+transform/pos = Vector2( 461.612, 500.694 )
+transform/scale = Vector2( 0.86097, 0.861284 )
+
+[node name="Hearth4" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 582.532, 503.834 )
+transform/scale = Vector2( 0.86097, 0.861284 )
+
+[node name="Hearth5" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 304.416, 420.732 )
 transform/scale = Vector2( 0.86097, 0.861284 )
 
 [node name="Hearth2" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 530.971, 462.841 )
+transform/pos = Vector2( 721.164, 506.047 )
 transform/scale = Vector2( 0.86097, 0.861284 )
 
-[node name="Hearth3" parent="." instance=ExtResource( 3 )]
+[node name="Shoe" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 549.387, 493.535 )
-transform/scale = Vector2( 0.86097, 0.861284 )
+transform/pos = Vector2( 545.39, 334.15 )
 
 

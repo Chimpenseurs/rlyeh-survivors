@@ -71,22 +71,23 @@ func get_direction_vector(direction):
 	
 func get_room(pos):
 	return self.world[pos.y][pos.x]
-	
-func change_room(pos, direction):
+
+func move_to_room(room):
 	create_bullet_holder()
-	
-	var direction_vector = get_direction_vector(direction)
-	
-	self.currentRoomIdx += direction_vector
-	var room = get_room(self.currentRoomIdx)
-	
 	var tmp_room = self.currentRoom
 	self.currentRoom = Maps[room].instance()
-	tmp_room.queue_free()
-	
+	if tmp_room :
+		tmp_room.queue_free()
 	self.currentRoom.add_to_group("map")
 	self.add_child(self.currentRoom)
 	self.currentRoom.set_z(self.currentRoom.get_z() - 1)
+	
+
+func change_room(pos, direction):
+	var direction_vector = get_direction_vector(direction)
+	self.currentRoomIdx += direction_vector
+	var room = get_room(self.currentRoomIdx)
+	self.move_to_room(room)
 	
 	self.player.set_pos(pos)
 
@@ -94,23 +95,19 @@ func restart():
 	get_node("GameOver").hide()
 	get_tree().set_pause(false)
 	self.set_fixed_process(true)
-	create_bullet_holder()
 	var cursorTexture = load("res://assets/target.png")
-	Input.set_custom_mouse_cursor(cursorTexture,cursorTexture.get_size()/2)
 	
 	self.player = PlayerTscn.instance()
 	self.player.set_pos(Vector2(100, 100))
 	self.player.add_to_group("player")
 	self.player.set_as_toplevel(true)
-	
-	self.currentRoom = self.Maps[get_room(currentRoomIdx)].instance()
-	self.currentRoom.add_to_group("map")
-	self.currentRoom.set_z(self.currentRoom.get_z() - 1)
-	
-	self.add_child(currentRoom)
 	self.add_child(player)
 	
+	var room  = get_room(Vector2(1, 1))
+	self.move_to_room(room)
+	
 	get_node("HUD").init_life_bar()
+	Input.set_custom_mouse_cursor(cursorTexture,cursorTexture.get_size()/2)
 	
 func death():
 	self.player.queue_free()

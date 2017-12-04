@@ -15,7 +15,7 @@ func die():
 	randomize()
 	if randf() < 0.25 :
 		var item 
-		if randf() < 0.33 : 
+		if randf() < 0.1 : 
 			item = items["shoe"].instance()
 		else :
 			item = items["heart"].instance()
