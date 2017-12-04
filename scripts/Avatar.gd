@@ -204,7 +204,7 @@ func add_weapons(weapons_bought) :
 	for w in weapons_bought :
 		enabled_weapons.append(w["name"])
 		
-		max_life *= (100.0 - float(w["heart_malus"])) / 100.0
+		max_life -= 150 * float(w["heart_malus"])
 		if life > max_life :
 			life = max_life
 		
