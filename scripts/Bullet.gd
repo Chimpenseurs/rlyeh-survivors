@@ -8,6 +8,7 @@ var pierce = 1
 
 func _ready():
 	set_fixed_process(true)
+	add_to_group("bullet")
 	self.set_gravity_scale(0)
 
 func init_bullet(velocity, damages, dist_range):
@@ -23,11 +24,10 @@ func _fixed_process(delta):
 
 func _on_Bullet_body_enter( body ):
 	if body.is_in_group("enemy"):
+		print("sdfsfsf ", self.damages)
 		body.take_damage(self.damages)
-		print(pierce)
 		pierce -= 1
 		if pierce == 0:
 			self.queue_free()
-
-	elif !body.is_in_group("player"):
+	elif !body.is_in_group("player") and !body.is_in_group("bullet"):
 		self.queue_free()
