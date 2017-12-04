@@ -82,7 +82,6 @@ hframes = 4
 
 [node name="pistol" type="Sprite" parent="Sprite"]
 
-visibility/visible = false
 transform/pos = Vector2( -33.0935, 3.71108 )
 transform/scale = Vector2( 0.297984, 0.35602 )
 z/z = -1
@@ -111,6 +110,7 @@ transform/scale = Vector2( 1.69412, 2.23897 )
 
 [node name="Paczooka" type="Sprite" parent="Sprite"]
 
+visibility/visible = false
 transform/pos = Vector2( -25.7622, -4.34814 )
 transform/scale = Vector2( -2.18597, 1.46861 )
 z/z = -1
@@ -118,6 +118,7 @@ texture = ExtResource( 5 )
 
 [node name="ShotPosition" type="Position2D" parent="Sprite/Paczooka"]
 
+visibility/visible = false
 transform/pos = Vector2( 20.9161, -5.86775 )
 transform/scale = Vector2( 0.42263, 0.80561 )
 

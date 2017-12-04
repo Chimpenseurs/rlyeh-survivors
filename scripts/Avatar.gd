@@ -52,7 +52,7 @@ func _ready():
 	max_life = 5000
 	life = max_life
 	
-	enabled_weapons = ["Paczooka"]
+	enabled_weapons = ["pistol"]
 	current_weapon_id = 0
 	current_weapon = weapons[enabled_weapons[current_weapon_id]]
 	
