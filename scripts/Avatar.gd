@@ -10,7 +10,7 @@ var weapons = {
 	},
 	"laser gun":{
 		"fire_rate": 0.01,
-		"damage": 2,
+		"damage": 4,
 		"sprite": null,
 		"fire": "_shoot_arrow",
 		"bulletTscn" : preload("res://scenes/LaserBullet.tscn")
