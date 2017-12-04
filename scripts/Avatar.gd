@@ -170,7 +170,8 @@ func _shoot_arrow():
 		new_arrow.set_global_pos(shoot_position.get_global_pos())
 		new_arrow.set_z(self.get_z())
 		get_parent().bullerHolder.add_child(new_arrow)
-		get_node("SamplePlayer").play("laser")
+		if not get_node("SamplePlayer").is_active() :
+			get_node("SamplePlayer").play("laser")
 		new_arrow.init_bullet(bullet_motion, self.current_weapon["damage"], self.bullet_range )
 
 func set_player_orientation():
