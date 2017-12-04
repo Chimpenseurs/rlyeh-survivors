@@ -139,9 +139,9 @@ focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 21.0
+margin/top = 23.0
 margin/right = 69.0
-margin/bottom = 53.0
+margin/bottom = 55.0
 alignment = 0
 
 [node name="Label" type="Label" parent="ScrollContainer/weapon_list/weapon01/weapon_cost/hearts_cost"]
@@ -219,19 +219,19 @@ stretch_mode = 0
 
 [node name="shoes_cost" type="HBoxContainer" parent="ScrollContainer/weapon_list/weapon01/weapon_cost"]
 
+visibility/visible = false
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 57.0
+margin/top = 41.0
 margin/right = 69.0
-margin/bottom = 57.0
+margin/bottom = 73.0
 alignment = 0
 
 [node name="Label" type="Label" parent="ScrollContainer/weapon_list/weapon01/weapon_cost/shoes_cost"]
 
-visibility/visible = false
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -249,14 +249,13 @@ max_lines_visible = -1
 
 [node name="TextureFrame" type="TextureFrame" parent="ScrollContainer/weapon_list/weapon01/weapon_cost/shoes_cost"]
 
-visibility/visible = false
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 0.0
+margin/left = 37.0
 margin/top = 0.0
-margin/right = 32.0
+margin/right = 69.0
 margin/bottom = 32.0
 texture = ExtResource( 7 )
 stretch_mode = 0
