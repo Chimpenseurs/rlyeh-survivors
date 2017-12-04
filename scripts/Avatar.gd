@@ -2,14 +2,16 @@ extends KinematicBody2D
 
 var bulletTscn = preload("res://scenes/Bullet.tscn")
 
-const weapons = {
+var weapons = {
 	"pistol":{
 		"fire_rate": 0.75,
-		"damage": 50
+		"damage": 50,
+		"sprite": get_node("Sprite/pistol")
 	},
 	"laser gun":{
 		"fire_rate": 0.2,
-		"damage": 50
+		"damage": 50,
+		"sprite": get_node("Sprite/laser gun")
 	}
 }
 
@@ -32,8 +34,11 @@ var devil_eyes
 var devil_shoes
 
 
-var shoot_postition
 func _ready():
+	# Init weapon sprite
+	weapons["pistol"]["sprite"] = get_node("Sprite/pistol")
+	weapons["laser gun"]["sprite"] = get_node("Sprite/laser gun")
+	
 	# Init vars
 	dead = false
 	max_life = 5000
@@ -49,21 +54,24 @@ func _ready():
 	devil_eyes = 0
 	devil_shoes = 0
 	
-	self.shoot_postition = self.get_node("Sprite/weapon_sprite/ShotPosition")
 	set_process_input(true)
 	set_fixed_process(true)
 
 func _input(event):
 	if event.is_action_pressed("next_weapon") :
+		current_weapon["sprite"].hide()
 		current_weapon_id += 1
 		if current_weapon_id > enabled_weapons.size() - 1 :
 			current_weapon_id = 0
 		current_weapon = weapons[enabled_weapons[current_weapon_id]]
+		current_weapon["sprite"].show()
 	elif event.is_action_pressed("previous_weapon") :
+		current_weapon["sprite"].hide()
 		current_weapon_id -= 1
 		if current_weapon_id < 0 :
 			current_weapon_id = enabled_weapons.size() - 1
 		current_weapon = weapons[enabled_weapons[current_weapon_id]]
+		current_weapon["sprite"].show()
 
 func _fixed_process(delta):
 	set_player_orientation()
@@ -96,12 +104,13 @@ func _fixed_process(delta):
 func _shoot_arrow():
 	if self.fire_ready == 0:
 		self.fire_ready = self.current_weapon["fire_rate"]
-		var bullet_motion = (get_global_mouse_pos() - self.shoot_postition.get_global_pos()).normalized() * shoot_speed
+		var shoot_position = current_weapon["sprite"].get_node("ShotPosition")
+		var bullet_motion = (get_global_mouse_pos() - shoot_position.get_global_pos()).normalized() * shoot_speed
 		var new_arrow = bulletTscn.instance()
 		var arrow_rotation = get_angle_to(get_global_mouse_pos()) + self.get_rot()
 		new_arrow.set_rot(arrow_rotation)
-		var weapon = find_node("ShotPosition")
-		new_arrow.set_global_pos(weapon.get_global_pos())
+		
+		new_arrow.set_global_pos(shoot_position.get_global_pos())
 		get_parent().bullerHolder.add_child(new_arrow)
 		get_node("SamplePlayer").play("laser")
 		new_arrow.init_bullet(bullet_motion, self.current_weapon["damage"], self.bullet_range )

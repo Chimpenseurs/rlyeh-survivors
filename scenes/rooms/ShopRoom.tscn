@@ -58,7 +58,7 @@ texture = ExtResource( 3 )
 [node name="trader" parent="." instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 371.975, 340.515 )
-z/z = 6
+z/z = 7
 
 [node name="Hearth" parent="." instance=ExtResource( 5 )]
 
