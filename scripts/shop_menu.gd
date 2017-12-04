@@ -46,4 +46,4 @@ func _on_Button_pressed():
 	
 	if weapons_bought.size() > 0 :
 		var player = get_tree().get_nodes_in_group("player")[0]
-		player.add_weapon(weapons_bought)
+		player.add_weapons(weapons_bought)
