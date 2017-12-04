@@ -155,6 +155,7 @@ margin/top = 5.0
 margin/right = 33.0
 margin/bottom = 27.0
 custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.9375, 0.124512, 0.124512, 1 )
 text = "010"
 percent_visible = 1.0
 lines_skipped = 0
@@ -197,6 +198,7 @@ margin/top = 5.0
 margin/right = 33.0
 margin/bottom = 27.0
 custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "000"
 percent_visible = 1.0
 lines_skipped = 0
@@ -239,6 +241,7 @@ margin/top = 5.0
 margin/right = 33.0
 margin/bottom = 27.0
 custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.929688, 0.0944214, 0.0944214, 1 )
 text = "000"
 percent_visible = 1.0
 lines_skipped = 0
@@ -271,7 +274,6 @@ margin/bottom = 86.0
 
 [node name="weapon2" type="HBoxContainer" parent="ScrollContainer/weapon_list"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -342,7 +344,6 @@ max_lines_visible = -1
 
 [node name="weapon_cost" type="VBoxContainer" parent="ScrollContainer/weapon_list/weapon2"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -355,7 +356,6 @@ alignment = 1
 
 [node name="hearts_cost" type="HBoxContainer" parent="ScrollContainer/weapon_list/weapon2/weapon_cost"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -397,7 +397,6 @@ stretch_mode = 0
 
 [node name="eyes_cost" type="HBoxContainer" parent="ScrollContainer/weapon_list/weapon2/weapon_cost"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -419,6 +418,7 @@ margin/top = 5.0
 margin/right = 33.0
 margin/bottom = 27.0
 custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "010"
 percent_visible = 1.0
 lines_skipped = 0
@@ -439,7 +439,6 @@ stretch_mode = 0
 
 [node name="shoes_cost" type="HBoxContainer" parent="ScrollContainer/weapon_list/weapon2/weapon_cost"]
 
-editor/display_folded = true
 visibility/visible = false
 focus/ignore_mouse = false
 focus/stop_mouse = false
@@ -462,6 +461,7 @@ margin/top = 5.0
 margin/right = 33.0
 margin/bottom = 27.0
 custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "000"
 percent_visible = 1.0
 lines_skipped = 0
@@ -563,7 +563,6 @@ max_lines_visible = -1
 
 [node name="weapon_cost" type="VBoxContainer" parent="ScrollContainer/weapon_list/weapon3"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -597,6 +596,7 @@ margin/top = 5.0
 margin/right = 32.0
 margin/bottom = 27.0
 custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "030"
 percent_visible = 1.0
 lines_skipped = 0
@@ -638,6 +638,7 @@ margin/top = 5.0
 margin/right = 32.0
 margin/bottom = 27.0
 custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "030"
 percent_visible = 1.0
 lines_skipped = 0
@@ -679,6 +680,7 @@ margin/top = 5.0
 margin/right = 32.0
 margin/bottom = 27.0
 custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "030"
 percent_visible = 1.0
 lines_skipped = 0
