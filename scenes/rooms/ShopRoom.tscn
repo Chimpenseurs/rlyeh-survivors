@@ -19,7 +19,6 @@ tile_data = IntArray( 0, 0, 1, 5, 2, 15, 3, 16, 4, 16, 5, 16, 6, 14, 7, 5, 8, 5,
 
 [node name="Sprite" type="Node2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 492.321, 231.898 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite"]
@@ -47,7 +46,7 @@ _update_shape_index = 0
 [node name="Sprite" type="Sprite" parent="Sprite"]
 
 transform/pos = Vector2( -0.487671, -33.162 )
-z/z = 2
+z/z = 3
 texture = ExtResource( 2 )
 
 [node name="Sprite1" type="Sprite" parent="Sprite"]
