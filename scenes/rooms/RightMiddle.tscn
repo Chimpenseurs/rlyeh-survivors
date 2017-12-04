@@ -14,22 +14,27 @@ tile_data = IntArray( 0, 30, 1, 30, 2, 2, 3, 16, 4, 16, 5, 16, 6, 14, 7, 5, 8, 5
 [node name="Spawner" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 92.5054, 213.579 )
+throuput = 2
 
 [node name="Spawner1" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 598.565, 364.58 )
+throuput = 2
 
 [node name="Spawner4" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 371.382, 270.714 )
+throuput = 2
 
 [node name="Spawner3" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 599.925, 199.975 )
+throuput = 2
 
 [node name="Spawner2" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 614.889, 274.795 )
+throuput = 2
 
 [node name="Shoe" parent="." instance=ExtResource( 3 )]
 

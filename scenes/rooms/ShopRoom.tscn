@@ -19,10 +19,12 @@ tile_data = IntArray( 0, 0, 1, 5, 2, 15, 3, 16, 4, 16, 5, 16, 6, 14, 7, 5, 8, 5,
 
 [node name="Sprite" type="Node2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 492.321, 231.898 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite"]
 
+editor/display_folded = true
 transform/pos = Vector2( 0, 52 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
@@ -60,6 +62,42 @@ transform/pos = Vector2( 371.975, 340.515 )
 z/z = 7
 
 [node name="Hearth" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 492.241, 255.526 )
+
+[node name="Hearth1" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 492.241, 255.526 )
+
+[node name="Hearth2" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 492.241, 255.526 )
+
+[node name="Hearth3" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 492.241, 255.526 )
+
+[node name="Hearth4" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 492.241, 255.526 )
+
+[node name="Hearth5" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 492.241, 255.526 )
+
+[node name="Hearth6" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 492.241, 255.526 )
+
+[node name="Hearth7" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 492.241, 255.526 )
+
+[node name="Hearth8" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 492.241, 255.526 )
+
+[node name="Hearth9" parent="." instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 492.241, 255.526 )
 

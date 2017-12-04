@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=1]
+[gd_scene load_steps=3 format=1]
 
 [ext_resource path="res://resources/tilest.tres" type="TileSet" id=1]
+[ext_resource path="res://scripts/EnemiesHolder.gd" type="Script" id=2]
 
 [node name="TileMap" type="Navigation2D"]
 
@@ -28,5 +29,7 @@ __meta__ = {
 [node name="Enemies" type="Node2D" parent="."]
 
 material/use_parent = true
+script/script = ExtResource( 2 )
+max_enemies = 7
 
 
