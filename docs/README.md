@@ -1,6 +1,6 @@
 # Rlyeh survivors
 
-**Rate us on the ludum dare webpage of the project https://ldjam.com/events/ludum-dare/40/rlyeh-survivors**
+**Rate us on the ludum dare webpage of the project [https://ldjam.com/events/ludum-dare/40/rlyeh-survivors](https://ldjam.com/events/ludum-dare/40/rlyeh-survivors)**
 
 `ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn`, H.P Lovecraft
 
