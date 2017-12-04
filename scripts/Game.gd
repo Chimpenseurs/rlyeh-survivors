@@ -1,21 +1,45 @@
 extends Node2D
 
 enum MAPS {
+	CornerBotLeft,
+	CornerMap,
+	CrossRoadBot,
+	CornerRightTop,
+	CornerTopLeft,
+	CrossRoad,
 	DeadEnd,
-	CrossRoad
+	LeftEnd,
+	LeftMiddle,
+	RightMiddle,
+	Map3Spawner,
+	RightEnd,
+	ShopRoom,
+	TopEnd
+}
+
+const Maps = {
+	MAPS.CornerBotLeft: preload("res://scenes/rooms/CornerBotLeft.tscn"),
+	MAPS.CornerMap: preload("res://scenes/rooms/CornerMap.tscn"),
+	MAPS.CornerRightTop: preload("res://scenes/rooms/CornerRightTop.tscn"),
+	MAPS.CornerTopLeft: preload("res://scenes/rooms/CornerTopLeft.tscn"),
+	MAPS.CrossRoad: preload("res://scenes/rooms/CrossRoad.tscn"),
+	MAPS.DeadEnd: preload("res://scenes/rooms/DeadEnd.tscn"),
+	MAPS.LeftEnd: preload("res://scenes/rooms/LeftEnd.tscn"),
+	MAPS.CrossRoadBot: preload("res://scenes/rooms/CrossRoadBot.tscn"),
+	MAPS.LeftMiddle: preload("res://scenes/rooms/LeftMiddle.tscn"),
+	MAPS.Map3Spawner: preload("res://scenes/rooms/Map3Spawner.tscn"),
+	MAPS.RightEnd: preload("res://scenes/rooms/RightEnd.tscn"),
+	MAPS.RightMiddle: preload("res://scenes/rooms/RightMiddle.tscn"),
+	MAPS.ShopRoom: preload("res://scenes/rooms/ShopRoom.tscn"),
+	MAPS.TopEnd: preload("res://scenes/rooms/TopEnd.tscn")
 }
 
 var currentRoomIdx = Vector2(1, 1)
 var world = [
-	[ MAPS.CrossRoad, MAPS.CrossRoad, MAPS.CrossRoad],
-	[ MAPS.DeadEnd, MAPS.DeadEnd, MAPS.CrossRoad],
-	[ MAPS.CrossRoad, MAPS.CrossRoad, MAPS.CrossRoad]
-		]
-			
-const Maps = {
-	MAPS.DeadEnd: preload("res://scenes/rooms/DeadEnd.tscn"),
-	MAPS.CrossRoad : preload("res://scenes/rooms/CrossRoad.tscn")
-}
+	[ MAPS.TopEnd, MAPS.CornerTopLeft, MAPS.RightEnd],
+	[ MAPS.RightMiddle, MAPS.ShopRoom, MAPS.RightEnd],
+	[ MAPS.CornerBotLeft, MAPS.CrossRoadBot, MAPS.RightEnd]
+]
 
 var PlayerTscn = preload("res://scenes/Avatar.tscn")
 
@@ -92,16 +116,16 @@ func _fixed_process(delta):
 	var direction = null
 	
 	if player.get_pos().x < 0 :
-		new_pos.x = viewport_rect.size.width - 10
+		new_pos.x = viewport_rect.size.width - 64
 		direction = "left"
 	elif player.get_pos().x > viewport_rect.size.width :
-		new_pos.x = 10
+		new_pos.x = 64
 		direction = "right"
 	elif player.get_pos().y < 0 :
-		new_pos.y = viewport_rect.size.height - 10
+		new_pos.y = viewport_rect.size.height - 64
 		direction = "bottom"
 	elif player.get_pos().y > viewport_rect.size.height :
-		new_pos.y = 10
+		new_pos.y = 64
 		direction = "up"
 		
 	if new_pos != player.get_pos():
