@@ -24,7 +24,6 @@ func _fixed_process(delta):
 
 func _on_Bullet_body_enter( body ):
 	if body.is_in_group("enemy"):
-		print("sdfsfsf ", self.damages)
 		body.take_damage(self.damages)
 		pierce -= 1
 		if pierce == 0:
