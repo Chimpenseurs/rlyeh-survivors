@@ -13,7 +13,7 @@ const weapons = {
 	}
 }
 
-var enabled_weapon
+var enabled_weapons
 var current_weapon
 const shoot_speed = 500
 const bullet_range = 50000
@@ -38,7 +38,7 @@ func _ready():
 	max_life = 5000
 	life = max_life
 	
-	enabled_weapon = ["pistol"]
+	enabled_weapons = ["pistol"]
 	current_weapon = weapons["pistol"]
 	
 	velocity = 350
@@ -114,6 +114,18 @@ func take_damage(collider_pos, damage_amount):
 		self.move(direction.normalized() * 50)
 		get_node("SamplePlayer").play("takeDamage")
 		play_animation("take_damage")
+
+func add_weapon(weapons) :
+	for w in weapons :
+		enabled_weapons.append(w["name"])
+		max_life *= (100.0 - float(w["heart_malus"])) / 100.0
+		devil_hearts -= w["heart_malus"]
+		
+		# TODO : Precision
+		devil_eyes -= w["eye_malus"]
+		
+		velocity *= (100.0 - float(w["shoe_malus"])) / 100.0
+		devil_shoes -= w["shoe_malus"]
 
 # Helper to play animation
 func play_animation(animation):
