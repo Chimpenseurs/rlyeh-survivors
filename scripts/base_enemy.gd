@@ -15,9 +15,9 @@ func die():
 		var item 
 		var rand = randf()
 		if rand < 0.16 : 
-			item = items["eye"].instance()
-		elif rand >= 0.16 && rand < 0.5 : 
 			item = items["shoe"].instance()
+		elif rand >= 0.16 && rand < 0.5 : 
+			item = items["eye"].instance()
 		else :
 			item = items["heart"].instance()
 			

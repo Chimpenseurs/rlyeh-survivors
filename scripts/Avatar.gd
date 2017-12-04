@@ -208,16 +208,15 @@ func add_weapons(weapons_bought) :
 	for w in weapons_bought :
 		enabled_weapons.append(w["name"])
 		
-		max_life -= 150 * float(w["heart_malus"])
+		max_life *= (100.0 - float(w["heart_malus"])) / 100.0
 		if life > max_life :
 			life = max_life
-		
 		devil_hearts -= w["heart_malus"]
 		
-		visual_acuity *= (100.0 - float(w["eye_malus"])) / 100.0
+		visual_acuity *= (100.0 - float(w["eye_malus"])*2.5) / 100.0
 		devil_eyes -= w["eye_malus"]
 		
-		velocity -= 12 * float(w["shoe_malus"])
+		velocity *= (100.0 - float(w["shoe_malus"])*7.5) / 100.0
 		devil_shoes -= w["shoe_malus"]
 	
 	# Equip last weapon
