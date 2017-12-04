@@ -12,7 +12,6 @@ radius = 10.0
 "bullet",
 ]]
 
-editor/display_folded = true
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 0.806086, 0, 0, 0.818055, -0.0809613, 0.0462542 )
