@@ -1,14 +1,14 @@
 [gd_scene load_steps=11 format=1]
 
 [ext_resource path="res://scripts/shop_menu.gd" type="Script" id=1]
-[ext_resource path="res://assets/laserGun.png" type="Texture" id=2]
+[ext_resource path="res://assets/shotgun.png" type="Texture" id=2]
 [ext_resource path="res://resources/fonts/TravelingTypewriter_10pt.fnt" type="BitmapFont" id=3]
 [ext_resource path="res://resources/fonts/TravelingTypewriter.fnt" type="BitmapFont" id=4]
 [ext_resource path="res://assets/badHealt_token.png" type="Texture" id=5]
 [ext_resource path="res://assets/EvilEye.png" type="Texture" id=6]
 [ext_resource path="res://assets/oldBoot.png" type="Texture" id=7]
-[ext_resource path="res://assets/canon.png" type="Texture" id=8]
-[ext_resource path="res://assets/shotgun.png" type="Texture" id=9]
+[ext_resource path="res://assets/laserGun.png" type="Texture" id=8]
+[ext_resource path="res://assets/canon.png" type="Texture" id=9]
 [ext_resource path="res://resources/fonts/TravelingTypewriter_16pt.fnt" type="BitmapFont" id=10]
 
 [node name="shop_menu" type="Panel"]
@@ -32,7 +32,7 @@ size_flags/vertical = 2
 margin/left = 10.0
 margin/top = 6.0
 margin/right = 206.0
-margin/bottom = 122.0
+margin/bottom = 118.0
 scroll/horizontal = true
 scroll/vertical = true
 __meta__ = {
@@ -48,11 +48,12 @@ size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
 margin/right = 167.0
-margin/bottom = 259.0
+margin/bottom = 284.0
 alignment = 0
 
-[node name="weapon01" type="HBoxContainer" parent="ScrollContainer/weapon_list"]
+[node name="weapon3" type="HBoxContainer" parent="ScrollContainer/weapon_list"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -61,6 +62,232 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 167.0
 margin/bottom = 79.0
+alignment = 0
+
+[node name="checkbox" type="CheckBox" parent="ScrollContainer/weapon_list/weapon3"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 26.0
+margin/bottom = 79.0
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+flat = false
+align = 0
+
+[node name="descr" type="VBoxContainer" parent="ScrollContainer/weapon_list/weapon3"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 30.0
+margin/top = 0.0
+margin/right = 94.0
+margin/bottom = 79.0
+alignment = 1
+
+[node name="TextureFrame" type="TextureFrame" parent="ScrollContainer/weapon_list/weapon3/descr"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 64.0
+margin/bottom = 64.0
+texture = ExtResource( 2 )
+stretch_mode = 0
+
+[node name="weapon_name" type="Label" parent="ScrollContainer/weapon_list/weapon3/descr"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 68.0
+margin/right = 64.0
+margin/bottom = 79.0
+custom_fonts/font = ExtResource( 3 )
+text = "Pump"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="weapon_cost" type="VBoxContainer" parent="ScrollContainer/weapon_list/weapon3"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 98.0
+margin/top = 0.0
+margin/right = 167.0
+margin/bottom = 79.0
+alignment = 1
+
+[node name="hearts_cost" type="HBoxContainer" parent="ScrollContainer/weapon_list/weapon3/weapon_cost"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 23.0
+margin/right = 69.0
+margin/bottom = 55.0
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/weapon_list/weapon3/weapon_cost/hearts_cost"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 5.0
+margin/right = 33.0
+margin/bottom = 27.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.9375, 0.124512, 0.124512, 1 )
+text = "010"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="TextureFrame" type="TextureFrame" parent="ScrollContainer/weapon_list/weapon3/weapon_cost/hearts_cost"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 37.0
+margin/top = 0.0
+margin/right = 69.0
+margin/bottom = 32.0
+texture = ExtResource( 5 )
+stretch_mode = 0
+
+[node name="eyes_cost" type="HBoxContainer" parent="ScrollContainer/weapon_list/weapon3/weapon_cost"]
+
+editor/display_folded = true
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 36.0
+margin/right = 69.0
+margin/bottom = 68.0
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/weapon_list/weapon3/weapon_cost/eyes_cost"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 5.0
+margin/right = 33.0
+margin/bottom = 27.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "000"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="TextureFrame" type="TextureFrame" parent="ScrollContainer/weapon_list/weapon3/weapon_cost/eyes_cost"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 37.0
+margin/top = 0.0
+margin/right = 69.0
+margin/bottom = 32.0
+texture = ExtResource( 6 )
+stretch_mode = 0
+
+[node name="shoes_cost" type="HBoxContainer" parent="ScrollContainer/weapon_list/weapon3/weapon_cost"]
+
+editor/display_folded = true
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 41.0
+margin/right = 69.0
+margin/bottom = 73.0
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/weapon_list/weapon3/weapon_cost/shoes_cost"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 5.0
+margin/right = 33.0
+margin/bottom = 27.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.929688, 0.0944214, 0.0944214, 1 )
+text = "000"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="TextureFrame" type="TextureFrame" parent="ScrollContainer/weapon_list/weapon3/weapon_cost/shoes_cost"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 37.0
+margin/top = 0.0
+margin/right = 69.0
+margin/bottom = 32.0
+texture = ExtResource( 7 )
+stretch_mode = 0
+
+[node name="HSeparator1" type="HSeparator" parent="ScrollContainer/weapon_list"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 83.0
+margin/right = 167.0
+margin/bottom = 86.0
+
+[node name="weapon01" type="HBoxContainer" parent="ScrollContainer/weapon_list"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 90.0
+margin/right = 167.0
+margin/bottom = 169.0
 alignment = 0
 
 [node name="checkbox" type="CheckBox" parent="ScrollContainer/weapon_list/weapon01"]
@@ -102,7 +329,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 64.0
 margin/bottom = 64.0
-texture = ExtResource( 2 )
+texture = ExtResource( 8 )
 stretch_mode = 0
 
 [node name="weapon_name" type="Label" parent="ScrollContainer/weapon_list/weapon01/descr"]
@@ -136,14 +363,15 @@ alignment = 1
 
 [node name="hearts_cost" type="HBoxContainer" parent="ScrollContainer/weapon_list/weapon01/weapon_cost"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 23.0
+margin/top = 5.0
 margin/right = 69.0
-margin/bottom = 55.0
+margin/bottom = 37.0
 alignment = 0
 
 [node name="Label" type="Label" parent="ScrollContainer/weapon_list/weapon01/weapon_cost/hearts_cost"]
@@ -158,7 +386,7 @@ margin/right = 33.0
 margin/bottom = 27.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0.9375, 0.124512, 0.124512, 1 )
-text = "010"
+text = "020"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -178,7 +406,7 @@ stretch_mode = 0
 
 [node name="eyes_cost" type="HBoxContainer" parent="ScrollContainer/weapon_list/weapon01/weapon_cost"]
 
-visibility/visible = false
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -201,7 +429,7 @@ margin/right = 33.0
 margin/bottom = 27.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "000"
+text = "010"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -263,16 +491,16 @@ margin/bottom = 32.0
 texture = ExtResource( 7 )
 stretch_mode = 0
 
-[node name="HSeparator1" type="HSeparator" parent="ScrollContainer/weapon_list"]
+[node name="HSeparator" type="HSeparator" parent="ScrollContainer/weapon_list"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 83.0
+margin/top = 173.0
 margin/right = 167.0
-margin/bottom = 86.0
+margin/bottom = 176.0
 
 [node name="weapon2" type="HBoxContainer" parent="ScrollContainer/weapon_list"]
 
@@ -281,9 +509,9 @@ focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 90.0
+margin/top = 180.0
 margin/right = 167.0
-margin/bottom = 169.0
+margin/bottom = 284.0
 alignment = 0
 
 [node name="checkbox" type="CheckBox" parent="ScrollContainer/weapon_list/weapon2"]
@@ -295,7 +523,7 @@ size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
 margin/right = 26.0
-margin/bottom = 79.0
+margin/bottom = 104.0
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -312,7 +540,7 @@ size_flags/vertical = 2
 margin/left = 30.0
 margin/top = 0.0
 margin/right = 94.0
-margin/bottom = 79.0
+margin/bottom = 104.0
 alignment = 1
 
 [node name="TextureFrame" type="TextureFrame" parent="ScrollContainer/weapon_list/weapon2/descr"]
@@ -322,10 +550,10 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 0.0
+margin/top = 12.0
 margin/right = 64.0
-margin/bottom = 64.0
-texture = ExtResource( 8 )
+margin/bottom = 76.0
+texture = ExtResource( 9 )
 stretch_mode = 0
 
 [node name="weapon_name" type="Label" parent="ScrollContainer/weapon_list/weapon2/descr"]
@@ -335,9 +563,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 0.0
-margin/top = 68.0
+margin/top = 80.0
 margin/right = 64.0
-margin/bottom = 79.0
+margin/bottom = 91.0
 custom_fonts/font = ExtResource( 3 )
 text = "Paczooka"
 percent_visible = 1.0
@@ -346,7 +574,6 @@ max_lines_visible = -1
 
 [node name="weapon_cost" type="VBoxContainer" parent="ScrollContainer/weapon_list/weapon2"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -354,7 +581,7 @@ size_flags/vertical = 2
 margin/left = 98.0
 margin/top = 0.0
 margin/right = 167.0
-margin/bottom = 79.0
+margin/bottom = 104.0
 alignment = 1
 
 [node name="hearts_cost" type="HBoxContainer" parent="ScrollContainer/weapon_list/weapon2/weapon_cost"]
@@ -364,9 +591,9 @@ focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 5.0
+margin/top = 0.0
 margin/right = 69.0
-margin/bottom = 37.0
+margin/bottom = 32.0
 alignment = 0
 
 [node name="Label" type="Label" parent="ScrollContainer/weapon_list/weapon2/weapon_cost/hearts_cost"]
@@ -377,11 +604,11 @@ size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 0.0
 margin/top = 5.0
-margin/right = 31.0
+margin/right = 30.0
 margin/bottom = 27.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0.9375, 0.124512, 0.124512, 1 )
-text = "005"
+text = "035"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -392,25 +619,23 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 35.0
+margin/left = 34.0
 margin/top = 0.0
-margin/right = 67.0
+margin/right = 66.0
 margin/bottom = 32.0
 texture = ExtResource( 5 )
 stretch_mode = 0
 
 [node name="eyes_cost" type="HBoxContainer" parent="ScrollContainer/weapon_list/weapon2/weapon_cost"]
 
-editor/display_folded = true
-visibility/visible = false
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 23.0
+margin/top = 36.0
 margin/right = 69.0
-margin/bottom = 55.0
+margin/bottom = 68.0
 alignment = 0
 
 [node name="Label" type="Label" parent="ScrollContainer/weapon_list/weapon2/weapon_cost/eyes_cost"]
@@ -421,11 +646,11 @@ size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 0.0
 margin/top = 5.0
-margin/right = 33.0
+margin/right = 31.0
 margin/bottom = 27.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "000"
+text = "015"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -436,24 +661,23 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 37.0
+margin/left = 35.0
 margin/top = 0.0
-margin/right = 69.0
+margin/right = 67.0
 margin/bottom = 32.0
 texture = ExtResource( 6 )
 stretch_mode = 0
 
 [node name="shoes_cost" type="HBoxContainer" parent="ScrollContainer/weapon_list/weapon2/weapon_cost"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 41.0
+margin/top = 72.0
 margin/right = 69.0
-margin/bottom = 73.0
+margin/bottom = 104.0
 alignment = 0
 
 [node name="Label" type="Label" parent="ScrollContainer/weapon_list/weapon2/weapon_cost/shoes_cost"]
@@ -474,231 +698,6 @@ lines_skipped = 0
 max_lines_visible = -1
 
 [node name="TextureFrame" type="TextureFrame" parent="ScrollContainer/weapon_list/weapon2/weapon_cost/shoes_cost"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 37.0
-margin/top = 0.0
-margin/right = 69.0
-margin/bottom = 32.0
-texture = ExtResource( 7 )
-stretch_mode = 0
-
-[node name="HSeparator" type="HSeparator" parent="ScrollContainer/weapon_list"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 173.0
-margin/right = 167.0
-margin/bottom = 176.0
-
-[node name="weapon3" type="HBoxContainer" parent="ScrollContainer/weapon_list"]
-
-editor/display_folded = true
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 180.0
-margin/right = 167.0
-margin/bottom = 259.0
-alignment = 0
-
-[node name="checkbox" type="CheckBox" parent="ScrollContainer/weapon_list/weapon3"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 26.0
-margin/bottom = 79.0
-toggle_mode = true
-enabled_focus_mode = 2
-shortcut = null
-flat = false
-align = 0
-
-[node name="descr" type="VBoxContainer" parent="ScrollContainer/weapon_list/weapon3"]
-
-editor/display_folded = true
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 30.0
-margin/top = 0.0
-margin/right = 94.0
-margin/bottom = 79.0
-alignment = 1
-
-[node name="TextureFrame" type="TextureFrame" parent="ScrollContainer/weapon_list/weapon3/descr"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 64.0
-margin/bottom = 64.0
-texture = ExtResource( 9 )
-stretch_mode = 0
-
-[node name="weapon_name" type="Label" parent="ScrollContainer/weapon_list/weapon3/descr"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 68.0
-margin/right = 64.0
-margin/bottom = 79.0
-custom_fonts/font = ExtResource( 3 )
-text = "Pump"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="weapon_cost" type="VBoxContainer" parent="ScrollContainer/weapon_list/weapon3"]
-
-editor/display_folded = true
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 98.0
-margin/top = 0.0
-margin/right = 167.0
-margin/bottom = 79.0
-alignment = 1
-
-[node name="hearts_cost" type="HBoxContainer" parent="ScrollContainer/weapon_list/weapon3/weapon_cost"]
-
-editor/display_folded = true
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 5.0
-margin/right = 69.0
-margin/bottom = 37.0
-alignment = 0
-
-[node name="Label" type="Label" parent="ScrollContainer/weapon_list/weapon3/weapon_cost/hearts_cost"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 5.0
-margin/right = 31.0
-margin/bottom = 27.0
-custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color = Color( 0.9375, 0.124512, 0.124512, 1 )
-text = "005"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="TextureFrame" type="TextureFrame" parent="ScrollContainer/weapon_list/weapon3/weapon_cost/hearts_cost"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 35.0
-margin/top = 0.0
-margin/right = 67.0
-margin/bottom = 32.0
-texture = ExtResource( 5 )
-stretch_mode = 0
-
-[node name="eyes_cost" type="HBoxContainer" parent="ScrollContainer/weapon_list/weapon3/weapon_cost"]
-
-editor/display_folded = true
-visibility/visible = false
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 36.0
-margin/right = 69.0
-margin/bottom = 68.0
-alignment = 0
-
-[node name="Label" type="Label" parent="ScrollContainer/weapon_list/weapon3/weapon_cost/eyes_cost"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 5.0
-margin/right = 33.0
-margin/bottom = 27.0
-custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "000"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="TextureFrame" type="TextureFrame" parent="ScrollContainer/weapon_list/weapon3/weapon_cost/eyes_cost"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 37.0
-margin/top = 0.0
-margin/right = 69.0
-margin/bottom = 32.0
-texture = ExtResource( 6 )
-stretch_mode = 0
-
-[node name="shoes_cost" type="HBoxContainer" parent="ScrollContainer/weapon_list/weapon3/weapon_cost"]
-
-editor/display_folded = true
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 41.0
-margin/right = 69.0
-margin/bottom = 73.0
-alignment = 0
-
-[node name="Label" type="Label" parent="ScrollContainer/weapon_list/weapon3/weapon_cost/shoes_cost"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 5.0
-margin/right = 33.0
-margin/bottom = 27.0
-custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color = Color( 0.929688, 0.0944214, 0.0944214, 1 )
-text = "010"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="TextureFrame" type="TextureFrame" parent="ScrollContainer/weapon_list/weapon3/weapon_cost/shoes_cost"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true

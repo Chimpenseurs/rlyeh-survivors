@@ -45,6 +45,7 @@ func _on_Button_pressed():
 						"eye_malus": int(w.get_node("weapon_cost/eyes_cost/Label").get_text()),
 						"shoe_malus": int(w.get_node("weapon_cost/shoes_cost/Label").get_text())
 					})
+				w.get_node("checkbox").set_pressed(false)
 				w.hide()
 	
 	if weapons_bought.size() > 0 :
