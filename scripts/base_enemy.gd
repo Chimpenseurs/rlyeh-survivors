@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
-const items = [preload("res://scenes/Hearth.tscn"), 
-preload("res://scenes/Eye.tscn"),
-preload("res://scenes/Shoe.tscn")]
+const items = [preload("res://scenes/collectables/Heart.tscn"), 
+preload("res://scenes/collectables/Eye.tscn"),
+preload("res://scenes/collectables/Shoe.tscn")]
 
 var life = 100
 var velocity = 100
