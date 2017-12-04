@@ -41,7 +41,7 @@ func _fixed_process(delta):
 	get_node("life_bar").set_value(player.life * (float(player.life) / float(player.max_life)))
 	get_node("corrupt_bar").set_value(get_node("corrupt_bar").get_max() - player.max_life)
 	
-	get_node("enemies_killed/Label").set_text(get_tree().get_nodes_in_group("scores")[0].get_text())
+	get_node("enemies_killed").set_text(get_tree().get_nodes_in_group("scores")[0].get_text())
 
 func int_to_text(val) :
 	return String(val / 100) + String((val % 100) / 10) + String((val % 100) % 10)

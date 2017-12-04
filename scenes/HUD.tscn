@@ -218,9 +218,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 56.0
-margin/top = 7.0
+margin/top = 9.0
 margin/right = 456.0
-margin/bottom = 37.0
+margin/bottom = 39.0
 range/min = 0.0
 range/max = 100.0
 range/step = 1.0
@@ -241,9 +241,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 56.0
-margin/top = 7.0
+margin/top = 9.0
 margin/right = 456.0
-margin/bottom = 37.0
+margin/bottom = 39.0
 range/min = 0.0
 range/max = 100.0
 range/step = 1.0
@@ -258,47 +258,33 @@ mode = 1
 radial_fill/fill_degrees = 360.0
 radial_fill/center_offset = Vector2( 0, 0 )
 
-[node name="enemies_killed" type="HBoxContainer" parent="."]
-
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 60.0
-margin/top = 48.0
-margin/right = 172.0
-margin/bottom = 112.0
-alignment = 0
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Label" type="Label" parent="enemies_killed"]
+[node name="enemies_killed" type="Label" parent="."]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 21.0
-margin/right = 44.0
-margin/bottom = 43.0
+margin/left = 70.0
+margin/top = 44.0
+margin/right = 114.0
+margin/bottom = 66.0
 custom_fonts/font = ExtResource( 3 )
 text = "0000"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="TextureFrame" type="TextureFrame" parent="enemies_killed"]
+[node name="TextureFrame" type="TextureFrame" parent="."]
 
+rect/scale = Vector2( 0.5, 0.5 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 48.0
-margin/top = 0.0
-margin/right = 112.0
-margin/bottom = 64.0
+margin/left = 116.0
+margin/top = 39.0
+margin/right = 180.0
+margin/bottom = 103.0
 texture = ExtResource( 10 )
 stretch_mode = 0
 
