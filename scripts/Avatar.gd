@@ -89,6 +89,7 @@ func _shoot_arrow(delta):
 		var weapon = find_node("ShotPosition")
 		new_arrow.set_global_pos(weapon.get_global_pos())
 		get_parent().bullerHolder.add_child(new_arrow)
+		get_node("SamplePlayer").play("laser")
 		new_arrow.init_bullet(bullet_motion, self.current_weapon["damage"], self.bullet_range )
 
 func set_player_orientation():
@@ -111,7 +112,7 @@ func take_damage(collider_pos, damage_amount):
 		
 	if life > 0:
 		self.move(direction.normalized() * 50)
-		play("takeDammage")
+		get_node("SamplePlayer").play("takeDamage")
 		play_animation("take_damage")
 
 # Helper to play animation
