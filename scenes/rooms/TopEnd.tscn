@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scenes/rooms/Map.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Spawner.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/collectables/Eye.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/collectables/Heart.tscn" type="PackedScene" id=3]
 
 [node name="TileMap" instance=ExtResource( 1 )]
 
@@ -18,16 +18,8 @@ transform/pos = Vector2( 228.543, 253.03 )
 
 transform/pos = Vector2( 809.423, 253.03 )
 
-[node name="Eye" parent="." instance=ExtResource( 3 )]
+[node name="Hearth" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 435.557, 173.652 )
-
-[node name="Eye1" parent="." instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 481.81, 173.652 )
-
-[node name="Eye2" parent="." instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 532.144, 173.652 )
+transform/pos = Vector2( 505.586, 166.13 )
 
 

@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=7 format=1]
 
 [ext_resource path="res://scenes/rooms/Map.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/trade_post-top.png" type="Texture" id=2]
 [ext_resource path="res://assets/trade_post-bottom.png" type="Texture" id=3]
 [ext_resource path="res://scenes/Trader.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/collectables/Heart.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -57,5 +58,9 @@ texture = ExtResource( 3 )
 
 transform/pos = Vector2( 371.975, 340.515 )
 z/z = 7
+
+[node name="Hearth" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 492.241, 255.526 )
 
 
