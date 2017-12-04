@@ -12,6 +12,12 @@ var weapons = {
 		"damage": 50,
 		"sprite": null,
 		"bulletTscn" : preload("res://scenes/LaserBullet.tscn")
+	},
+	"Paczooka":{
+		"fire_rate": 0.85,
+		"damage": 100,
+		"sprite": null,
+		"bulletTscn" : preload("res://scenes/PacBullet.tscn")
 	}
 }
 
@@ -37,15 +43,16 @@ var timer = 0
 
 func _ready():
 	# Init weapon sprite
-	weapons["pistol"]["sprite"] = get_node("Sprite/pistol")
+	weapons["pistol"]["sprite"]    = get_node("Sprite/pistol")
 	weapons["laser gun"]["sprite"] = get_node("Sprite/laser gun")
+	weapons["Paczooka"]["sprite"] = get_node("Sprite/Paczooka")
 	
 	# Init vars
 	dead = false
 	max_life = 5000
 	life = max_life
 	
-	enabled_weapons = ["pistol"]
+	enabled_weapons = ["Paczooka"]
 	current_weapon_id = 0
 	current_weapon = weapons[enabled_weapons[current_weapon_id]]
 	
@@ -111,6 +118,7 @@ func _shoot_arrow():
 	if self.fire_ready == 0:
 		self.fire_ready = self.current_weapon["fire_rate"]
 		var shoot_position = current_weapon["sprite"].get_node("ShotPosition")
+		
 		var bullet_motion = (get_global_mouse_pos() - shoot_position.get_global_pos()).normalized() * shoot_speed
 		var new_arrow = self.current_weapon["bulletTscn"].instance()
 
@@ -126,8 +134,10 @@ func set_player_orientation():
 	var dif = self_pos - mouse_pos
 	if dif.x > 0:
 		self.set_scale(Vector2(-1, 1))
+		self.current_weapon["sprite"].set_z(1)
 	else :
 		self.set_scale(Vector2(1, 1))
+		self.current_weapon["sprite"].set_z(-1)
 	
 func take_damage(collider_pos, damage_amount):
 	var direction = get_pos() - collider_pos
