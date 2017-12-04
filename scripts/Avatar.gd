@@ -97,8 +97,8 @@ func _input(event):
 func _fixed_process(delta):
 	
 	last_hit_time += delta
-	if (last_hit_time > 5 &&  self.life < self.max_life):
-		self.life +=1
+	if (last_hit_time > 0.5 &&  self.life < self.max_life):
+		self.life +=3
 		
 	set_player_orientation()
 	self.fire_ready -= delta
