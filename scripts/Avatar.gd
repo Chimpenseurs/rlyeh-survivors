@@ -215,7 +215,7 @@ func add_weapons(weapons_bought) :
 		visual_acuity *= (100.0 - float(w["eye_malus"])) / 100.0
 		devil_eyes -= w["eye_malus"]
 		
-		velocity *= (100.0 - float(w["shoe_malus"])) / 100.0
+		velocity -= 12 * float(w["shoe_malus"])
 		devil_shoes -= w["shoe_malus"]
 	
 	# Equip last weapon
