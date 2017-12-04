@@ -8,6 +8,7 @@ func _ready():
 func _on_Area2D_body_enter( body ):
 	if(body.is_in_group("player")):
 		var list = get_node("shop_menu")
+		get_node("SamplePlayer").play("welcome")
 		list.update_store(body.devil_hearts, body.devil_eyes, body.devil_shoes)
 		list.show()
 

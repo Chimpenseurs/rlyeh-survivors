@@ -13,7 +13,8 @@ const weapons = {
 	}
 }
 
-var enabled_weapon
+var enabled_weapons
+var current_weapon_id
 var current_weapon
 const shoot_speed = 500
 const bullet_range = 50000
@@ -38,8 +39,9 @@ func _ready():
 	max_life = 5000
 	life = max_life
 	
-	enabled_weapon = ["pistol"]
-	current_weapon = weapons["pistol"]
+	enabled_weapons = ["pistol"]
+	current_weapon_id = 0
+	current_weapon = weapons[enabled_weapons[current_weapon_id]]
 	
 	velocity = 350
 	
@@ -50,6 +52,18 @@ func _ready():
 	self.shoot_postition = self.get_node("Sprite/weapon_sprite/ShotPosition")
 	set_process_input(true)
 	set_fixed_process(true)
+
+func _input(event):
+	if event.is_action_pressed("next_weapon") :
+		current_weapon_id += 1
+		if current_weapon_id > enabled_weapons.size() - 1 :
+			current_weapon_id = 0
+		current_weapon = weapons[enabled_weapons[current_weapon_id]]
+	elif event.is_action_pressed("previous_weapon") :
+		current_weapon_id -= 1
+		if current_weapon_id < 0 :
+			current_weapon_id = enabled_weapons.size() - 1
+		current_weapon = weapons[enabled_weapons[current_weapon_id]]
 
 func _fixed_process(delta):
 	set_player_orientation()
@@ -77,9 +91,9 @@ func _fixed_process(delta):
 		vect = n.slide(vect)
 		move(motion)
 	if Input.is_action_pressed("action_shoot"):
-		_shoot_arrow(delta)
+		_shoot_arrow()
 
-func _shoot_arrow(delta):
+func _shoot_arrow():
 	if self.fire_ready == 0:
 		self.fire_ready = self.current_weapon["fire_rate"]
 		var bullet_motion = (get_global_mouse_pos() - self.shoot_postition.get_global_pos()).normalized() * shoot_speed
@@ -89,6 +103,7 @@ func _shoot_arrow(delta):
 		var weapon = find_node("ShotPosition")
 		new_arrow.set_global_pos(weapon.get_global_pos())
 		get_parent().bullerHolder.add_child(new_arrow)
+		get_node("SamplePlayer").play("laser")
 		new_arrow.init_bullet(bullet_motion, self.current_weapon["damage"], self.bullet_range )
 
 func set_player_orientation():
@@ -111,7 +126,24 @@ func take_damage(collider_pos, damage_amount):
 		
 	if life > 0:
 		self.move(direction.normalized() * 50)
+		get_node("SamplePlayer").play("takeDamage")
 		play_animation("take_damage")
+
+func add_weapon(weapons) :
+	for w in weapons :
+		enabled_weapons.append(w["name"])
+		
+		max_life *= (100.0 - float(w["heart_malus"])) / 100.0
+		if life > max_life :
+			life = max_life
+		
+		devil_hearts -= w["heart_malus"]
+		
+		# TODO : Precision
+		devil_eyes -= w["eye_malus"]
+		
+		velocity *= (100.0 - float(w["shoe_malus"])) / 100.0
+		devil_shoes -= w["shoe_malus"]
 
 # Helper to play animation
 func play_animation(animation):
