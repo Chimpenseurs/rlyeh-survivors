@@ -140,5 +140,5 @@ COLOR = tex(TEXTURE, dist_tex_coord);",
 resource/name = "distorsion"
 shader/shader = SubResource( 1 )
 shader/shading_mode = 0
-shader_param/strength = -4.5756e+06
+shader_param/strength = 0.0
 
