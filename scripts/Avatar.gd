@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var bulletTscn = preload("res://scenes/Bullet.tscn")
 
-var weapons = {
+const weapons = {
 	"pistol":{
 		"fire_rate": 0.75,
 		"damage": 50
@@ -13,24 +13,38 @@ var weapons = {
 	}
 }
 
-var enabled_weapon = ["pistol"]
-var current_weapon = weapons["pistol"]
-
+var enabled_weapon
+var current_weapon
 const shoot_speed = 500
-const velocity = 350
-
-var bullet_range = 50000
+const bullet_range = 50000
 var fire_ready = 0
-var dead = false
 
-var max_life = 5000
-var life = 5000
+var velocity
 
-var devil_hearts = 0
-var devil_eyes = 0
-var devil_shoes = 0
+var dead
+
+var max_life
+var life
+
+var devil_hearts
+var devil_eyes
+var devil_shoes
 
 func _ready():
+	# Init vars
+	dead = false
+	max_life = 5000
+	life = max_life
+	
+	enabled_weapon = ["pistol"]
+	current_weapon = weapons["pistol"]
+	
+	velocity = 350
+	
+	devil_hearts = 0
+	devil_eyes = 0
+	devil_shoes = 0
+	
 	set_process_input(true)
 	set_fixed_process(true)
 
