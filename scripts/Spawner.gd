@@ -8,7 +8,7 @@ var animation_length
 
 func _ready():
 	set_shape_as_trigger(0, true)
-	self.life  = 1000
+	self.life  = 1000 #useless
 	self.cooldown = throuput
 	self.animation_length = self.get_node("AnimationPlayer").get_animation("Spawn").get_length()
 	
@@ -27,4 +27,6 @@ func _fixed_process(delta):
 		get_parent().get_node("Enemies").add_child(new_monster)
 		self.get_node("AnimationPlayer").play("idle")
 
+func take_damage(hit_rate):
+	pass
 	

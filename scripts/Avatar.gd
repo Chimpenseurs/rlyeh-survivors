@@ -33,6 +33,7 @@ var devil_hearts
 var devil_eyes
 var devil_shoes
 
+var timer = 0
 
 func _ready():
 	# Init weapon sprite
@@ -74,6 +75,11 @@ func _input(event):
 		current_weapon["sprite"].show()
 
 func _fixed_process(delta):
+	
+	timer += delta
+	if (timer > 5 &&  self.life < self.max_life):
+		self.life +=1
+		
 	set_player_orientation()
 	self.fire_ready -= delta
 	if self.fire_ready < 0:
@@ -137,8 +143,8 @@ func take_damage(collider_pos, damage_amount):
 		get_node("SamplePlayer").play("takeDamage")
 		play_animation("take_damage")
 
-func add_weapon(weapons) :
-	for w in weapons :
+func add_weapons(weapons_bought) :
+	for w in weapons_bought :
 		enabled_weapons.append(w["name"])
 		
 		max_life *= (100.0 - float(w["heart_malus"])) / 100.0
@@ -152,6 +158,12 @@ func add_weapon(weapons) :
 		
 		velocity *= (100.0 - float(w["shoe_malus"])) / 100.0
 		devil_shoes -= w["shoe_malus"]
+	
+	# Equip last weapon
+	current_weapon["sprite"].hide()
+	current_weapon = weapons[enabled_weapons.back()]
+	current_weapon["sprite"].show()
+	
 
 # Helper to play animation
 func play_animation(animation):

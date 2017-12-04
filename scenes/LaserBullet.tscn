@@ -14,7 +14,7 @@ transform/pos = Vector2( 0.0098877, 0 )
 transform/scale = Vector2( -1, 1 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( -4.37114e-08, -1, 0.204143, -8.92337e-09, 0.005054, 196.317 )
+shapes/0/transform = Matrix32( -8.83682e-08, -2.02163, 0.204143, -8.92337e-09, 0.00506286, 398.936 )
 shapes/0/trigger = true
 collision/layers = 1
 collision/mask = 1
@@ -37,16 +37,16 @@ script/script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 
-transform/pos = Vector2( -0.130905, 195.574 )
+transform/pos = Vector2( -0.130896, 400.56 )
 transform/rot = 90.0
-transform/scale = Vector2( 1, 0.2 )
+transform/scale = Vector2( 2.02493, 0.2 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
-transform/pos = Vector2( 0.005054, 196.317 )
+transform/pos = Vector2( 0.00506286, 398.936 )
 transform/rot = 90.0
-transform/scale = Vector2( 1, 0.204143 )
+transform/scale = Vector2( 2.02163, 0.204143 )
 shape = SubResource( 1 )
 trigger = true
 _update_shape_index = 0
