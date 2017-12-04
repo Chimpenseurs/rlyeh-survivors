@@ -33,6 +33,7 @@ var devil_hearts
 var devil_eyes
 var devil_shoes
 
+var timer = 0
 
 func _ready():
 	# Init weapon sprite
@@ -74,6 +75,11 @@ func _input(event):
 		current_weapon["sprite"].show()
 
 func _fixed_process(delta):
+	
+	timer += delta
+	if (timer > 5 &&  self.life < self.max_life):
+		self.life +=1
+		
 	set_player_orientation()
 	self.fire_ready -= delta
 	if self.fire_ready < 0:
