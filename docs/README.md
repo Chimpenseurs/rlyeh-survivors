@@ -16,3 +16,10 @@ Will you survive Rlyeh ?
 
 ## The source code
 [Source code](https://github.com/ludum-rlyeh/rlyeh-survivors)
+
+## Screenshots
+
+
+![Screen 1](screenshot1.png)
+![Screen 2](screenshot2.png)
+![Screen 3](screenshot3.png)
