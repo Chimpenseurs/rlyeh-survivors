@@ -50,7 +50,7 @@ tracks/0/keys = {
 [sub_resource type="SampleLibrary" id=4]
 
 samples/laser = {
-"db": 0.0,
+"db": -15.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 7 )
