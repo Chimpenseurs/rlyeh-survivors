@@ -110,11 +110,13 @@ func restart():
 	
 	get_node("HUD").init_life_bar()
 	Input.set_custom_mouse_cursor(cursorTexture,cursorTexture.get_size()/2)
+	get_node("music_theme").play()
 	
 func death():
 	self.player.queue_free()
 	get_node("GameOver").show()
 	get_node("GameOver").set_fixed_process(true)
+	get_node("music_theme").stop()
 	get_tree().set_pause(true)
 	
 func _fixed_process(delta):
