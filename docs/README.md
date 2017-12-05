@@ -1,15 +1,19 @@
 # Rlyeh survivors
 
+**Rate us on the ludum dare webpage of the project [https://ldjam.com/events/ludum-dare/40/rlyeh-survivors](https://ldjam.com/events/ludum-dare/40/rlyeh-survivors)**
+
 `ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn`, H.P Lovecraft
 
 Rlyeh survivors is an Isaac life, where you can collect different kinds of coins and trade it to buy weapons. But everything came at a cost. When you trade coin, you get a debuff according to what kind of coin you trade. While rotten earth applies life debuff, the rotten shoes make you slower. So choose carefully...
 
 Will you survive Rlyeh?
+
 # Play the game
 
 ## Online
 
 [Play online](https://ludum-rlyeh.github.io/rlyeh-survivors/rlyeh.html)
+`Only tested on firefox... sorry`
 
 ## Game for linux
 
