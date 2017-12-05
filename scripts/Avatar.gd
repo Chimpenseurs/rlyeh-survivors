@@ -65,7 +65,7 @@ func _ready():
 	max_life = 5000
 	life = max_life
 	
-	enabled_weapons = ["pistol"]
+	enabled_weapons = ["laser gun"]
 	current_weapon_id = 0
 	current_weapon = weapons[enabled_weapons[current_weapon_id]]
 	current_weapon["sprite"].show()
@@ -73,9 +73,9 @@ func _ready():
 	velocity = 350
 	visual_acuity = 1.0
 	
-	devil_hearts = 0
-	devil_eyes = 0
-	devil_shoes = 0
+	devil_hearts = 100
+	devil_eyes = 100
+	devil_shoes = 100
 	
 	set_process_input(true)
 	set_fixed_process(true)
