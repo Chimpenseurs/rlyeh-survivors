@@ -46,3 +46,4 @@ Will you survive Rlyeh?
 Dec 5 2017 
 * Fixed duplicated laser fire
 * fixed low pv rendering (life bar)
+* Fixed WASD inputs (was configured for french azerty keyboards) + remove confusing key for weapon switch
