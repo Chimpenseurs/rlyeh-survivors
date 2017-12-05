@@ -6,13 +6,13 @@ func _ready():
 	set_fixed_process(true)
 
 func init_life_bar():
-	var life_bar = get_node("life_bar")
+	var life_bar = get_node("bars/life_bar")
 	var player = get_tree().get_nodes_in_group("player")[0]
 	life_bar.set_min(0.0)
 	life_max_max = player.max_life
 	life_bar.set_max(life_max_max)
 	
-	var corrupt_bar = get_node("corrupt_bar")
+	var corrupt_bar = get_node("bars/corrupt_bar")
 	corrupt_bar.set_min(0.0)
 	corrupt_bar.set_max(life_max_max)
 	
@@ -38,8 +38,8 @@ func _fixed_process(delta):
 	
 	get_node("fog").set_opacity(1.0 - player.visual_acuity)
 	
-	get_node("life_bar").set_value(player.life * (float(player.life) / float(player.max_life)))
-	get_node("corrupt_bar").set_value(get_node("corrupt_bar").get_max() - player.max_life)
+	get_node("bars/life_bar").set_value(player.life * (float(player.life) / float(player.max_life)))
+	get_node("bars/corrupt_bar").set_value(get_node("bars/corrupt_bar").get_max() - player.max_life)
 	
 	get_node("enemies_killed").set_text(get_tree().get_nodes_in_group("scores")[0].get_text())
 
