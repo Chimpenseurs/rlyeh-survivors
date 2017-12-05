@@ -41,3 +41,8 @@ Will you survive Rlyeh?
 ![Screen 1](screenshot1.png)
 ![Screen 2](screenshot2.png)
 ![Screen 3](screenshot3.png)
+
+## Bugfix
+Dec 5 2017 
+* Fixed duplicated laser fire
+* fixed low pv rendering (life bar)
