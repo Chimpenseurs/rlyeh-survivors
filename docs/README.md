@@ -12,7 +12,7 @@ Will you survive Rlyeh?
 
 ## Online
 
-[Play online](https://ludum-rlyeh.github.io/rlyeh-survivors/rlyeh.html)
+[Play online](https://ludum-rlyeh.github.io/rlyeh-survivors/Rlyeh_Survivors.html)
 `Only tested on firefox... sorry`
 
 ## Game for linux
